@@ -997,7 +997,7 @@ Um triângulo escaleno é aquele que não tem dois lados iguais.
 
 \startdefinition{}\label{def:I.XXXIV}
 \begin{center}
-Todas as outras figuras quadriláteras são chamadas trapézios.
+Todas as outras figuras quadriláteras são chamadas trapézios, no sentido antigo do termo: a classe residual das figuras que não se enquadram nas definições anteriores.
 \end{center}
 
 \defineNewPicture{
@@ -4964,18 +4964,18 @@ draw byLabelsOnPolygon(C, E, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 
 Se uma das linhas passa pelo centro, é evidente que não pode ser cortada ao meio pela outra, que não passa pelo centro.
 
-But if neither of the lines \drawUnitLine{AC} or \drawUnitLine{BD} pass through the centre, draw \drawUnitLine{EF} from the centre to their intersection.
+Mas, se nenhuma das retas \drawUnitLine{AC} ou \drawUnitLine{BD} passar pelo centro, trace \drawUnitLine{EF} do centro até o ponto de interseção delas.
 
 \begin{center}
 Se \drawUnitLine{AC} for dividido ao meio, \drawUnitLine{EF} $\perp$ para ele \byref{prop:III.III}\\
 $\therefore \drawAngle{FED,DEC} = \drawRightAngle$\\
-and if \drawUnitLine{BD} be bisected, $\drawUnitLine{EF} \perp \drawUnitLine{BD}$ \byref{prop:III.III}\\
+e, se \drawUnitLine{BD} for dividido ao meio, $\drawUnitLine{EF} \perp \drawUnitLine{BD}$ \byref{prop:III.III}\\
 $\therefore \drawAngle{FED} = \drawRightAngle$;
 
-and $\therefore \drawAngle{FED} = \drawAngle{FED,DEC}$;\\
+e $\therefore \drawAngle{FED} = \drawAngle{FED,DEC}$;\\
 uma parte igual ao todo, o que é um absurdo:
 
-$\therefore$ \drawUnitLine{AC} and \drawUnitLine{BD} do not bisect one another.
+$\therefore$ \drawUnitLine{AC} e \drawUnitLine{BD} não se cortam ao meio.
 \end{center}
 
 \qed
@@ -5142,9 +5142,9 @@ No centro do círculo trace \drawUnitLine{EB} e \drawUnitLine{EC}; então $\draw
 
 \startsubproposition{Figure II.}
 \begin{center}
-If $\drawAngle{KFE} = \drawAngle{GFE}$ then $\drawUnitLine{FM,MK} = \drawUnitLine{FG}$,\\
+Se $\drawAngle{KFE} = \drawAngle{GFE}$, então $\drawUnitLine{FM,MK} = \drawUnitLine{FG}$,\\
 se não, pegue $\drawUnitLine{FM} = \drawUnitLine{FG}$, desenhe \drawUnitLine{EM,MH}\\
-then in \drawLine[middle][triangleEFM]{EM,EF,FM} and \drawLine[middle][triangleEFG]{FG,EF,EG}, \drawUnitLine{EF} common,\\
+então, em \drawLine[middle][triangleEFM]{EM,EF,FM} e \drawLine[middle][triangleEFG]{FG,EF,EG}, com \drawUnitLine{EF} comum,\\
 $\drawAngle{KFE} = \drawAngle{GFE}$ and $\drawUnitLine{FG} = \drawUnitLine{FM}$
 
 $\therefore \drawUnitLine{EG} = \drawUnitLine{EM}$ \byref{prop:I.IV}
@@ -5185,7 +5185,7 @@ draw byLabelsOnCircle(F, E, A)(M);
 draw byLabelsOnPolygon(F, D, M, A)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-Se de um ponto sem círculo, linhas retas
+Se de um ponto fora do círculo, linhas retas
 $\left\{\vcenter{
 \nointerlineskip\hbox{\drawProportionalLine{DM,MA}}
 \nointerlineskip\hbox{\drawProportionalLine{DE}}
@@ -5195,10 +5195,10 @@ são atraídos pela circunferência; daquelas que caem sobre a circunferência c
 \begin{center}
 Trace \drawUnitLine{MF} e \drawUnitLine{ME} no centro.\\
 Então, \drawUnitLine[0.75cm]{DM,MA} que passa pelo centro é maior;\\
-for since $\drawUnitLine[0.75cm]{MA} = \drawUnitLine[0.75cm]{ME}$, if \drawUnitLine[0.75cm]{DM} be added to both $\drawUnitLine{DM,MA} = \drawUnitLine[0.75cm]{DM} + \drawUnitLine[0.75cm]{ME}$; but $> \drawUnitLine[0.75cm]{DE}$ \byref{prop:I.XX}\\
+pois, como $\drawUnitLine[0.75cm]{MA} = \drawUnitLine[0.75cm]{ME}$, se \drawUnitLine[0.75cm]{DM} for acrescentada a ambas, $\drawUnitLine{DM,MA} = \drawUnitLine[0.75cm]{DM} + \drawUnitLine[0.75cm]{ME}$; mas é $> \drawUnitLine[0.75cm]{DE}$ \byref{prop:I.XX}\\
 $\therefore$ \drawUnitLine{DM,MA} é maior que qualquer outra linha traçada do mesmo ponto até a circunferência côncava.\\
-Again in \drawLine[middle][triangleDFM]{DM,MF,DF} and \drawLine[middle][triangleDEM]{DM,ME,DE}, $\drawUnitLine[0.5cm]{MF} = \drawUnitLine[0.5cm]{ME}$, and \drawUnitLine[0.5cm]{DM} common,\\
-but $\drawAngle{DMF,FME} > \drawAngle{DMF}$, $\therefore \drawUnitLine{DE} > \drawUnitLine{DF}$ \byref{prop:I.XXIV};\\
+Novamente, em \drawLine[middle][triangleDFM]{DM,MF,DF} e \drawLine[middle][triangleDEM]{DM,ME,DE}, $\drawUnitLine[0.5cm]{MF} = \drawUnitLine[0.5cm]{ME}$, e \drawUnitLine[0.5cm]{DM} é comum,\\
+mas $\drawAngle{DMF,FME} > \drawAngle{DMF}$, $\therefore \drawUnitLine{DE} > \drawUnitLine{DF}$ \byref{prop:I.XXIV};\\
 e da mesma maneira \drawUnitLine{DE} pode ser mostrado como $>$ do que qualquer outra linha mais remota de \drawUnitLine{DM,MA}.
 \end{center}
 
@@ -5227,13 +5227,13 @@ draw byLabelsOnPolygon(G, M, H)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
 \startsubproposition{II.}
-Das linhas que caem na circunferência convexa, a menor é aquela (\drawUnitLine{DG}) que está sendo produzida passaria pelo centro, e a linha que está mais próxima do menor é menor que aquela que está mais remota.
+Das linhas que caem na circunferência convexa, a menor é aquela (\drawUnitLine{DG}) que, se prolongada, passaria pelo centro, e a linha que está mais próxima da menor é menor que aquela que está mais remota.
 
 \begin{center}
-For, since $\drawUnitLine{KM} + \drawUnitLine{DK} > \drawUnitLine{DG,GM}$ \byref{prop:I.XX}\\
-and $\drawUnitLine{KM} = \drawUnitLine{GM}$, $\therefore \drawUnitLine{DK} > \drawUnitLine{DG}$ \byref{ax:I.V}
+Pois, como $\drawUnitLine{KM} + \drawUnitLine{DK} > \drawUnitLine{DG,GM}$ \byref{prop:I.XX}\\
+e $\drawUnitLine{KM} = \drawUnitLine{GM}$, $\therefore \drawUnitLine{DK} > \drawUnitLine{DG}$ \byref{ax:I.V}
 
-And again, since $\drawUnitLine[0.75cm]{HM} + \drawUnitLine[0.75cm]{DH} > \drawUnitLine[0.75cm]{KM} + \drawUnitLine[0.75cm]{DK}$ \byref{prop:I.XXI}, and $\drawUnitLine[0.75cm]{HM} = \drawUnitLine[0.75cm]{KM}$,
+E, novamente, como $\drawUnitLine[0.75cm]{HM} + \drawUnitLine[0.75cm]{DH} > \drawUnitLine[0.75cm]{KM} + \drawUnitLine[0.75cm]{DK}$ \byref{prop:I.XXI}, e $\drawUnitLine[0.75cm]{HM} = \drawUnitLine[0.75cm]{KM}$,
 
 $\therefore \drawUnitLine{DK} < \drawUnitLine{DH}$. E o mesmo acontece com outros.
 \end{center}
@@ -5619,7 +5619,7 @@ $\therefore \drawUnitLine{CG} + \drawUnitLine{CH} = \drawUnitLine{HA,AG}$;
 but $\drawUnitLine{CG} + \drawUnitLine{CH} > \drawUnitLine{HA,AG}$ \byref{prop:I.XX}, which is absurd.
 \end{center}
 
-There is therefore no case in which two circles can touch one another in two points.
+Não há, portanto, caso algum em que dois círculos possam tocar-se em dois pontos.
 
 \qed
 
@@ -5934,13 +5934,13 @@ Mas se o ponto fornecido \drawPointL[middle][FB]{A} estiver fora da circunferên
 \begin{center}
 trace \drawUnitLine{DE,AD} dele para o centro, cortando \circleEI;\\
 e trace $\drawUnitLine{FD} \perp \drawUnitLine{DE}$,\\
-describe \drawCircle[middle][1/6]{EII} concentric with \circleEI\ radius $= \drawUnitLine{DE,AD}$,\\ % improvement: These two lines were not originally there, but without them this proof makes no sense
+descreva \drawCircle[middle][1/6]{EII} concêntrico com \circleEI\ e raio $= \drawUnitLine{DE,AD}$,\\ % improvement: These two lines were not originally there, but without them this proof makes no sense
 trace \drawUnitLine{BE,FB} para o centro a partir do ponto onde \drawUnitLine{FD} cai na circunferência \circleEII\,\\
-trace $\drawUnitLine{AB} \perp \drawUnitLine{BE,FB}$ a partir do ponto onde corta \circleEI,\\
+trace $\drawUnitLine{AB} \perp \drawUnitLine{BE,FB}$ a partir do ponto onde corta \circleEI.\\
 %
-Then \drawUnitLine{AB} will be the tangent required.\\
-For in \drawLine[bottom]{FD,FB,BE,DE} and \drawLine[bottom]{BE,DE,AD,AB} $\drawUnitLine{AD,DE} = \drawUnitLine{FB,BE}$, \drawAngle{E} common,\\
-and $\drawUnitLine{DE} = \drawUnitLine{BE}$,\\
+Então \drawUnitLine{AB} será a tangente requerida.\\
+Pois, em \drawLine[bottom]{FD,FB,BE,DE} e \drawLine[bottom]{BE,DE,AD,AB}, $\drawUnitLine{AD,DE} = \drawUnitLine{FB,BE}$, \drawAngle{E} comum,\\
+e $\drawUnitLine{DE} = \drawUnitLine{BE}$,\\
 $\therefore \mbox{ \byref{prop:I.IV} } \drawAngle{B} = \drawAngle{D} = \drawRightAngle$,\\
 $\therefore \drawUnitLine{FD}$ é uma tangente a \circleEI.
 \end{center}
@@ -7033,16 +7033,16 @@ Trace \drawUnitLine{EF} \byref{prop:III.XVII}, uma tangente ao círculo em qualq
 
 no ponto de contato faça $\drawAngle{B} = \drawAngle{givenAngle}$ o ângulo dado;
 
-and \drawFromCurrentPicture[middle][segmentO]{
+e \drawFromCurrentPicture[middle][segmentO]{
 draw byNamedFilledCircleSegment(O);
 draw byLabelsOnCircle(A, B)(O);
 } contém um ângulo $=$ do ângulo fornecido.
 
-Because \drawUnitLine{EF} is a tangent,\\
-and \drawUnitLine{AB} cuts it,\\
+Porque \drawUnitLine{EF} é uma tangente,\\
+e \drawUnitLine{AB} a corta,\\
 o ângulo em $\segmentO\ = \drawAngle{B}$ \byref{prop:III.XXXII},
 
-but $\drawAngle{B} = \drawAngle{givenAngle}$ \byref{\constref}.
+mas $\drawAngle{B} = \drawAngle{givenAngle}$ \byref{\constref}.
 \end{center}
 
 \qed
@@ -7066,7 +7066,7 @@ draw byCircleR(E, r, byyellow, 0, 0, 0);
 draw byLabelsOnCircle(A, B, C, D)(E);
 draw byLabelsOnPolygon(C, E, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
-\problem{I}{f}{two chords
+\problem{S}{e}{duas cordas
 $\left\{\vcenter{
 \nointerlineskip\hbox{\drawSizedLine{AE,EC}}
 \nointerlineskip\hbox{\drawSizedLine{DE,EB}}}\right\}$
@@ -7261,20 +7261,20 @@ draw byLabelPoint(C, angle(C-F) + 45, 2);
 \problem{S}{e}{a partir de um ponto fora de um círculo forem traçadas duas linhas retas, uma \drawSizedLine{CA,DC} cortando o círculo, a outra \drawSizedLine{DB} encontrando-o, e se o retângulo compreendido por toda a linha de corte \drawSizedLine{CA,DC} e seu segmento externo \drawSizedLine{DC} forem iguais ao quadrado da linha que encontra o círculo, o último \drawSizedLine{DB} é uma tangente ao círculo.}
 
 \begin{center}
-Trace a partir do ponto dado \drawSizedLine{DE}, uma tangente ao círculo,\\
+Trace, a partir do ponto dado, \drawSizedLine{DE}, uma tangente ao círculo,\\
 e trace a partir do centro \drawSizedLine{DF}, \drawSizedLine{BF} e \drawSizedLine{EF},\\
 $\drawSizedLine{DE}^2 = \drawSizedLine{CA,DC} \times \drawSizedLine{DC}$ \byref{prop:III.XXXVI}\\
-but $\drawSizedLine{DB}^2 = \drawSizedLine{CA,DC} \times \drawSizedLine{DC}$ \byref{\hypref},\\
+mas $\drawSizedLine{DB}^2 = \drawSizedLine{CA,DC} \times \drawSizedLine{DC}$ \byref{\hypref},\\
 $\therefore \drawSizedLine{DB}^2 = \drawSizedLine{DE}^2$,\\
-and $\therefore \drawSizedLine{DB} = \drawSizedLine{DE}$.
+e $\therefore \drawSizedLine{DB} = \drawSizedLine{DE}$.
 
-Then in \drawLine{DB,DF,BF} and \drawLine{EF,DF,DE}\\
+Então, em \drawLine{DB,DF,BF} e \drawLine{EF,DF,DE},\\
 $\drawSizedLine{BF} \mbox{ e } \drawSizedLine{DB} = \drawSizedLine{EF} \mbox{ e } \drawSizedLine{DE}$,\\
 e \drawSizedLine{DF} é comum,\\
 $\therefore \drawAngle{B} = \drawAngle{E}$ \byref{prop:I.VIII};\\
-but $\drawAngle{E} = \drawRightAngle$ a right angle \byref{prop:III.XVIII},
+mas $\drawAngle{E} = \drawRightAngle$ \byref{prop:III.XVIII},
 
-$\therefore \drawAngle{B} = \drawRightAngle$ a right angle,\\
+$\therefore \drawAngle{B} = \drawRightAngle$,\\
 e $\therefore$ \drawSizedLine{DB} é uma tangente ao círculo \byref{prop:III.XVI}.
 \end{center}
 
@@ -8577,8 +8577,8 @@ Um múltiplo de maior magnitude é maior que o mesmo múltiplo de menor.
 
 \begin{center}
 $\begin{aligned}
-	\mbox{Let } A &> B \mbox{,} \\
-	\mbox{ then } 2A &> 2B \mbox{;}\\
+	\mbox{Se } A &> B \mbox{,} \\
+	\mbox{ então } 2A &> 2B \mbox{;}\\
 	3A&> 3B \mbox{;} \\
 	4A &> 4B \mbox{;}\\
 	\mbox{\&c. } &\mbox{\&c.} \\
@@ -8773,19 +8773,19 @@ Então, tomando cada par de equimúltiplos do primeiro e do terceiro, e cada par
 \begin{center}
 Se
 $\left\{\vcenter{
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{or} < \drawMagnitude[middle][1]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{or} < \drawMagnitude[middle][2]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{or} < \drawMagnitude[middle][3]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{or} < \drawMagnitude[middle][4]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{or} < \drawMagnitude[middle][5]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][1]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][2]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][3]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][4]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][5]{Bm}$}
 }\right.$
 
 $\vcenter{\hbox{então}\hbox{serão}}\left\{\vcenter{
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{or} < \drawMagnitude[middle][1]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{or} < \drawMagnitude[middle][2]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{or} < \drawMagnitude[middle][3]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{or} < \drawMagnitude[middle][4]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{or} < \drawMagnitude[middle][5]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][1]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][2]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][3]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][4]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][1]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][5]{Dm}$}
 }\right.$
 \end{center}
 
@@ -8794,19 +8794,19 @@ Ou seja, se o dobro do primeiro for maior, igual ou menor que o dobro do segundo
 \begin{center}
 Se
 $\left\{\vcenter{
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{or} < \drawMagnitude[middle][1]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{or} < \drawMagnitude[middle][2]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{or} < \drawMagnitude[middle][3]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{or} < \drawMagnitude[middle][4]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{or} < \drawMagnitude[middle][5]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][1]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][2]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][3]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][4]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][5]{Bm}$}
 }\right.$
 
 $\vcenter{\hbox{então}\hbox{serão}}\left\{\vcenter{
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{or} < \drawMagnitude[middle][1]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{or} < \drawMagnitude[middle][2]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{or} < \drawMagnitude[middle][3]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{or} < \drawMagnitude[middle][4]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{or} < \drawMagnitude[middle][5]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][1]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][2]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][3]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][4]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][2]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][5]{Dm}$}
 }\right.$
 \end{center}
 
@@ -8815,19 +8815,19 @@ Em outros termos, se três vezes o primeiro for maior, igual ou menor que duas v
 \begin{center}
 Se
 $\left\{\vcenter{
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{or} < \drawMagnitude[middle][1]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{or} < \drawMagnitude[middle][2]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{or} < \drawMagnitude[middle][3]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{or} < \drawMagnitude[middle][4]{Bm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{or} < \drawMagnitude[middle][5]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][1]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][2]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][3]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][4]{Bm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Am} >, = \mbox{ ou } < \drawMagnitude[middle][5]{Bm}$}
 }\right.$
 
 $\vcenter{\hbox{então}\hbox{serão}}\left\{\vcenter{
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{or} < \drawMagnitude[middle][1]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{or} < \drawMagnitude[middle][2]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{or} < \drawMagnitude[middle][3]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{or} < \drawMagnitude[middle][4]{Dm}$}
-\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{or} < \drawMagnitude[middle][5]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][1]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][2]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][3]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][4]{Dm}$}
+\nointerlineskip\hbox{$\drawMagnitude[middle][3]{Cm} >, = \mbox{ ou } < \drawMagnitude[middle][5]{Dm}$}
 }\right.$
 \end{center}
 
@@ -8861,7 +8861,7 @@ e é lido, \\
 \enquote{assim como \drawMagnitude{A} está para \drawMagnitude{B}, \drawMagnitude{C} está para \drawMagnitude{D}.}
 
 E, se $\drawMagnitude{A} : \drawMagnitude{B} :: \drawMagnitude{C} : \drawMagnitude{D}$, inferiremos que, se \\
-$M \drawMagnitude{A} >, = \mbox{ ou } < m \drawMagnitude{B}$, then will \\
+$M \drawMagnitude{A} >, = \mbox{ ou } < m \drawMagnitude{B}$, então \\
 $M \drawMagnitude{C} >, = \mbox{ ou } < m \drawMagnitude{D}$.
 \end{center}
 
@@ -8882,7 +8882,7 @@ byMagnitudeSymbolDefine.IV("wedgeDown", byblue, 0);
 
 Seja $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$, então $3\drawMagnitude{I} : 2\drawMagnitude{II} :: 3\drawMagnitude{III} : 2\drawMagnitude{IV}$, cada equimúltiplo de $3\drawMagnitude{I}$ e $3\drawMagnitude{III}$ são equimúltiplos de \drawMagnitude{I} e \drawMagnitude{III}, e cada equimúltiplo de $2\drawMagnitude{II}$ e $2\drawMagnitude{IV}$, são equimúltiplos de \drawMagnitude{II} e \drawMagnitude{IV} \byref{prop:V.III}
 
-Ou seja, $M$ vezes $3\drawMagnitude{I}$ e $M$ vezes $3\drawMagnitude{III}$ são equimúltiplos de \drawMagnitude{I} e \drawMagnitude{III}, e $m$ vezes $2\drawMagnitude{II}$ e $m 2\drawMagnitude{IV}$ são equimúltiplos de $2\drawMagnitude{II}$ e $2\drawMagnitude{IV}$; mas $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$ \byref{\hypref}; $\therefore$ se $M 3\drawMagnitude{I} <, =, \mbox{ or } > m 2 \drawMagnitude{II}$, então $M 3\drawMagnitude{III} <, =, \mbox{ or } > m 2 \drawMagnitude{IV}$ \byref{def:V.V} e portanto $3\drawMagnitude{I} : 2\drawMagnitude{II} :: 3\drawMagnitude{III} : 2\drawMagnitude{IV}$ \byref{def:V.V}
+Ou seja, $M$ vezes $3\drawMagnitude{I}$ e $M$ vezes $3\drawMagnitude{III}$ são equimúltiplos de \drawMagnitude{I} e \drawMagnitude{III}, e $m$ vezes $2\drawMagnitude{II}$ e $m$ vezes $2\drawMagnitude{IV}$ são equimúltiplos de $2\drawMagnitude{II}$ e $2\drawMagnitude{IV}$; mas $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$ \byref{\hypref}; $\therefore$ se $M 3\drawMagnitude{I} >, =, \mbox{ ou } < m 2 \drawMagnitude{II}$, então $M 3\drawMagnitude{III} >, =, \mbox{ ou } < m 2 \drawMagnitude{IV}$ \byref{def:V.V} e, portanto, $3\drawMagnitude{I} : 2\drawMagnitude{II} :: 3\drawMagnitude{III} : 2\drawMagnitude{IV}$ \byref{def:V.V}
 
 O mesmo raciocínio é válido se qualquer outro equimúltiplo do primeiro e do terceiro for tomado, qualquer outro equimúltiplo do segundo e do quarto.
 
@@ -8931,8 +8931,8 @@ byMagnitudeDefine.IV(0, false)(1)(d);
 \begin{center}
 Seja $\drawMagnitude{I} = M'\drawMagnitude{II}$; e $\drawMagnitude{III} = M'\drawMagnitude{IV}$
 
-then $\drawMagnitude{I} - m'\drawMagnitude{II} = M'\drawMagnitude{II} -m'\drawMagnitude{II} = (M' - m') \drawMagnitude{II}$\\ % three times \mbox{ minus }
-and $\drawMagnitude{III} - m'\drawMagnitude{IV} = M'\drawMagnitude{IV} - m'\drawMagnitude{IV} = (M' - m') \drawMagnitude{IV}$. %three times \mbox{ minus }
+então $\drawMagnitude{I} - m'\drawMagnitude{II} = M'\drawMagnitude{II} -m'\drawMagnitude{II} = (M' - m') \drawMagnitude{II}$\\ % three times \mbox{ minus }
+e $\drawMagnitude{III} - m'\drawMagnitude{IV} = M'\drawMagnitude{IV} - m'\drawMagnitude{IV} = (M' - m') \drawMagnitude{IV}$. %three times \mbox{ minus }
 
 Portanto, $(M' - m') \drawMagnitude{II}$ e $(M' - m') \drawMagnitude{IV}$ são equimúltiplos de \drawMagnitude{II} e \drawMagnitude{IV}, e iguais a \drawMagnitude{II} e \drawMagnitude{IV}, quando $M' - m' = 1$. %três vezes \mbox{ menos }
 
@@ -8962,9 +8962,9 @@ byMagnitudeDefine.dIV(0, false)(2)(d);
 Deixe $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$; portanto, pela quinta definição, se $\drawMagnitude{dI} > \drawMagnitude{dII}$, então será $\drawMagnitude{dIII} > \drawMagnitude{dIV}$;
 
 mas se $\drawMagnitude{I} > \drawMagnitude{II}$, então $\drawMagnitude{dI} > \drawMagnitude{dII}$ e $\drawMagnitude{dIII} > \drawMagnitude{dIV}$,\\
-and $\therefore \drawMagnitude{III} > \drawMagnitude{IV}$.
+e $\therefore \drawMagnitude{III} > \drawMagnitude{IV}$.
 
-Similarly, if $\drawMagnitude{I} =, \mbox{ ou } < \drawMagnitude{II}$, then will $\drawMagnitude{III} =, \mbox{ ou } < \drawMagnitude{IV}$.
+Da mesma forma, se $\drawMagnitude{I} =, \mbox{ ou } < \drawMagnitude{II}$, então $\drawMagnitude{III} =, \mbox{ ou } < \drawMagnitude{IV}$.
 
 $\therefore$ Se for o primeiro de quatro, \&c.
 \end{center}
@@ -8997,9 +8997,9 @@ Se $M \magnitudeI < m \magnitudeII$, então $M \magnitudeIII < m \magnitudeIV$\\
 pela quinta definição.
 
 Suponha $M \magnitudeI < m \magnitudeII$, isto é, $m \magnitudeII > M \magnitudeI$,\\
-$\therefore M \magnitudeIII < m \magnitudeIV$, or, $m \magnitudeIV > M \magnitudeIII$;
+$\therefore M \magnitudeIII < m \magnitudeIV$, ou $m \magnitudeIV > M \magnitudeIII$;
 
-$\therefore$ if $m \magnitudeII > M \magnitudeI$, then will $m \magnitudeIV > M \magnitudeIII$.
+$\therefore$ se $m \magnitudeII > M \magnitudeI$, então $m \magnitudeIV > M \magnitudeIII$.
 
 Da mesma forma pode-se mostrar\\
 que, se $m \magnitudeII = \mbox{ ou } < M \magnitudeI$,\\
@@ -9045,14 +9045,14 @@ que $M \magnitudeIII$ é de \magnitudeIV.
 Portanto, se $M \magnitudeI$ for de \magnitudeII\ um múltiplo maior que $m \magnitudeII$ é, \\
 então $M \magnitudeIII$ é um múltiplo maior de \magnitudeIV\ do que $m \magnitudeIV$;
 
-that is, if $M \magnitudeI$ be greater than $m \magnitudeII$, then $M \magnitudeIII$ will be greater than $m \magnitudeIV$;
+isto é, se $M \magnitudeI$ for maior que $m \magnitudeII$, então $M \magnitudeIII$ será maior que $m \magnitudeIV$;
 
 da mesma maneira que pode ser mostrado, se $M \magnitudeI$ for igual a $m \magnitudeII$, então $M \magnitudeIII$ será igual a $m \magnitudeIV$.
 
-And, generally, if $M \magnitudeI >, = \mbox{ ou } < m \magnitudeII$\\
-than $M \magnitudeIII \mbox{ will be } >, = \mbox{ ou } < m \magnitudeIV$;
+E, em geral, se $M \magnitudeI >, = \mbox{ ou } < m \magnitudeII$\\
+então $M \magnitudeIII >, = \mbox{ ou } < m \magnitudeIV$;
 
-$\therefore$ by the fifth definition,\\
+$\therefore$ pela quinta definição,\\
 $\magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$
 
 A seguir, seja \magnitudeII a mesma parte de \magnitudeI \\
@@ -9186,7 +9186,7 @@ byMagnitudeSymbolDefine.IVa("rhombus", byyellow, 0);
 
 Quando dos equimúltiplos de quatro grandezas (tomadas como na quinta definição), o múltiplo da primeira é maior que o da segunda, mas o múltiplo da terceira não é maior que o múltiplo da quarta; então diz-se que a primeira tem para a segunda uma razão maior do que a terceira grandeza tem para a quarta: e, pelo contrário, diz-se que a terceira tem para a quarta uma razão menor do que a primeira tem para a segunda.
 
-Se, entre os equimúltiplos de quatro grandezas, comparados na quinta definição, encontrarmos $\drawMagnitude{I} > \drawMagnitude{II}$, mas $\drawMagnitude{III} = \mbox{ or } > \drawMagnitude{IV}$, ou se encontrarmos qualquer múltiplo particular $M'$ da primeira e terceira, e um múltiplo particular $m'$ da segunda e quarta, tal, que $M'$ vezes o primeiro é $> m'$ vezes o segundo, mas $M'$ vezes o terceiro não é $> m'$ vezes o quarto, ou seja.\ e.\ $= \mbox{ or } < m'$ vezes o quarto; então diz-se que o primeiro tem para o segundo uma proporção maior do que o terceiro para o quarto; ou a terceira tem para a quarta, sob tais circunstâncias, uma razão menor do que a primeira tem para a segunda: embora vários outros equimúltiplos possam tender a mostrar que as quatro grandezas são proporcionais.
+Se, entre os equimúltiplos de quatro grandezas, comparados na quinta definição, encontrarmos $\drawMagnitude{I} > \drawMagnitude{II}$, mas $\drawMagnitude{III} = \mbox{ ou } > \drawMagnitude{IV}$, ou se encontrarmos qualquer múltiplo particular $M'$ da primeira e terceira, e um múltiplo particular $m'$ da segunda e quarta, tal que $M'$ vezes o primeiro é $> m'$ vezes o segundo, mas $M'$ vezes o terceiro não é $> m'$ vezes o quarto, isto é, é $= \mbox{ ou } < m'$ vezes o quarto; então diz-se que o primeiro tem para o segundo uma proporção maior do que o terceiro para o quarto; ou a terceira tem para a quarta, sob tais circunstâncias, uma razão menor do que a primeira tem para a segunda: embora vários outros equimúltiplos possam tender a mostrar que as quatro grandezas são proporcionais.
 
 Esta definição será doravante expressa assim: -
 
@@ -9381,10 +9381,10 @@ byMagnitudeSymbolDefine.III("square", byyellow, 0);
 \problem{A}{quela}{magnitude que tem uma proporção maior do que outra tem a mesma magnitude, é a maior das duas; e aquela grandeza com a qual a mesma tem uma razão maior do que tem com outra grandeza, é a menor das duas.}
 
 \begin{center}
-Let $\drawMagnitude{I} : \drawMagnitude{III} > \drawMagnitude{II} : \drawMagnitude{III}$, then $\magnitudeI > \magnitudeII$.
+Seja $\drawMagnitude{I} : \drawMagnitude{III} > \drawMagnitude{II} : \drawMagnitude{III}$, então $\magnitudeI > \magnitudeII$.
 
-Pois se não, deixe $\magnitudeI = \mbox{ or } < \magnitudeII$;\\
-then, $\magnitudeI : \magnitudeIII = \magnitudeII : \magnitudeIII$ \byref{prop:V.VII} or\\
+Pois se não, deixe $\magnitudeI = \mbox{ ou } < \magnitudeII$;\\
+então, $\magnitudeI : \magnitudeIII = \magnitudeII : \magnitudeIII$ \byref{prop:V.VII} ou\\
 $\magnitudeI : \magnitudeIII < \magnitudeII : \magnitudeIII$ \byref{prop:V.VIII} e (invertido.), o que é um absurdo segundo a hipótese.
 
 $\therefore \magnitudeI \mbox{ is } \neq \mbox{ ou } < \magnitudeII$, and\\ % \mbox{ is not } =
@@ -9658,8 +9658,8 @@ $\therefore M \magnitudeIII + M \magnitudeIV > m \magnitudeIV + M \magnitudeIV$;
 $\therefore M \magnitudeIII > m \magnitudeIV$, by taking $M \magnitudeIV$ from both sides:\\
 that is, when $M \magnitudeI > m \magnitudeII$, then $M \magnitudeIII > m \magnitudeIV$.
 
-Da mesma maneira pode ser provado que se $M \magnitudeI = \mbox{ or } < m \magnitudeII$, então $M \magnitudeIII = \mbox{ or } < m \magnitudeIV$;\\
-and $\therefore \magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$ \byref{def:V.V}
+Da mesma maneira pode ser provado que se $M \magnitudeI = \mbox{ ou } < m \magnitudeII$, então $M \magnitudeIII = \mbox{ ou } < m \magnitudeIV$;\\
+e $\therefore \magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$ \byref{def:V.V}
 
 $\therefore$ Se as magnitudes forem tomadas em conjunto, \&c.
 \end{center}
@@ -10144,13 +10144,13 @@ Quando três grandezas são proporcionais, diz-se que a primeira tem para a terc
 Por exemplo, se $\varA$, $\varB$, $\varC$, forem proporcionais continuados, ou seja, $\varA : \varB :: \varB : \varC$, $\varA$ tem que $\varC$ o razão duplicada de $\varA : \varB$;
 
 \begin{center}
-or $\dfrac{\varA}{\varC} = \mbox{ a praça de } \dfrac{\varA}{\varB}$.
+ou $\dfrac{\varA}{\varC} = \mbox{ o quadrado de } \dfrac{\varA}{\varB}$.
 
 Esta propriedade será mais facilmente observada nas grandezas $\vararS$, $\varar$, $\vara$, para $\vararS : \varar :: \varar : \vara$;
 
-and $\dfrac{\vararS}{\vara} = r^2 = \mbox{ a praça de } \dfrac{\vararS}{\varar} = r$,\\
-or of $\vara$, $\varar$, $\vararS$;\\
-for $\dfrac{\vara}{\vararS} = \dfrac{1}{r^2} = \mbox{ o quadrado de } \dfrac{\vara}{\varar} = \dfrac{1}{r}$.
+e $\dfrac{\vararS}{\vara} = r^2 = \mbox{ o quadrado de } \dfrac{\vararS}{\varar} = r$,\\
+ou, para $\vara$, $\varar$, $\vararS$;\\
+$\dfrac{\vara}{\vararS} = \dfrac{1}{r^2} = \mbox{ o quadrado de } \dfrac{\vara}{\varar} = \dfrac{1}{r}$.
 \end{center}
 
 \vfill\pagebreak
@@ -10176,17 +10176,17 @@ Esta definição será melhor compreendida e aplicada a um número maior de magn
 
 \begin{center}
 Sejam $\vararQ$, $\vararS$, $\varar$, $\vara$ quatro magnitudes em proporção contínua, ou seja, $\vararQ : \vararS :: \vararS : \varar :: \varar : \vara$,\\
-then $\dfrac{\vararQ}{\vara} = r^3 = \mbox{ o cubo de } \dfrac{\vararQ}{\vararS} = r$.
+então $\dfrac{\vararQ}{\vara} = r^3 = \mbox{ o cubo de } \dfrac{\vararQ}{\vararS} = r$.
 \end{center}
 
 Ou seja $ar^5$, $ar^4$, $ar^3$, $ar^2$, $ar$, $a$, seis magnitudes em proporção, isto é
 
 \begin{center}
 $ar^5 : ar^4 :: ar^4 : ar^3 :: ar^3 : ar^2 :: ar^2 : ar :: ar : a$,\\
-then the ratio $\dfrac{ar^5}{a} = r^5 = \mbox{ a quinta potência de } \dfrac{ar^5}{ar^4} = r$
+então a razão $\dfrac{ar^5}{a} = r^5 = \mbox{ a quinta potência de } \dfrac{ar^5}{ar^4} = r$
 \end{center}
 
-Or, let $a$, $ar$, $ar^2$, $ar^3$, $ar^4$, be five magnitudes in continued proportion; then $\dfrac{a}{ar^4} = \dfrac{1}{r^4} = \mbox{ the fourth power of } \dfrac{a}{ar} = \dfrac{1}{r}$.
+Ou, sejam $a$, $ar$, $ar^2$, $ar^3$, $ar^4$ cinco magnitudes em proporção contínua; então $\dfrac{a}{ar^4} = \dfrac{1}{r^4} = \mbox{ a quarta potência de } \dfrac{a}{ar} = \dfrac{1}{r}$.
 
 \vfill\pagebreak
 
@@ -10240,7 +10240,7 @@ E das grandezas $\varA, \varB, \varC, \varD, \varE, \varF$, da mesma espécie, $
 
 \begin{center}
 $\varA : \varB$, $\varB : \varC$, $\varC : \varD$, $\varD : \varE$, $\varE : \varF$;\\
-for $\varA \times \varB \times \varC \times \varD \times \varE : \varB \times \varC \times \varD \times \varE \times \varF$,\\
+pois $\varA \times \varB \times \varC \times \varD \times \varE : \varB \times \varC \times \varD \times \varE \times \varF$,\\
 ou $\dfrac{\varA \times \varB \times \varC \times \varD \times \varE}{\varB \times \varC \times \varD \times \varE \times \varF} = \dfrac{\varA}{\varF}$, ou a razão de $\varA : \varF$.
 \end{center}
 
@@ -10263,7 +10263,7 @@ ou $\dfrac{\varA \times \varB \times \varC \times \varD \times \varE}{\varB \tim
 Seja $\varA : \varB :: \varF : \varG$,\\
  $\varB : \varC :: \varG : \varH$,\\
 $\varC : \varD :: \varH : \varK$,\\
-and $\varD : \varE :: \varK : \varL$,
+e $\varD : \varE :: \varK : \varL$,
 \end{center}
 
 \marginpar{
@@ -10274,12 +10274,12 @@ and $\varD : \varE :: \varK : \varL$,
 Então, a proporção que é composta pelas razões de $\varA : \varB$, $\varB : \varC$, $\varC : \varD$, $\varD : \varE$ ou a razão de $\varA : \varE$ é a mesma que a proporção composta pelas proporções $\varF : \varG$, $\varG : \varH$, $\varH : \varK$, $\varK : \varL$ ou a razão de $\varF : \varL$.
 
 \begin{center}
-For $\dfrac{\varA}{\varB} = \dfrac{\varF}{\varG}$,\\
+Pois $\dfrac{\varA}{\varB} = \dfrac{\varF}{\varG}$,\\
 $\dfrac{\varB}{\varC} = \dfrac{\varG}{\varH}$,\\
 $\dfrac{\varC}{\varD} = \dfrac{\varH}{\varK}$,\\
-and $\dfrac{\varD}{\varE} = \dfrac{\varK}{\varL}$;\\
+e $\dfrac{\varD}{\varE} = \dfrac{\varK}{\varL}$;\\
 $\therefore \dfrac{\varA \times \varB \times \varC \times \varD}{\varB \times \varC \times \varD \times \varE} = \dfrac{\varF \times \varG \times \varH \times \varK}{\varG \times \varH \times \varK \times \varL}$,\\
-and $\therefore \dfrac{\varA}{\varE} = \dfrac{\varF}{\varL}$,\\
+e $\therefore \dfrac{\varA}{\varE} = \dfrac{\varF}{\varL}$,\\
 ou a razão de $\varA : \varE$ é igual à razão $\varF : \varL$.
 \end{center}
 
@@ -10295,15 +10295,15 @@ $\varD : \varE :: \varF : \varG$,
 Então, a proporção que é composta pelas razões de $\varA : \varB$, $\varB : \varC$, $\varC : \varD$, $\varD : \varE$ ou a razão de $\varA : \varE$ é a mesma que a proporção composta pelas razões de $\varK : \varL$, $\varH : \varK$, $\varG : \varH$, $\varF : \varG$ ou a razão de $\varF : \varL$
 
 \begin{center}
-For $\dfrac{\varA}{\varB} = \dfrac{\varK}{\varL}$,\\
+Pois $\dfrac{\varA}{\varB} = \dfrac{\varK}{\varL}$,\\
 $\dfrac{\varB}{\varC} = \dfrac{\varH}{\varK}$,\\
 $\dfrac{\varC}{\varD} = \dfrac{\varG}{\varH}$,\\
-and $\dfrac{\varD}{\varE} = \dfrac{\varF}{\varG}$;\\
+e $\dfrac{\varD}{\varE} = \dfrac{\varF}{\varG}$;\\
 $\therefore \dfrac{\varA \times \varB \times \varC \times \varD}{\varB \times \varC \times \varD \times \varE} = \dfrac{\varK \times \varH \times \varG \times \varF}{\varL \times \varK \times \varH \times \varG}$,\\
-and $\therefore \dfrac{\varA}{\varE} = \dfrac{\varF}{\varL}$,\\
+e $\therefore \dfrac{\varA}{\varE} = \dfrac{\varF}{\varL}$,\\
 ou a razão de $\varA : \varE$ é igual à razão $\varF : \varL$.
 
-$\therefore$ Ratios which are compounded, \&c.
+$\therefore$ Razões compostas pelas mesmas razões, \&c.
 \end{center}
 \vfill\pagebreak
 
@@ -10326,7 +10326,7 @@ $\therefore$ Ratios which are compounded, \&c.
 \def\varX{\textcolor{byyellow}{X}}
 \def\varY{\textcolor{byyellow}{Y}}
 \def\varZ{\textcolor{byyellow}{Z}}
-\problem{I}{f}{several ratios be the same to several ratios, each to each, the ratio which is compounded of ratios which are the same to the first ratios, each to each, shall be the same to the ratio compounded of ratios which are the same to the other ratios, each to each.}
+\problem{S}{e}{várias razões forem iguais a várias outras razões, cada uma à sua correspondente, a razão composta das razões que são iguais às primeiras, cada uma à sua correspondente, será igual à razão composta das razões que são iguais às outras, cada uma à sua correspondente.}
 
 \begin{center}
 %\unprotect
@@ -10518,7 +10518,7 @@ $\varO$ & $\varP$, & $\varQ$ & $\varR$, & $\varS$ & $\varT$, & $\varV$ & $\varW$
 %}}\hfill~
 %\protect
 
-Let $\varA : \varB$, $\varC : \varD$, $\varE : \varF$, $\varG : \varH$, $\varK : \varL$, $\varM : \varN$, be the first ratios, and $\varO : \varP$, $\varQ : \varR$, $\varS : \varT$, $\varV : \varW$, $\varX : \varY$, the other ratios;
+Sejam $\varA : \varB$, $\varC : \varD$, $\varE : \varF$, $\varG : \varH$, $\varK : \varL$, $\varM : \varN$ as primeiras razões, e $\varO : \varP$, $\varQ : \varR$, $\varS : \varT$, $\varV : \varW$, $\varX : \varY$ as outras razões;
 
 \begin{center}
 $\begin{aligned}
@@ -10536,7 +10536,7 @@ Então, pela definição de um razão composta, a proporção de $\vara : \varg$
 
 \begin{center}
 $\begin{aligned}
-\mbox{Also, }
+\mbox{Além disso, }
 \varO : \varP &= h : k ,\\
 \varQ : \varR &= k : l ,\\
 \varS : \varT &= l : m ,\\
@@ -10548,7 +10548,7 @@ $\begin{aligned}
 Então a razão de $h : p$ será a proporção composta pelas razões de $h : k$, $k : l$, $l : m$, $m : n$, $n : p$, que são iguais às proporções de $\varO : \varP$, $\varQ : \varR$, $\varS : \varT$, $\varV : \varW$, $\varX : \varY$, cada um para cada.
 
 \begin{center}
-$\therefore$ by the hypothesis $\vara : \varg = h : p$.
+$\therefore$ pela hipótese, $\vara : \varg = h : p$.
 \end{center}
 
 Além disso, deixe a proporção que é composta pelas proporções de $\varA : \varB$, $\varC : \varD$, duas das primeiras proporções (ou as proporções de $\vara : \varc$ para $\varA : \varB = \vara : \varb$ e $\varC : \varD = \varb : \varc$), seja a mesma que a proporção de $a : d$, que é composta pelas proporções de $a : b$, $b : c$, $c : d$, que são iguais às proporções de $\varO : \varP$, $\varQ : \varR$, $\varS : \varT$, três das outras proporções.
@@ -10794,7 +10794,7 @@ draw byLabelsOnPolygon(C, A, Q)(ALL_LABELS, 0);
 }
 e sua base são respectivamente equimúltiplos de \polygonACD\ e da base \drawUnitLine{CD}.
 
-$\therefore$ se $m$ ou $6$ vezes \polygonABC\ $>, = \mbox{ or } < n$ ou $5$ vezes \polygonACD\ então $m$ ou $6$ vezes \drawUnitLine{BC} $>, = \mbox{ or } < n$ ou $5$ vezes \drawUnitLine{CD}, $m$ e $n$ representam todos os múltiplos tomados como na quinta definição do Quinto Livro. Embora tenhamos mostrado apenas que esta propriedade existe quando $m$ é igual a $6$ e $n$ é igual a $5$, ainda assim é evidente que a propriedade é válida para cada valor múltiplo que pode ser dado a $m$ e a $n$.
+$\therefore$ se $m$ vezes \polygonABC\ $>, = \mbox{ ou } < n$ vezes \polygonACD$, então $m$ vezes \drawUnitLine{BC} $>, = \mbox{ ou } < n$ vezes \drawUnitLine{CD}$, onde $m$ e $n$ representam quaisquer múltiplos tomados como na quinta definição do Quinto Livro. Embora tenhamos mostrado isso explicitamente apenas no caso em que $m = 6$ e $n = 5$, é evidente que a propriedade vale para quaisquer valores de $m$ e $n$.
 
 \begin{center}
 $\therefore \polygonABC\ : \polygonACD\ :: \drawUnitLine{BC} : \drawUnitLine{CD}$ \byref{def:V.V}
@@ -11308,12 +11308,12 @@ e trace $\drawSizedLine{DF} \parallel \drawSizedLine{BE}$.\\
 
 \drawSizedLine{AF} é a parte necessária do \drawSizedLine{AF,FB}.
 
-For since $\drawSizedLine{DF} \parallel \drawSizedLine{BE}$\\
+Pois, como $\drawSizedLine{DF} \parallel \drawSizedLine{BE}$\\
 $\drawSizedLine{AF} : \drawSizedLine{FB} :: \drawSizedLine{AD} : \drawSizedLine{DC,CE}$ \byref{prop:VI.II},\\
-and by composition \byref{prop:V.XVIII};\\
+e, por composição, \byref{prop:V.XVIII};\\
 $\drawSizedLine{AF,FB} : \drawSizedLine{AF} :: \drawSizedLine{AD,DC,CE} : \drawSizedLine{AD}$;
 
-but \drawSizedLine{AD,DC,CE} contains \drawSizedLine{AD} as often as \drawSizedLine{AF,FB} contains the required part \byref{\constref};
+mas \drawSizedLine{AD,DC,CE} contém \drawSizedLine{AD} tantas vezes quantas \drawSizedLine{AF,FB} contém a parte requerida \byref{\constref};
 
 $\therefore$ \drawSizedLine{AF} é a peça necessária.
 \end{center}
@@ -11411,18 +11411,18 @@ draw byLabelsOnPolygon(E, C, A, B, D)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(C', A', noPoint)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{T}{o}{find a third proportional to two given straight lines (\drawSizedLine{A'C'} and \drawSizedLine{AB}).}
+\problem{P}{ara}{encontrar uma terceira proporcional a duas retas dadas (\drawSizedLine{A'C'} e \drawSizedLine{AB}).}
 
 \begin{center}
 Em qualquer extremidade da linha dada \drawSizedLine{AB} trace \drawSizedLine{AC,CE} fazendo um ângulo;\\
 pegue $\drawSizedLine{AC} = \drawSizedLine{A'C'}$ e trace \drawSizedLine{BC};\\
-make $\drawSizedLine{BD} = \drawSizedLine{A'C'}$,\\
+faça $\drawSizedLine{BD} = \drawSizedLine{A'C'}$,\\
 e trace $\drawSizedLine{DE} \parallel \drawSizedLine{BC}$; \byref{prop:I.XXXI}\\
 \drawSizedLine{CE} é o terceiro proporcional a \drawSizedLine{AB} e \drawSizedLine{A'C'}.
 
-For since $\drawSizedLine{BC} \parallel \drawSizedLine{DE}$,\\
+Pois, como $\drawSizedLine{BC} \parallel \drawSizedLine{DE}$,\\
 $\therefore \drawSizedLine{AB} : \drawSizedLine{BD} :: \drawSizedLine{AC} : \drawSizedLine{CE}$ \byref{prop:VI.II};\\
-but $\drawSizedLine{BD} = \drawSizedLine{AC} = \drawSizedLine{A'C'}$ \byref{\constref};\\
+mas $\drawSizedLine{BD} = \drawSizedLine{AC} = \drawSizedLine{A'C'}$ \byref{\constref};\\
 $\therefore \drawSizedLine{AB} : \drawSizedLine{A'C'} :: \drawSizedLine{A'C'} : \drawSizedLine{CE}$ \byref{prop:V.VII}.
 \end{center}
 
@@ -12094,21 +12094,21 @@ draw byLabelLine(1)(AB,CD,EF,GH,O,P);
 }
 \drawCurrentPictureInMargin
 \initialIndentation{9}
-\problem{I}{f}{four straight lines be proportional ($\drawUnitLine{AB} : \drawUnitLine{CD} :: \drawUnitLine{EF} : \drawUnitLine{GH}$), the similar rectilinear figures similarly described on them are also proportional.\\
+\problem{S}{e}{quatro retas forem proporcionais ($\drawUnitLine{AB} : \drawUnitLine{CD} :: \drawUnitLine{EF} : \drawUnitLine{GH}$), as figuras retilíneas semelhantes descritas de modo semelhante sobre elas também serão proporcionais.\\
 E se quatro figuras retilíneas semelhantes, descritas de forma semelhante em quatro linhas retas, forem proporcionais, as linhas retas também serão proporcionais.}
 
 \startsubproposition{Parte I.}
 \begin{center}
 Considere \drawUnitLine{O} um terço proporcional a \drawUnitLine{AB} e \drawUnitLine{CD}, e \drawUnitLine{P} um terço proporcional a \drawUnitLine{EF} e \drawUnitLine{GH} \byref{prop:VI.XI};
 
-since $\drawUnitLine{AB} : \drawUnitLine{CD} :: \drawUnitLine{EF} : \drawUnitLine{GH}$ \byref{\hypref}\\
+como $\drawUnitLine{AB} : \drawUnitLine{CD} :: \drawUnitLine{EF} : \drawUnitLine{GH}$ \byref{\hypref}\\
 $\drawUnitLine{CD} : \drawUnitLine{O} :: \drawUnitLine{GH} : \drawUnitLine{P}$ \byref{\constref}
 
 $\therefore$ ex \ae quali,\\
 $\drawUnitLine{AB} : \drawUnitLine{O} :: \drawUnitLine{EF} : \drawUnitLine{P}$;
 
-but $\drawPolygon{AB} : \drawPolygon{CD} :: \drawUnitLine{AB} : \drawUnitLine{O}$ \byref{prop:VI.XX},\\
-and $\drawPolygon{EF} : \drawPolygon{GH} :: \drawUnitLine{EF} : \drawUnitLine{P}$;
+mas $\drawPolygon{AB} : \drawPolygon{CD} :: \drawUnitLine{AB} : \drawUnitLine{O}$ \byref{prop:VI.XX},\\
+e $\drawPolygon{EF} : \drawPolygon{GH} :: \drawUnitLine{EF} : \drawUnitLine{P}$;
 
 $\therefore \drawPolygon{AB} : \drawPolygon{CD} :: \drawPolygon{EF} : \drawPolygon{GH}$ \byref{prop:V.XI}.
 \end{center}
@@ -12123,7 +12123,7 @@ $\drawPolygon{AB} : \drawPolygon{CD} :: \drawPolygon{EF} : \drawPolygon{GH}$ \by
 
 $\therefore \drawUnitLine{AB} : \drawUnitLine{O} :: \drawUnitLine{EF} : \drawUnitLine{P}$ \byref{\constref},
 
-and $\therefore \drawUnitLine{AB} : \drawUnitLine{CD} :: \drawUnitLine{EF} : \drawUnitLine{GH}$ \byref{prop:V.XI}.
+e $\therefore \drawUnitLine{AB} : \drawUnitLine{CD} :: \drawUnitLine{EF} : \drawUnitLine{GH}$ \byref{prop:V.XI}.
 \end{center}
 
 \qed
@@ -12167,7 +12167,7 @@ e $\drawAngle{GCE} = \drawAngle{BCD}$ \byref{\hypref},\\
 $\drawAngle{GCE} + \drawAngle{DCG} = \drawTwoRightAngles$,\\
 e $\therefore$ \drawUnitLine{CE} e \drawUnitLine{DC} formam uma linha reta \byref{prop:I.XIV};
 
-complete \drawPolygon[bottom]{CDHG}.
+complete o \drawPolygon[bottom]{CDHG}.
 
 Como $\polygonABCD\ : \polygonCDHG\ :: \drawUnitLine{BC} : \drawUnitLine{CG}$ \byref{prop:VI.I},\\
 e $\polygonCDHG\ : \polygonEFGC\ :: \drawUnitLine{DC} : \drawUnitLine{CE}$ \byref{prop:VI.I},\\
@@ -12211,7 +12211,7 @@ draw byLabelsOnPolygon(A, G, D, K, C, H, B, E)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(H, F, E)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem[4]{I}{n}{any parallelogram
+\problem[4]{E}{m}{qualquer paralelogramo
 (\drawFromCurrentPicture[bottom][parallelogramABCD]{
 draw byNamedLine(AE,EB,BH,HC,FH,EF);
 draw byNamedPolygon(GFKD,AGF,FCK);
@@ -12223,7 +12223,7 @@ draw byNamedLine(FH,HC);
 draw byNamedPolygon(FCK);
 draw byLabelsOnPolygon(K, C, H, F)(ALL_LABELS, 0);
 }
-and
+e
 \drawFromCurrentPicture[bottom][parallelogramAEFG]{
 draw byNamedLine(AE,EF);
 draw byNamedPolygon(AGF);
@@ -12233,7 +12233,7 @@ que estão aproximadamente na diagonal são semelhantes ao todo e entre si.}
 
 \begin{center}
 Como \parallelogramABCD\ e \parallelogramAEFG\ possuem um ângulo comum eles são equiangulares;\\
-but $\because \drawUnitLine{GF} \parallel \drawUnitLine{DK,KC}$\\ %because
+e, como $\because \drawUnitLine{GF} \parallel \drawUnitLine{DK,KC}$\\ %because
 \drawFromCurrentPicture[bottom]{
 startGlobalRotation(180-angle(A-C));
 startAutoLabeling;
@@ -12241,7 +12241,7 @@ draw byNamedPolygon(AGF);
 stopAutoLabeling;
 stopGlobalRotation;
 }
-and
+e
 \drawFromCurrentPicture[bottom]{
 startGlobalRotation(180-angle(A-C));
 startAutoLabeling;
@@ -12249,7 +12249,7 @@ draw byNamedPolygon(GFKD,AGF,FCK);
 stopAutoLabeling;
 stopGlobalRotation;
 }
-are similar \byref{prop:VI.IV},\\
+são semelhantes \byref{prop:VI.IV},\\
 $\therefore \drawUnitLine{GA} : \drawUnitLine{GF} :: \drawUnitLine{GA,DG} : \drawUnitLine{DK,KC}$;
 
 e os restantes lados opostos são iguais a esses,\\
@@ -12391,13 +12391,13 @@ draw byLabelsOnPolygon(K, H, A)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 draw byLabelsOnPolygon(E, F, A)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem{I}{f}{similar and similarly posited parallelograms
+\problem{S}{e}{paralelogramos semelhantes e semelhantemente situados
 (\drawFromCurrentPicture[bottom][parallelogramAEFG]{
 draw byNamedPolygon(FHKE);
 draw byNamedLine(KAt,AGt,GHt);
 draw byLabelsOnPolygon(A, G, F, E)(ALL_LABELS, 0);
 }
-and
+e
 \drawFromCurrentPicture[bottom][parallelogramABCD]{
 draw byNamedPolygon(GDCBEF);
 draw byNamedLine(EAt,AC);
@@ -12407,7 +12407,7 @@ draw byLabelsOnPolygon(A, D, C, B)(ALL_LABELS, 0);
 têm um ângulo comum, eles têm aproximadamente a mesma diagonal.}
 
 \begin{center}
-For, if possible, let
+Pois, se possível, seja
 \drawFromCurrentPicture[bottom][lineAHC]{
 startGlobalRotation(180-angle(A-C));
 draw byNamedArbitraryFigure(AHC);
@@ -12737,7 +12737,7 @@ byLineDefine.EDt(E, D, byblack, SOLID_LINE, THIN_WIDTH);
 draw byLabelsOnPolygon(E, C, B, A, C, D)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{I}{f}{two triangles
+\problem{S}{e}{dois triângulos
 (\drawFromCurrentPicture[bottom]{
 startTempAngleScale(angleScale*3/5);
 draw byNamedAngle(A, B, BCA);
@@ -13047,16 +13047,16 @@ draw byLabelsOnPolygon(C, D, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 
 \begin{center}
 De \drawAngle{A} de \drawLine[bottom]{CA,DC,BD,AB}\\
-draw $\drawUnitLine{AD} \perp \drawUnitLine{BD,DC}$;\\
+trace $\drawUnitLine{AD} \perp \drawUnitLine{BD,DC}$;\\
 então deve $\drawUnitLine{AB} \times \drawUnitLine{CA} = \drawUnitLine{AD} \times $ o diâmetro do círculo descrito.
 
 Descreva \drawCircle[middle][1/4]{O} \byref{prop:IV.V}, trace seu diâmetro \drawUnitLine{AE} e trace \drawUnitLine{CE};\\
-then $\because \drawAngle{D} = \drawAngle{BCA,ECB}$  \byref{\constref,prop:III.XXXI};\\ %because
-and $\drawAngle{B} = \drawAngle{E}$ \byref{prop:III.XXI};\\
+então $\because \drawAngle{D} = \drawAngle{BCA,ECB}$  \byref{\constref,prop:III.XXXI};\\ %because
+e $\drawAngle{B} = \drawAngle{E}$ \byref{prop:III.XXI};\\
 $\therefore$ \drawLine[bottom]{AD,BD,AB} é equiangular a \drawLine[middle]{CA,CE,AE} \byref{prop:VI.IV};
 
 $\therefore \drawUnitLine{AB} : \drawUnitLine{AD} :: \drawUnitLine{AE} : \drawUnitLine{CA}$;\\
-and $\therefore \drawUnitLine{AB} \times \drawUnitLine{CA} = \drawUnitLine{AD} \times \drawUnitLine{AE}$ \byref{prop:VI.XVI}.
+e $\therefore \drawUnitLine{AB} \times \drawUnitLine{CA} = \drawUnitLine{AD} \times \drawUnitLine{AE}$ \byref{prop:VI.XVI}.
 \end{center}
 
 \qed
@@ -13102,18 +13102,18 @@ draw byLabelsOnPolygon(D, E, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \begin{center}
 Seja \drawLine{DA,CD,BC,AB} qualquer figura quadrilátera inscrito em \drawCircle[middle][1/5]{O};\\
 e trace \drawUnitLine{BE,ED} e \drawUnitLine{AC};\\
-then $\drawUnitLine{BE,ED} \times \drawUnitLine{AC} = \drawUnitLine{AB} \times \drawUnitLine{CD} + \drawUnitLine{DA} \times \drawUnitLine{BC}$.
+então $\drawUnitLine{BE,ED} \times \drawUnitLine{AC} = \drawUnitLine{AB} \times \drawUnitLine{CD} + \drawUnitLine{DA} \times \drawUnitLine{BC}$.
 
-Make $\drawAngle{EAB} = \drawAngle{DAC}$ \byref{prop:I.XXIII},\\
-$\therefore \drawAngle{EAB,CAE} = \drawAngle{CAE,DAC}$; and $\drawAngle{BCA} = \drawAngle{D}$ \byref{prop:III.XXI};
+Faça $\drawAngle{EAB} = \drawAngle{DAC}$ \byref{prop:I.XXIII},\\
+$\therefore \drawAngle{EAB,CAE} = \drawAngle{CAE,DAC}$; e $\drawAngle{BCA} = \drawAngle{D}$ \byref{prop:III.XXI};
 
 $\therefore \drawUnitLine{DA} : \drawUnitLine{ED} :: \drawUnitLine{AC} : \drawUnitLine{BC}$ \byref{prop:VI.IV};\\
-and $\therefore \drawUnitLine{ED} \times \drawUnitLine{AC} = \drawUnitLine{DA} \times \drawUnitLine{BC}$ \byref{prop:VI.XVI};\\
-again, $\because \drawAngle{EAB} = \drawAngle{DAC}$ \byref{\constref},\\ %because
-and $\drawAngle{B} = \drawAngle{ACD}$ \byref{prop:III.XXI};\\
+e $\therefore \drawUnitLine{ED} \times \drawUnitLine{AC} = \drawUnitLine{DA} \times \drawUnitLine{BC}$ \byref{prop:VI.XVI};\\
+novamente, $\because \drawAngle{EAB} = \drawAngle{DAC}$ \byref{\constref},\\ %because
+e $\drawAngle{B} = \drawAngle{ACD}$ \byref{prop:III.XXI};\\
 $\therefore \drawUnitLine{AB} : \drawUnitLine{BE} :: \drawUnitLine{AC} : \drawUnitLine{CD}$ \byref{prop:VI.IV};\\
-and $\therefore \drawUnitLine{BE} \times \drawUnitLine{AC} = \drawUnitLine{AB} \times \drawUnitLine{CD}$ \byref{prop:VI.XVI};\\
-but, from above, $\drawUnitLine{ED} \times \drawUnitLine{AC} = \drawUnitLine{DA} \times \drawUnitLine{BC}$;\\
+e $\therefore \drawUnitLine{BE} \times \drawUnitLine{AC} = \drawUnitLine{AB} \times \drawUnitLine{CD}$ \byref{prop:VI.XVI};\\
+mas, do que foi mostrado acima, $\drawUnitLine{ED} \times \drawUnitLine{AC} = \drawUnitLine{DA} \times \drawUnitLine{BC}$;\\
 $\therefore \drawUnitLine{BE,ED} \times \drawUnitLine{AC} = \drawUnitLine{AB} \times \drawUnitLine{CD} + \drawUnitLine{DA} \times \drawUnitLine{BC}$ \byref{prop:II.I}.
 \end{center}
 
