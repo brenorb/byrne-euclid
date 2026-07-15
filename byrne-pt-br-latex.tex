@@ -1,6 +1,9 @@
 \documentclass[booklanguage=brazilian]{byrnebook}
 %\usepackage{lua-visual-debug}
 
+% References used by translator's notes point to the bibliography at the end.
+\newcommand{\bookbibref}[2]{\hyperref[#1]{\textbf{[#2]}}}
+
 % Define missing angle style functions and constants for SOLID_SECTOR, ARC_SECTOR, etc.
 % Note: SOLID_SECTOR, ARC_SECTOR, etc. are used as string literals in the code,
 % but MetaPost needs the corresponding functions to exist.
@@ -389,7 +392,7 @@ Mas $\drawAngle{BCA,DCB} = \drawAngle{ABC,CBE}$, $\therefore \drawAngle{BCA} = \
 \emph{Anexando Letras ao Diagrama.}
 \end{center}
 
-Seja os lados iguais AB e AC serem prolongados através das extremidades BC, do terceiro lado, e na parte prolongada BD de qualquer um, seja assumido qualquer ponto D, e do outro seja cortado AE igual a AD \byref{prop:I.III}. Seja os pontos E e D, assim tomados nos lados prolongados, serem conectados por linhas retas DC e BE com as extremidades alternadas do terceiro lado do triângulo.
+Sejam os lados iguais AB e AC prolongados através das extremidades BC, do terceiro lado; na parte prolongada BD de qualquer um, tome-se um ponto D, e no outro corte-se AE igual a AD \byref{prop:I.III}. Sejam os pontos E e D, assim tomados nos lados prolongados, ligados por retas DC e BE às extremidades alternadas do terceiro lado do triângulo.
 
 Nos triângulos DAC e EAB os lados DA e AC são respectivamente iguais a EA e AB, e o ângulo incluído A é comum a ambos os triângulos. Portanto \byref{prop:I.IV} a linha DC é igual a BE, o ângulo ADC ao ângulo AEB, e o ângulo ACD ao ângulo ABE; se das linhas iguais AD e AE forem tomados os lados iguais AB e AC, os restos BD e CE serão iguais. Portanto nos triângulos BDC e CEB, os lados BD e DC são respectivamente iguais a CE e EB, e os ângulos D e E incluídos por esses lados também são iguais. Portanto \byref{prop:I.IV} os ângulos DBC e ECB, que são aqueles incluídos pelo terceiro lado BC e os prolongamentos dos lados iguais AB e AC são iguais. Também os ângulos DCB e EBC são iguais se esses iguais forem tomados dos ângulos DCA e EBA antes provados iguais, os restos, que são os ângulos ABC e ACB opostos aos lados iguais, serão iguais.
 
@@ -998,7 +1001,7 @@ Um triângulo escaleno é aquele que não tem dois lados iguais.
 \startdefinition{}\label{def:I.XXXIV}
 \begin{center}
 Todas as outras figuras quadriláteras são chamadas \emph{trapezia}.
-\footnote{Mantém-se aqui o termo \emph{trapezium} para evitar confusão com o \textbf{trapézio} moderno. Em Euclides, o termo grego correspondente não designa o quadrilátero com um par de lados paralelos, mas a classe residual dos quadriláteros que não são quadrado, oblongo, losango ou romboide. Já no uso moderno, tanto em português quanto em grego, o termo passou a designar o quadrilátero com dois lados opostos paralelos. Cf. o \emph{Λεξικό da Língua Grega Moderna}, verbete \textbf{τραπέζιο}; e o manual do ΙΕΠ, p. 46: “Τραπέζιο ονομάζει όχι ό,τι σήμερα εννοούμε με τον όρο αυτό, δηλαδή τετράπλευρο με δύο μόνο πλευρές παράλληλες, αλλά οποιοδήποτε τετράπλευρο. Ο όρος τραπέζιο, με τη σύγχρονη έννοια, απαντάται αργότερα στον Αρχιμήδη” (\emph{tradução livre}: “Ele chama de trapézio não aquilo que hoje entendemos por esse termo, isto é, um quadrilátero com apenas dois lados paralelos, mas qualquer quadrilátero. O termo trapézio, no sentido moderno, aparece mais tarde em Arquimedes.”). Ver referências [F6], [F7] e [F8] na bibliografia do relatório de auditoria.}
+\footnote{Mantém-se aqui o termo \emph{trapezium} para evitar confusão com o \textbf{trapézio} moderno. Em Euclides, o termo grego correspondente não designa o quadrilátero com um par de lados paralelos, mas a classe residual dos quadriláteros que não são quadrado, oblongo, losango ou romboide. Já no uso moderno, tanto em português quanto em grego, o termo passou a designar o quadrilátero com dois lados opostos paralelos. Cf. o \emph{Λεξικό da Língua Grega Moderna}, verbete \textbf{τραπέζιο}; e o manual do ΙΕΠ, p. 46: “Τραπέζιο ονομάζει όχι ό,τι σήμερα εννοούμε με τον όρο αυτό, δηλαδή τετράπλευρο με δύο μόνο πλευρές παράλληλες, αλλά οποιοδήποτε τετράπλευρο. Ο όρος τραπέζιο, με τη σύγχρονη έννοια, απαντάται αργότερα στον Αρχιμήδη” (\emph{tradução livre}: “Ele chama de trapézio não aquilo que hoje entendemos por esse termo, isto é, um quadrilátero com apenas dois lados paralelos, mas qualquer quadrilátero. O termo trapézio, no sentido moderno, aparece mais tarde em Arquimedes.”). Ver referências \bookbibref{bib:greek-dictionary}{B1}, \bookbibref{bib:iep}{B2} e \bookbibref{bib:mathworld}{B3} na bibliografia deste volume.}
 \end{center}
 
 \defineNewPicture{
@@ -1683,7 +1686,7 @@ draw byLabelLineEnd(D, A, 0);
 draw byLabelLineEnd(C, A, 0);
 }
 \drawCurrentPictureInMargin
-\problem{D}{esenhar}{uma linha reta perpendicular a uma linha reta indefinida dada (\drawUnitLine[1.2cm]{DB,CD}) de um ponto dado (\drawPointL{A}) fora dela.}
+\problem{T}{raçar}{uma linha reta perpendicular a uma linha reta indefinida dada (\drawUnitLine[1.2cm]{DB,CD}) de um ponto dado (\drawPointL{A}) fora dela.}
 
 \begin{center}
 Com o ponto dado \drawPointL{A} como centro, de um lado da linha, e qualquer distância \drawUnitLine{DB} capaz de se estender ao outro lado, descreva \drawArc{O}. % improvement: the distance mentioned here seems not to be in the original drawing, it should either be drawn, or not be referenced graphically as DB
@@ -2183,7 +2186,7 @@ draw byLabelsOnPolygon(noPoint,J, G, F, H, G)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 
 \drawCurrentPictureInMargin
 \problem{E}{m}{um ponto dado (\drawPointL{F}) em uma linha reta dada (\drawUnitLine{FG,GJ}), fazer um ângulo igual a um ângulo retilíneo dado (\drawAngle{A}).}
 
-Trace \drawUnitLine{BC} entre quaisquer dois pontos nas pernas do ângulo dado.
+Trace \drawUnitLine{BC} entre quaisquer dois pontos nos lados do ângulo dado.
 
 \begin{center}
 Construa \drawLine[bottom]{HF,GH,FG} \byref{prop:I.XXII}\\
@@ -2355,7 +2358,7 @@ draw byNamedLineSeq(0)(GD,FG,EF,DE);
 draw byLabelsOnPolygon(C, B, A)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(D, G, F, E)(ALL_LABELS, 0);
 }
-\problem{S}{e}{dois triângulos têm dois ângulos de um respectivamente iguais a dois ângulos do outro ($\drawAngle{A} = \drawAngle{D}$ e $\drawAngle{B} = \drawAngle{GED,FEG}$), e um lado de um igual a um lado do outro similarmente posicionado em relação aos ângulos iguais, os lados e ângulos restantes são respectivamente iguais entre si.}
+\problem{S}{e}{dois triângulos têm dois ângulos de um respectivamente iguais a dois ângulos do outro ($\drawAngle{A} = \drawAngle{D}$ e $\drawAngle{B} = \drawAngle{GED,FEG}$), e um lado de um igual a um lado do outro semelhantemente disposto em relação aos ângulos iguais, os lados e ângulos restantes são respectivamente iguais entre si.}
 \drawCurrentPictureInMargin
 \startsubproposition{Case I.}
 \begin{center}
@@ -2656,7 +2659,7 @@ draw byLabelsOnPolygon(C, B, A, D, noPoint, E, A)(ALL_LABELS, 0);
 \problem[3]{S}{e}{qualquer lado (\drawUnitLine{AB}) de um triângulo for prolongado, o ângulo externo (\drawAngle{DAE,EAC}) é igual à soma dos dois ângulos internos e opostos (\drawAngle{B} e \drawAngle{C}), e os três ângulos internos de qualquer triângulo tomados juntos são iguais a dois ângulos retos.}
 
 \begin{center}
-Através do ponto \drawPointL[middle][AD,AE]{A} desenhe\\
+Através do ponto \drawPointL[middle][AD,AE]{A} trace\\
 $\drawUnitLine{AE} \parallel \drawUnitLine{BC}$ \byref{prop:I.XXXI}.
 
 Então $\left\{
@@ -3728,7 +3731,7 @@ draw byLabelsOnPolygon(B, D, E, C, H, L, K, G)(ALL_LABELS, 0);
 draw byLabelLine(0)(A);
 }
 \drawCurrentPictureInMargin
-\problem[3]{T}{he}{retângulo compreendido por duas linhas retas, uma das quais é dividida em qualquer número de partes,
+\problem[3]{O}{}{retângulo compreendido por duas linhas retas, uma das quais é dividida em qualquer número de partes,
 $\drawProportionalLine{GK,KL,LH} \cdot \drawProportionalLine{A} = \left\{
 	\begin{aligned}
 		&\drawProportionalLine{A} \cdot \drawProportionalLine{GK}\\
@@ -3736,12 +3739,12 @@ $\drawProportionalLine{GK,KL,LH} \cdot \drawProportionalLine{A} = \left\{
 		+&\drawProportionalLine{A} \cdot \drawProportionalLine{LH}\\
 	\end{aligned}
 \right.$\\
-é igual à soma dos retângulos compreendido por da linha indivisa e das várias partes da linha dividida.}
+é igual à soma dos retângulos compreendidos pela linha indivisa e pelas várias partes da linha dividida.}
 
 \begin{center}
-Trace $\drawProportionalLine{GB} \perp \drawProportionalLine{GK,KL,LH} \mbox{ and} = \drawProportionalLine{GB}$ \byref{prop:I.XI,prop:I.III}; completar os paralelogramos, ou seja, % de melhoria: no original \byref{prop:I.II} foi referenciado em vez de \byref{prop:I.XI}
+Trace $\drawProportionalLine{GB} \perp \drawProportionalLine{GK,KL,LH} \mbox{ e} = \drawProportionalLine{GB}$ \byref{prop:I.XI,prop:I.III}; completar os paralelogramos, ou seja, % de melhoria: no original \byref{prop:I.II} foi referenciado em vez de \byref{prop:I.XI}
 
-draw $\left\{
+trace $\left\{
 	\begin{aligned}
 		\drawProportionalLine{BD,DE,EC} &\parallel \drawProportionalLine{GK,KL,LH} \\
 		\vcenter{
@@ -3800,7 +3803,7 @@ $\drawProportionalLine{AC,CB}^2 = \left\{
 }
 
 \begin{center}
-Describe \drawPolygon[bottom][polygonABED]{ACFD,CBEF} \byref{prop:I.XLVI}
+Descreva \drawPolygon[bottom][polygonABED]{ACFD,CBEF} \byref{prop:I.XLVI}
 
 Trace \drawProportionalLine{CF} paralelo a \drawProportionalLine{AD} \byref{prop:I.XXXI}
 
@@ -3841,21 +3844,21 @@ draw byLabelsOnPolygon(B, C, A, F, D, E)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
 \problem{S}{e}{uma linha reta for dividida em duas partes quaisquer \drawProportionalLine{DE,DF}
-$\drawProportionalLine{DE,DF} \cdot \drawProportionalLine{DE} = \drawProportionalLine{DE}^2 + \drawProportionalLine{DE} \cdot \drawProportionalLine{DF}$, or \\
+$\drawProportionalLine{DE,DF} \cdot \drawProportionalLine{DE} = \drawProportionalLine{DE}^2 + \drawProportionalLine{DE} \cdot \drawProportionalLine{DF}$, ou \\
 $\drawProportionalLine{DE,DF} \cdot \drawProportionalLine{DF} = \drawProportionalLine{DF}^2 + \drawProportionalLine{DE} \cdot \drawProportionalLine{DF}$.}
 
 \begin{center}
-Describe \drawPolygon[bottom]{CBED} \byref{prop:I.XLVI}
+Descreva \drawPolygon[bottom]{CBED} \byref{prop:I.XLVI}
 
-Describe \drawPolygon[bottom]{ACDF} \byref{prop:I.XXXI}
+Descreva \drawPolygon[bottom]{ACDF} \byref{prop:I.XXXI}
 
-Then $\drawPolygon[bottom][polygonABEF]{ACDF,CBED} = \polygonCBED + \polygonACDF$, but\\
-$\polygonABEF = \drawProportionalLine{DE,DF} \cdot \drawProportionalLine{DE}$ and\\
+Então $\drawPolygon[bottom][polygonABEF]{ACDF,CBED} = \polygonCBED + \polygonACDF$, mas\\
+$\polygonABEF = \drawProportionalLine{DE,DF} \cdot \drawProportionalLine{DE}$ e\\
 $\polygonCBED = \drawProportionalLine{DE}^2$, $\polygonACDF = \drawProportionalLine{DE} \cdot \drawProportionalLine{DF}$,
 
 $\therefore \drawProportionalLine{DE,DF} \cdot \drawProportionalLine{DE} = \drawProportionalLine{DE}^2 + \drawProportionalLine{DE} \cdot \drawProportionalLine{DF}$.
 
-In a similar manner it may be readily shown that $\drawProportionalLine{DE,DF} \cdot \drawProportionalLine{DF} = \drawProportionalLine{DF}^2 + \drawProportionalLine{DE} \cdot \drawProportionalLine{DF}$.
+Da mesma maneira, pode-se mostrar prontamente que $\drawProportionalLine{DE,DF} \cdot \drawProportionalLine{DF} = \drawProportionalLine{DF}^2 + \drawProportionalLine{DE} \cdot \drawProportionalLine{DF}$.
 \end{center}
 
 \qed
@@ -3903,14 +3906,14 @@ draw byLabelsOnPolygon(H, G, C)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
 \problem{S}{e}{uma linha reta for dividida em duas partes quaisquer \drawProportionalLine{DF,FE}
-$\drawProportionalLine{DF,FE}^2 = \drawProportionalLine{DF}^2 + \drawProportionalLine{FE}^2 + \mbox{twice} \drawProportionalLine{DF} \cdot \drawProportionalLine{FE}$
+$\drawProportionalLine{DF,FE}^2 = \drawProportionalLine{DF}^2 + \drawProportionalLine{FE}^2 + \mbox{duas vezes} \drawProportionalLine{DF} \cdot \drawProportionalLine{FE}$
 }
 
 \begin{center}
-Describe \drawLine[bottom][squareABED]{AD,BA,KB,EK,FE,DF} \byref{prop:I.XLVI}
+Descreva \drawLine[bottom][squareABED]{AD,BA,KB,EK,FE,DF} \byref{prop:I.XLVI}
 
-draw \drawProportionalLine{BG,GD} \byref{post:I.I}\\
-and $\left\{
+trace \drawProportionalLine{BG,GD} \byref{post:I.I}\\
+e $\left\{
 	\begin{aligned}
 		\drawProportionalLine{FG,CG} &\parallel \drawProportionalLine{EK,KB}\\
 		\drawProportionalLine{HG,GK} &\parallel \drawProportionalLine{DF,FE}\\
@@ -3921,23 +3924,23 @@ $\drawAngle{GBK} = \drawAngle{FGD}$ \byref{prop:I.XXIX},
 
 $\therefore \drawAngle{FDG} = \drawAngle{FGD}$
 
-$\therefore$ by \byref{prop:I.VI,prop:I.XXIX,prop:I.XXXIV}\\ $\drawFromCurrentPicture[bottom][squareFGHD]{
+$\therefore$, por \byref{prop:I.VI,prop:I.XXIX,prop:I.XXXIV},\\ $\drawFromCurrentPicture[bottom][squareFGHD]{
 draw byNamedPolygon(DHG);
 draw byNamedLineFull(G, G, 1, 0,  0, -1)(DF);
 draw byNamedLineFull(D, D, 0, 1,  0, -1)(FG);
 draw byLabelsOnPolygon(D, H, G, F)(ALL_LABELS, 0);
-} \mbox{ is a square } = \drawProportionalLine{DF}^2$.
+} \mbox{ é um quadrado } = \drawProportionalLine{DF}^2$.
 
-For the same reasons \drawFromCurrentPicture[bottom][squareKBCG]{
+Pelas mesmas razões, \drawFromCurrentPicture[bottom][squareKBCG]{
 draw byNamedPolygon(GBC);
 draw byNamedLineFull(B, B, 1, 0,  0, -1)(GK);
 draw byNamedLineFull(G, G, 0, 1,  0, -1)(KB);
 draw byLabelsOnPolygon(G, C, B, K)(ALL_LABELS, 0);
-} is a square $= \drawProportionalLine{GK}^2$,
+} é um quadrado $= \drawProportionalLine{GK}^2$,
 
 $\drawPolygon[bottom]{ACGH} = \drawPolygon[middle]{GKEF} = \drawProportionalLine{DF} \cdot \drawProportionalLine{GK}$ \byref{prop:I.XLIII}
 
-But $\drawFromCurrentPicture[bottom][squareABEDf]{
+Mas $\drawFromCurrentPicture[bottom][squareABEDf]{
 draw byNamedPolygon(GBC,DHG,ACGH,GKEF);
 draw byNamedLineFull(G, G, 1, 0,  0, -1)(DF);
 draw byNamedLineFull(D, D, 0, 1,  0, -1)(FG);
@@ -3946,7 +3949,7 @@ draw byNamedLineFull(G, G, 0, 1,  0, -1)(KB);
 draw byLabelsOnPolygon(A, B, E, D)(ALL_LABELS, 0);
 } = \squareFGHD + \drawPolygon{ACGH} + \drawPolygon{GKEF} + \squareKBCG$,
 
-$\therefore \drawProportionalLine{DF,FE}^2 = \drawProportionalLine{DF}^2 + \drawProportionalLine{FE}^2 + \mbox{ twice } \drawProportionalLine{DF} \cdot \drawProportionalLine{FE}$.
+$\therefore \drawProportionalLine{DF,FE}^2 = \drawProportionalLine{DF}^2 + \drawProportionalLine{FE}^2 + \mbox{ duas vezes } \drawProportionalLine{DF} \cdot \drawProportionalLine{FE}$.
 \end{center}
 
 \qed
@@ -3993,9 +3996,9 @@ $\drawProportionalLine{BD} \cdot \drawProportionalLine{DC,CA} + \drawProportiona
 }
 
 \begin{center}
-Describe \drawPolygon[middle][squareCBFE]{BDHM,DCLH,MHGF,HLEG} \byref{prop:I.XLVI},\\
-draw \drawProportionalLine{EB}\\
-and $\left\{
+Descreva \drawPolygon[middle][squareCBFE]{BDHM,DCLH,MHGF,HLEG} \byref{prop:I.XLVI},\\
+trace \drawProportionalLine{EB}\\
+e $\left\{
 	\begin{aligned}
 		\drawProportionalLine{DH,HG} & \parallel \drawProportionalLine{CL,LE} \\
 		\drawProportionalLine{LM,KL} & \parallel \drawProportionalLine{BD,DC,CA} \\
@@ -4007,9 +4010,9 @@ $\drawPolygon{CLKA} = \drawPolygon{DCLH,BDHM}$ \byref{prop:I.XXXVI}\\
 $\drawPolygon{MHGF} = \drawPolygon{DCLH}$ \byref{prop:I.XLIII}
 
 $\therefore \mbox{\byref{ax:I.II} } \drawPolygon{DCLH,BDHM,MHGF} = \drawPolygon{DCLH,CLKA} = \drawProportionalLine{BD} \cdot \drawProportionalLine{DC,CA}$
-but $\drawPolygon{HLEG} = \drawProportionalLine{DC}^2$ \byref{prop:II.IV}
+mas $\drawPolygon{HLEG} = \drawProportionalLine{DC}^2$ \byref{prop:II.IV}
 
-and $\squareCBFE = \drawProportionalLine{BD,DC}^2$ \byref{\constref}
+e $\squareCBFE = \drawProportionalLine{BD,DC}^2$ \byref{\constref}
 
 $\therefore \mbox{\byref{ax:I.II} } \squareCBFE = \drawPolygon{DCLH,CLKA,HLEG}$
 
@@ -4062,7 +4065,7 @@ $\drawProportionalLine{BD,DC,CA} \cdot \drawProportionalLine{BD} + \drawProporti
 
 \begin{center}
 Descreva \drawPolygon[bottom][squareCBFE]{BDHM,DCLH,MHGF,HLEG} \byref{prop:I.XLVI}, trace \drawProportionalLine{EB}\\
-and $\left\{
+e $\left\{
 	\begin{aligned}
 		\drawProportionalLine{HG,DH} & \parallel \drawProportionalLine{CL,LE} \\
 		\drawProportionalLine{LM,KL} & \parallel \drawProportionalLine{BD,DC,CA} \\
@@ -4073,7 +4076,7 @@ and $\left\{
 $\drawPolygon[bottom]{MHGF} = \drawPolygon[bottom]{DCLH} = \drawPolygon[bottom]{CLKA}$ \byref{prop:I.XXXVI,prop:I.XLIII}
 
 $\therefore \drawPolygon[bottom]{BDHM,DCLH,MHGF} = \drawPolygon[bottom]{BDHM,DCLH,CLKA} = \drawProportionalLine{BD} \cdot \drawProportionalLine{BD,DC,CA}$;\\
-but $\drawPolygon[bottom]{HLEG} = \drawProportionalLine{DC}^2$ \byref{prop:II.IV}
+mas $\drawPolygon[bottom]{HLEG} = \drawProportionalLine{DC}^2$ \byref{prop:II.IV}
 
 $\therefore \squareCBFE = \drawProportionalLine{CB}^2 = \drawPolygon[bottom]{BDHM,DCLH,CLKA,HLEG}$ \byref{\constref,ax:I.II}
 
@@ -4119,14 +4122,14 @@ $\drawProportionalLine{DN,NE}^2 + \drawProportionalLine{NE}^2 = 2\drawProportion
 
 \begin{center}
 Descreva \drawPolygon[bottom][squareABED]{DNGH,NEFG,HGCA,GFBC} \byref{prop:I.XLVI}, trace \drawProportionalLine{BD} \byref{post:I.I},\\
-and $\left\{
+e $\left\{
 	\begin{aligned}
 		\drawProportionalLine{GN,GC} &\parallel \drawProportionalLine{EB} \\
 		\drawProportionalLine{GH,GF} &\parallel \drawProportionalLine{DN,NE}\\
 	\end{aligned}
 \right\}$\\
 $\drawPolygon[bottom]{HGCA} = \drawPolygon[bottom]{NEFG}$ \byref{prop:I.XLIII},\\
-add $\drawPolygon[bottom]{GFBC} = \drawProportionalLine{NE}^2$ to both \byref{prop:II.IV}
+adicione $\drawPolygon[bottom]{GFBC} = \drawProportionalLine{NE}^2$ a ambos \byref{prop:II.IV}
 
 $\drawPolygon[bottom]{HGCA,GFBC} = \drawPolygon[bottom]{NEFG,GFBC} = \drawProportionalLine{DN,NE} \cdot \drawProportionalLine{NE}$\\
 $\drawPolygon[bottom]{DNGH} = \drawProportionalLine{DN}^2$ \byref{prop:II.IV}\\
@@ -4190,13 +4193,13 @@ $\drawProportionalLine{EH,HL,LF}^2 = 4 \cdot \drawProportionalLine{EH,HL} \cdot 
 }
 
 \begin{center}
-Produce \drawProportionalLine{EH,HL} and make $\drawProportionalLine{LF} = \drawProportionalLine{HL}$
+Produza \drawProportionalLine{EH,HL} e faça $\drawProportionalLine{LF} = \drawProportionalLine{HL}$
 
-Construct \drawFromCurrentPicture[bottom]{
+Construa \drawFromCurrentPicture[bottom]{
 draw byNamedLine(BL,CH,MN,OP);
 draw byNamedLineSeq(0)(LF,HL,EH,EA,AD,DF);
 } \byref{prop:I.XLVI};\\
-draw \drawProportionalLine{DE},
+trace \drawProportionalLine{DE},
 
 $\left.
 \begin{aligned}
@@ -4219,7 +4222,7 @@ $\left.
 \right\}$ \byref{prop:I.XXXI}
 
 $\drawProportionalLine{EH,HL,LF}^2 = \drawProportionalLine{LF}^2 + \drawProportionalLine{EH,HL}^2 + 2 \cdot \drawProportionalLine{EH,HL} \cdot \drawProportionalLine{LF}$ \byref{prop:II.IV}\\
-but $\drawProportionalLine{HL}^2 + \drawProportionalLine{EH,HL}^2 = 2 \cdot \drawProportionalLine{EH,HL} \cdot \drawProportionalLine{HL} + \drawProportionalLine{EH}^2$ \byref{prop:II.VII}
+mas $\drawProportionalLine{HL}^2 + \drawProportionalLine{EH,HL}^2 = 2 \cdot \drawProportionalLine{EH,HL} \cdot \drawProportionalLine{HL} + \drawProportionalLine{EH}^2$ \byref{prop:II.VII}
 
 $\therefore \drawProportionalLine{EH,HL,LF}^2 = 4 \cdot \drawProportionalLine{EH,HL} \cdot \drawProportionalLine{HL} + \drawProportionalLine{EH}^2$.
 \end{center}
@@ -4269,20 +4272,20 @@ $\drawProportionalLine{AC,CD}^2 + \drawProportionalLine{DB}^2 = 2 \cdot \drawPro
 }
 
 \begin{center}
-Make $\drawProportionalLine{CG,GE} \perp \mbox{ e } = \drawProportionalLine{AC} \mbox{ ou } \drawProportionalLine{CD,DB}$,\\
+Faça $\drawProportionalLine{CG,GE} \perp \mbox{ e } = \drawProportionalLine{AC} \mbox{ ou } \drawProportionalLine{CD,DB}$,\\
 Trace \drawProportionalLine{AE} e \drawProportionalLine{EH,HF,FB},\\
 $\drawProportionalLine{FD} \parallel \drawProportionalLine{CG,GE}$, $ \drawProportionalLine{GF} \parallel \drawProportionalLine{CD,DB}$ e traçar \drawProportionalLine{AF}.
 
-$\drawAngle{A} = \drawAngle{AEC}$ \byref{prop:I.V} $=$ half a right angle \byref{prop:I.XXXII}\\
-$\drawAngle{B} = \drawAngle{DFB}$ \byref{prop:I.V} $=$ half a right angle \byref{prop:I.XXXII}\\
-$\therefore \drawAngle{AEC,CEB} =$ a right angle.
+$\drawAngle{A} = \drawAngle{AEC}$ \byref{prop:I.V} $=$ metade de um ângulo reto \byref{prop:I.XXXII}\\
+$\drawAngle{B} = \drawAngle{DFB}$ \byref{prop:I.V} $=$ metade de um ângulo reto \byref{prop:I.XXXII}\\
+$\therefore \drawAngle{AEC,CEB} =$ um ângulo reto.
 
 $\drawAngle{B} = \drawAngle{CEB} = \drawAngle{EFG} = \drawAngle{DFB}$ \byref{prop:I.V, prop:I.XXIX}.\\
-hence $\drawProportionalLine{FD} = \drawProportionalLine{DB}$, $\drawProportionalLine{GE} = \drawProportionalLine{GF} = \drawProportionalLine{CD}$ \byref{prop:I.VI,prop:I.XXXIV}
+portanto $\drawProportionalLine{FD} = \drawProportionalLine{DB}$, $\drawProportionalLine{GE} = \drawProportionalLine{GF} = \drawProportionalLine{CD}$ \byref{prop:I.VI,prop:I.XXXIV}
 
 $\drawProportionalLine{AF}^2 = \left\{
 \begin{aligned}
-&\drawProportionalLine{AC,CD}^2 + \drawProportionalLine{FD}^2 \mbox{, or } + \drawProportionalLine{DB}^2 \\
+&\drawProportionalLine{AC,CD}^2 + \drawProportionalLine{FD}^2 \mbox{, ou } + \drawProportionalLine{DB}^2 \\
 &= \left\{
 	\begin{aligned}
 		&= \drawProportionalLine{AE}^2 + \drawProportionalLine{EH,HF}^2 \\
@@ -4338,25 +4341,25 @@ $\drawProportionalLine{AC,CB,BD}^2 + \drawProportionalLine{BD}^2 = 2 \cdot \draw
 }
 
 \begin{center}
-Faça $\drawProportionalLine{CE} \perp \mbox{ e } = \mbox{ to } \drawProportionalLine{AC} \mbox{ ou } \drawProportionalLine{CB}$,\\
+Faça $\drawProportionalLine{CE} \perp \mbox{ e } = \mbox{ a } \drawProportionalLine{AC} \mbox{ ou } \drawProportionalLine{CB}$,\\
 traçar \drawProportionalLine{AE} e \drawProportionalLine{EB,BG},\\
-and $\left\{
+e $\left\{
 \begin{aligned}
 \drawProportionalLine{FD,DG} & \parallel \drawProportionalLine{CE} \\
 \drawProportionalLine{EF} & \parallel \drawProportionalLine{CB,BD}\\
 \end{aligned}
 \right\}$ \byref{prop:I.XXXI}\\
-draw \drawProportionalLine{AG} also.
+trace também \drawProportionalLine{AG}.
 
-$\drawAngle{A} = \drawAngle{CEA}$ \byref{prop:I.V} $=$ half a right angle \byref{prop:I.XXXII}\\
-$\drawAngle{CBE} = \drawAngle{BEC}$ \byref{prop:I.V} $=$ half a right angle \byref{prop:I.XXXII}\\
-$\therefore \drawAngle{CEA,BEC} = $ a right angle.
+$\drawAngle{A} = \drawAngle{CEA}$ \byref{prop:I.V} $=$ metade de um ângulo reto \byref{prop:I.XXXII}\\
+$\drawAngle{CBE} = \drawAngle{BEC}$ \byref{prop:I.V} $=$ metade de um ângulo reto \byref{prop:I.XXXII}\\
+$\therefore \drawAngle{CEA,BEC} = $ um ângulo reto.
 
 $\drawAngle{DBG} = \drawAngle{CBE} = \drawAngle{BEC} = \drawAngle{FEB} = \drawAngle{G} =$\\
 meio ângulo reto \byref{prop:I.V,prop:I.XXXII,prop:I.XXIX,prop:I.XXXIV},\\% melhoria: no DBG original é girado de forma semelhante a A; provavelmente só precisamos de prop:I.XXIX e prop:I.XV aqui
-and $\drawProportionalLine{BD} = \drawProportionalLine{DG}$, $\drawProportionalLine{CB,BD} = \drawProportionalLine{EF} = \drawProportionalLine{FD,DG}$, \byref{prop:I.VI,prop:I.XXXIV}.
+e $\drawProportionalLine{BD} = \drawProportionalLine{DG}$, $\drawProportionalLine{CB,BD} = \drawProportionalLine{EF} = \drawProportionalLine{FD,DG}$, \byref{prop:I.VI,prop:I.XXXIV}.
 
-Hence by \byref{prop:I.XLVII}
+Logo, por \byref{prop:I.XLVII},
 
 $\drawProportionalLine{AG}^2 = \left\{
 \begin{aligned}
@@ -4408,15 +4411,15 @@ $\drawProportionalLine{AH,HB} \cdot \drawProportionalLine{HB} = \drawProportiona
 }
 
 \begin{center}
-Describe \drawPolygon[bottom]{AHKC,HBDK} \byref{prop:I.XLVI},\\
-make $\drawProportionalLine{EA} = \drawProportionalLine{CE}$ \byref{prop:I.X},\\
-draw \drawProportionalLine{BE},\\
-take $\drawProportionalLine{EA,AF} = \drawProportionalLine{BE}$ \byref{prop:I.III},\\
-on \drawProportionalLine{AF} describe \drawPolygon[bottom]{AHGF} \byref{prop:I.XLVI}.
+Descreva \drawPolygon[bottom]{AHKC,HBDK} \byref{prop:I.XLVI},\\
+faça $\drawProportionalLine{EA} = \drawProportionalLine{CE}$ \byref{prop:I.X},\\
+trace \drawProportionalLine{BE},\\
+tome $\drawProportionalLine{EA,AF} = \drawProportionalLine{BE}$ \byref{prop:I.III},\\
+sobre \drawProportionalLine{AF} descreva \drawPolygon[bottom]{AHGF} \byref{prop:I.XLVI}.
 
-Produce \drawProportionalLine{KG} \byref{post:I.II}.
+Produza \drawProportionalLine{KG} \byref{post:I.II}.
 
-Then, \byref{prop:II.VI} $\drawProportionalLine{CE,EA,AF} \cdot \drawProportionalLine{AF} + \drawProportionalLine{EA}^2 = \drawProportionalLine{EA,AF}^2 = \drawProportionalLine{BE}^2 = \drawProportionalLine{AH,HB}^2 + \drawProportionalLine{EA}^2 \therefore \drawProportionalLine{CE,EA,AF} \cdot \drawProportionalLine{AF} = \drawProportionalLine{AH,HB}^2$, or,\\
+Então, por \byref{prop:II.VI}, $\drawProportionalLine{CE,EA,AF} \cdot \drawProportionalLine{AF} + \drawProportionalLine{EA}^2 = \drawProportionalLine{EA,AF}^2 = \drawProportionalLine{BE}^2 = \drawProportionalLine{AH,HB}^2 + \drawProportionalLine{EA}^2 \therefore \drawProportionalLine{CE,EA,AF} \cdot \drawProportionalLine{AF} = \drawProportionalLine{AH,HB}^2$, ou,\\
 $\drawPolygon[bottom]{AHKC,AHGF} = \drawPolygon[bottom]{AHKC,HBDK} \therefore \drawPolygon[bottom]{AHGF} = \drawPolygon[bottom]{HBDK}$
 
 $\therefore \drawProportionalLine{AH,HB} \cdot \drawProportionalLine{HB} = \drawProportionalLine{AH}^2$.
@@ -4445,24 +4448,24 @@ draw byLabelsOnPolygon(C, B, D, A)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
 \problem{I}{n}{qualquer triângulo de ângulo obtuso, o quadrado do lado que subtende o ângulo obtuso excede a soma dos quadrados dos lados que contêm o ângulo obtuso, em duas vezes o retângulo compreendido por de qualquer um desses lados e as partes produzidas do mesmo do ângulo obtuso à perpendicular caem sobre ele a partir do ângulo agudo oposto.\\
-$\drawProportionalLine{BC}^2 > \drawProportionalLine{CA}^2 + \drawProportionalLine{BA}^2$ by $2 \cdot \drawProportionalLine{CA} \cdot \drawProportionalLine{AD}$
+$\drawProportionalLine{BC}^2 > \drawProportionalLine{CA}^2 + \drawProportionalLine{BA}^2$ por $2 \cdot \drawProportionalLine{CA} \cdot \drawProportionalLine{AD}$
 }
 
 \begin{center}
-By \byref{prop:II.IV}\\
+Por \byref{prop:II.IV}\\
 $\drawProportionalLine{CA,AD}^2 = \drawProportionalLine{CA}^2 + \drawProportionalLine{AD}^2 + 2 \cdot \drawProportionalLine{CA} \cdot \drawProportionalLine{AD}$:
 
-add $\drawProportionalLine{DB}^2$ to both\\
+adicione $\drawProportionalLine{DB}^2$ a ambos\\
 $\drawProportionalLine{CA,AD}^2 + \drawProportionalLine{DB}^2 = \drawProportionalLine{BC}^2$ \byref{prop:I.XLVII}\\
 $= 2 \cdot \drawProportionalLine{CA} \cdot \drawProportionalLine{AD} + \drawProportionalLine{CA}^2 + \left\{
 	\begin{aligned}
 		&\drawProportionalLine{AD}^2 \\
 		&\drawProportionalLine{DB}^2\\
 	\end{aligned}
-\right\}$ or\\
+\right\}$ ou\\
 $+ \drawProportionalLine{BA}^2$ \byref{prop:I.XLVII}. % a apresentação original não é muito clara. isso deve ser AD ^ 2 + DB ^ 2, que é, por I.XLVII = BA ^ 2
 
-$\therefore \drawProportionalLine{BC}^2 = 2 \cdot \drawProportionalLine{CA} \cdot \drawProportionalLine{AD} + \drawProportionalLine{CA}^2 + \drawProportionalLine{BA}^2$: hence $ \drawProportionalLine{BC}^2 > \drawProportionalLine{CA}^2 + \drawProportionalLine{BA}^2$ by $2 \cdot \drawProportionalLine{CA} \cdot \drawProportionalLine{AD}$.
+$\therefore \drawProportionalLine{BC}^2 = 2 \cdot \drawProportionalLine{CA} \cdot \drawProportionalLine{AD} + \drawProportionalLine{CA}^2 + \drawProportionalLine{BA}^2$: logo $ \drawProportionalLine{BC}^2 > \drawProportionalLine{CA}^2 + \drawProportionalLine{BA}^2$ por $2 \cdot \drawProportionalLine{CA} \cdot \drawProportionalLine{AD}$.
 \end{center}
 
 \qed
@@ -4494,35 +4497,35 @@ byLineDefine(F, G, byblack, SOLID_LINE, REGULAR_WIDTH);
 byLineDefine(G, H, byblack, DASHED_LINE, REGULAR_WIDTH);
 byLineDefine(H, E, byyellow, SOLID_LINE, REGULAR_WIDTH);
 draw byNamedLineSeq(0)(EF,FG,GH,HE);
-label.top(btex First etex, (xpart(1/2[B, C]), ypart(A) + 1/4u));
-label.top(btex Second etex, (xpart(1/2[F, H]), ypart(E)));
+label.top(btex Primeiro etex, (xpart(1/2[B, C]), ypart(A) + 1/4u));
+label.top(btex Segundo etex, (xpart(1/2[F, H]), ypart(E)));
 draw byLabelsOnPolygon(B, A, C, D)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(F, E, H, G)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
 \problem{I}{n}{qualquer triângulo, o quadrado do lado que subtende um ângulo agudo, é menor que a soma dos quadrados dos lados que contêm esse ângulo, por duas vezes o retângulo compreendido por qualquer um desses lados, e a parte dele interceptada entre o pé da perpendicular deixada cair sobre ele do ângulo oposto, e o ponto angular do ângulo agudo.\\
-First.\\
-$\drawProportionalLine{CA}^2 < \drawProportionalLine{BD,DC}^2 + \drawProportionalLine{AB}^2$ by $2 \cdot \drawProportionalLine{BD,DC} \cdot \drawProportionalLine{BD}$.\\
-Second.\\
-$\drawProportionalLine{EG}^2 < \drawProportionalLine{EF}^2 + \drawProportionalLine{FG}^2$ by $2 \cdot \drawProportionalLine{FG} \cdot \drawProportionalLine{FG,GH}$.
+Primeiro.\\
+$\drawProportionalLine{CA}^2 < \drawProportionalLine{BD,DC}^2 + \drawProportionalLine{AB}^2$ por $2 \cdot \drawProportionalLine{BD,DC} \cdot \drawProportionalLine{BD}$.\\
+Segundo.\\
+$\drawProportionalLine{EG}^2 < \drawProportionalLine{EF}^2 + \drawProportionalLine{FG}^2$ por $2 \cdot \drawProportionalLine{FG} \cdot \drawProportionalLine{FG,GH}$.
 }
 
 \begin{center}
 Primeiro, suponha que a perpendicular caia dentro do triângulo, então \byref{prop:II.VII}\\
 $\drawProportionalLine{BD,DC}^2 + \drawProportionalLine{BD}^2 = 2 \cdot \drawProportionalLine{BD,DC} \cdot \drawProportionalLine{BD} + \drawProportionalLine{DC}^2$,\\
-add to each $\drawProportionalLine{AD}^2$ then,\\
+adicione $\drawProportionalLine{AD}^2$ a ambos, então,\\
 $\drawProportionalLine{BD,DC}^2 + \drawProportionalLine{BD}^2 + \drawProportionalLine{AD}^2 = 2 \cdot \drawProportionalLine{BD,DC} \cdot \drawProportionalLine{BD} + \drawProportionalLine{DC}^2 + \drawProportionalLine{AD}^2$\\
 $\therefore$ \byref{prop:I.XLVII}\\
 $\drawProportionalLine{BD,DC}^2 + \drawProportionalLine{AB}^2 = 2 \cdot \drawProportionalLine{BD,DC} \cdot \drawProportionalLine{BD} + \drawProportionalLine{CA}^2$,\\
-and $\therefore \drawProportionalLine{CA}^2 < \drawProportionalLine{BD,DC}^2 + \drawProportionalLine{AB}^2$ by $2 \cdot \drawProportionalLine{BD,DC} \cdot \drawProportionalLine{BD}$
+e $\therefore \drawProportionalLine{CA}^2 < \drawProportionalLine{BD,DC}^2 + \drawProportionalLine{AB}^2$ por $2 \cdot \drawProportionalLine{BD,DC} \cdot \drawProportionalLine{BD}$
 
 Em seguida, suponha que a perpendicular caia sem o triângulo, então \byref{prop:II.VII}\\
 $\drawProportionalLine{FG,GH}^2 + \drawProportionalLine{FG}^2 = 2 \cdot \drawProportionalLine{FG,GH} \cdot \drawProportionalLine{FG} + \drawProportionalLine{GH}^2$,\\
-add to each $\drawProportionalLine{HE}^2$ then\\
+adicione $\drawProportionalLine{HE}^2$ a ambos, então,\\
 $\drawProportionalLine{FG,GH}^2 + \drawProportionalLine{FG}^2 + \drawProportionalLine{HE}^2= 2 \cdot \drawProportionalLine{FG,GH} \cdot \drawProportionalLine{FG} + \drawProportionalLine{GH}^2 + \drawProportionalLine{HE}^2$\\
 $\therefore$ \byref{prop:I.XLVII}\\
 $\drawProportionalLine{EF} + \drawProportionalLine{FG}^2 = 2 \cdot \drawProportionalLine{FG,GH} \cdot \drawProportionalLine{FG}^2 + \drawProportionalLine{EG}^2$,\\
-$\therefore \drawProportionalLine{EG}^2 < \drawProportionalLine{EF}^2 + \drawProportionalLine{FG}^2$ by $2 \cdot \drawProportionalLine{FG,GH} \cdot \drawProportionalLine{FG}$.
+$\therefore \drawProportionalLine{EG}^2 < \drawProportionalLine{EF}^2 + \drawProportionalLine{FG}^2$ por $2 \cdot \drawProportionalLine{FG,GH} \cdot \drawProportionalLine{FG}$.
 \end{center}
 
 \qed
@@ -4578,16 +4581,16 @@ draw byLabelsOnPolygon(B, C, D, E, F, H)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(H, G, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem[4]{T}{o}{desenhe uma linha reta cujo quadrado seja igual a uma determinada figura retilínea.\\
+\problem[4]{T}{raçar}{uma linha reta cujo quadrado seja igual a uma determinada figura retilínea.\\
 Para traçar \drawSizedLine{HE} tal que, $\drawSizedLine{HE}^2 = \drawPolygon{abcdef}$
 }
 
 \begin{center}
-Make $\drawPolygon{BCDE} = \drawPolygon{abcdef}$ \byref{prop:I.XLV},
-produce \drawSizedLine{EG,GB} until $\drawSizedLine{FE} = \drawSizedLine{ED}$;\\
-take $\drawSizedLine{FE,EG} = \drawSizedLine{GB}$ \byref{prop:I.X}.
+Faça $\drawPolygon{BCDE} = \drawPolygon{abcdef}$ \byref{prop:I.XLV},
+produza \drawSizedLine{EG,GB} até que $\drawSizedLine{FE} = \drawSizedLine{ED}$;\\
+tome $\drawSizedLine{FE,EG} = \drawSizedLine{GB}$ \byref{prop:I.X}.
 
-Describe
+Descreva
 \drawFromCurrentPicture[bottom]{
 startTempScale(1/3);
 draw byNamedLineFull(B, F, 0, 0,  0, 1)(BF);
@@ -4600,11 +4603,11 @@ stopTempScale;
 e produza \drawSizedLine{ED} para atendê-lo: trace \drawSizedLine{HG}.
 
 $\drawSizedLine{BG}^2 \mbox{ ou } \drawSizedLine{HG}^2 = \drawSizedLine{FE} \cdot \drawSizedLine{EG,GB} + \drawSizedLine{EG}^2$ \byref{prop:II.V},\\
-but $\drawSizedLine{HG}^2 = \drawSizedLine{HE} ^2 + \drawSizedLine{EG}^2$ \byref{prop:I.XLVII};
+mas $\drawSizedLine{HG}^2 = \drawSizedLine{HE} ^2 + \drawSizedLine{EG}^2$ \byref{prop:I.XLVII};
 
 $\therefore \drawSizedLine{HE}^2 + \drawSizedLine{EG}^2 = \drawSizedLine{FE} \cdot \drawSizedLine{EG,GB} + \drawSizedLine{EG}^2$
 
-$\therefore \drawSizedLine{HE}^2 = \drawSizedLine{FE} \cdot \drawSizedLine{EG,GB}$, and
+$\therefore \drawSizedLine{HE}^2 = \drawSizedLine{FE} \cdot \drawSizedLine{EG,GB}$, e
 
 $\therefore \drawSizedLine{HE}^2 = \drawPolygon{BCDE} = \drawPolygon{abcdef}$.
 \end{center}
@@ -4868,17 +4871,17 @@ Encontre o centro de \circleD\ \byref{prop:III.I};\\
 do centro trace \drawSizedLine{DE} para qualquer ponto em \drawSizedLine{AB}, encontrando a circunferência a partir do centro;\\
 trace \drawSizedLine{AD} e \drawSizedLine{BD}.
 
-Then $\drawAngle{A} = \drawAngle{B}$ \byref{prop:I.V}\\
-but $\drawAngle{E} > \drawAngle{A} \mbox{ ou } > \drawAngle{B}$ \byref{prop:I.XVI}
+Então $\drawAngle{A} = \drawAngle{B}$ \byref{prop:I.V}\\
+mas $\drawAngle{E} > \drawAngle{A} \mbox{ ou } > \drawAngle{B}$ \byref{prop:I.XVI}
 
 $\therefore \drawSizedLine{AD} > \drawSizedLine{DE}$ \byref{prop:I.XIX}\\
-but $\drawSizedLine{AD} = \drawSizedLine{DE,EF}$,
+mas $\drawSizedLine{AD} = \drawSizedLine{DE,EF}$,
 
 $\therefore \drawSizedLine{DE,EF} > \drawSizedLine{DE}$;
 
 $\therefore \drawSizedLine{DE} < \drawSizedLine{DE,EF}$;
 
-$\therefore$ every point in \drawSizedLine{AB} lies within the circle.
+$\therefore$ todos os pontos de \drawSizedLine{AB} estão dentro do círculo.
 \end{center}
 
 \qed
@@ -4919,21 +4922,21 @@ draw byLabelsOnPolygon(A, E, C)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \begin{center}
 Trace \drawUnitLine{AE} e \drawUnitLine{EB} no centro do círculo.
 
-In \drawLine[bottom][triangleAEF]{AE,EF,AF} and
+Em \drawLine[bottom][triangleAEF]{AE,EF,AF} e
 \drawLine[bottom][triangleFEB]{EF,EB,FB}\\
-$\drawUnitLine{AE} = \drawUnitLine{EB}$, \drawUnitLine{EF} common,\\
-and $\drawUnitLine{AF} = \drawUnitLine{FB} \therefore \drawAngle{AFE} = \drawAngle{EFB}$ \byref{prop:I.VIII}\\
-and $\therefore \drawUnitLine{EF} \perp \drawUnitLine{AF,FB}$ \byref{def:I.X} % improvement: definition 7 in the original is irrelevant
+$\drawUnitLine{AE} = \drawUnitLine{EB}$, \drawUnitLine{EF} comum,\\
+e $\drawUnitLine{AF} = \drawUnitLine{FB} \therefore \drawAngle{AFE} = \drawAngle{EFB}$ \byref{prop:I.VIII}\\
+e $\therefore \drawUnitLine{EF} \perp \drawUnitLine{AF,FB}$ \byref{def:I.X} % improvement: definition 7 in the original is irrelevant
 
-Again let $\drawUnitLine{EF} \perp \drawUnitLine{AF,FB}$\\
-Then in \triangleAEF\ and \triangleFEB\\
+Novamente, seja $\drawUnitLine{EF} \perp \drawUnitLine{AF,FB}$\\
+Então, em \triangleAEF\ e \triangleFEB,\\
 $\drawAngle{A} = \drawAngle{B}$ \byref{prop:I.V}\\
 $\drawAngle{AFE} = \drawAngle{EFB}$ \byref{\hypref}\\
-and $\drawUnitLine{AE} = \drawUnitLine{EB}$
+e $\drawUnitLine{AE} = \drawUnitLine{EB}$
 
 $\therefore \drawUnitLine{AF} = \drawUnitLine{FB}$ \byref{prop:I.XXVI}
 
-and $\therefore \drawUnitLine{EF}$ bisects \drawUnitLine{AF,FB}.
+e $\therefore \drawUnitLine{EF}$ bissecta \drawUnitLine{AF,FB}.
 \end{center}
 
 \qed
@@ -5016,8 +5019,8 @@ draw byLabelsOnPolygon(C, F, E)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 1);
 Suponhamos que seja possível que dois círculos que se cruzam tenham um centro comum; a partir desse suposto centro trace \drawUnitLine{CE} até o ponto de intersecção, e \drawUnitLine{EF,FG} encontrando as circunferências dos círculos.
 
 \begin{center}
-Then $\drawUnitLine{CE} = \drawUnitLine{EF}$ \byref{def:I.XV}\\
-and $\drawUnitLine{CE} = \drawUnitLine{EF,FG}$ \byref{def:I.XV}
+Então $\drawUnitLine{CE} = \drawUnitLine{EF}$ \byref{def:I.XV}\\
+e $\drawUnitLine{CE} = \drawUnitLine{EF,FG}$ \byref{def:I.XV}
 
 $\therefore \drawUnitLine{EF} = \drawUnitLine{EF,FG}$\\
 uma parte igual ao todo, o que é um absurdo:
@@ -5057,11 +5060,11 @@ byPointLabelRemove(M, N);
 \drawCurrentPictureInMargin
 \problem{S}{e}{dois círculos \drawCircle{N,M} se tocam internamente, eles não têm o mesmo centro.}
 
-Pois, se for possível, que ambos os círculos tenham o mesmo centro; de tal suposto centro, desenhe \drawUnitLine{FE,EB} e \drawUnitLine{CF} até o ponto de contato.
+Pois, se for possível, que ambos os círculos tenham o mesmo centro; de tal suposto centro, trace \drawUnitLine{FE,EB} e \drawUnitLine{CF} até o ponto de contato.
 
 \begin{center}
-Then $\drawUnitLine{CF} = \drawUnitLine{FE}$ \byref{def:I.XV}\\
-and $\drawUnitLine{CF} = \drawUnitLine{FE,EB}$ \byref{def:I.XV}
+Então $\drawUnitLine{CF} = \drawUnitLine{FE}$ \byref{def:I.XV}\\
+e $\drawUnitLine{CF} = \drawUnitLine{FE,EB}$ \byref{def:I.XV}
 
 $\therefore \drawUnitLine{FE} = \drawUnitLine{FE,EB}$;
 \end{center}
@@ -5124,7 +5127,7 @@ label.top(btex Fig. 2 etex, (0, r+1/4cm));
 ) shifted d;
 }
 \drawCurrentPictureInMargin
-\problem[3]{I}{f}{from any point within a circle \drawFromCurrentPicture{
+\problem[3]{A}{ partir}{de qualquer ponto dentro de um círculo \drawFromCurrentPicture{
 startTempScale(1/3);
 draw byNamedCircle(E);
 draw byLabelPoint(F, 0, 0);
@@ -5136,17 +5139,17 @@ $\left\{\vcenter{
 \nointerlineskip\hbox{\drawUnitLine{FC}}}\right.$
 são atraídos pela circunferência; a maior dessas linhas é aquela (\drawUnitLine{EF,AE}) que passa pelo centro, e a menor é a parte restante (\drawUnitLine{FD}) do diâmetro.\\
 Dos outros, aquele (\drawUnitLine{FB}) que está mais próximo da linha que passa pelo centro, é maior que aquele (\drawUnitLine{FC}) que está mais remoto.\\
-Figura 2. As duas retas (\drawUnitLine{FM,MK} e \drawUnitLine{FG}) que fazem ângulos iguais com aquela que passa pelo centro, em lados opostos deste, são iguais entre si; e não pode ser traçada uma terceira linha igual a eles, do mesmo ponto à circunferência.}
+Figura 2. As duas retas (\drawUnitLine{FM,MK} e \drawUnitLine{FG}) que fazem ângulos iguais com aquela que passa pelo centro, em lados opostos deste, são iguais entre si; e não pode ser traçada uma terceira linha igual a elas, do mesmo ponto à circunferência.}
 
-\startsubproposition{Figure I.}
+\startsubproposition{Figura I.}
 No centro do círculo trace \drawUnitLine{EB} e \drawUnitLine{EC}; então $\drawUnitLine{AE} = \drawUnitLine{EB}$ \byref{def:I.XV} $\drawUnitLine{EF,AE} = \drawUnitLine{EF} + \drawUnitLine{EB} > \drawUnitLine{FB}$ \byref{prop:I.XX} da mesma maneira \drawUnitLine{EF,AE} pode ser mostrado como sendo maior que \drawUnitLine{FC}, ou qualquer outra linha traçada do mesmo ponto até a circunferência. Novamente, por \byref{prop:I.XX} $\drawUnitLine{EF} + \drawUnitLine{FC} > \drawUnitLine{EC} = \drawUnitLine{FD} + \drawUnitLine{EF}$, pegue \drawUnitLine{EF} de ambos; $\therefore \drawUnitLine{FC} > \drawUnitLine{FD}$ \byref{ax:I.III}, e da mesma maneira pode ser mostrado que \drawUnitLine{FD} é menor que qualquer outra linha traçada do mesmo ponto até a circunferência. Novamente, em \drawLine[middle][triangleEFB]{FB,EF,EB} e \drawLine[middle][triangleEFC]{FC,EF,EC}, \drawUnitLine{EF} comum, $\drawAngle{BEC,CEF} > \drawAngle{CEF}$ e $\drawUnitLine{EB} = \drawUnitLine{EC} \therefore \drawUnitLine{FB} > \drawUnitLine{FC}$ \byref{prop:I.XXIV} e \drawUnitLine{FB} podem, da mesma maneira, ser provados maiores do que qualquer outra linha traçada do mesmo ponto até a circunferência mais distante de \drawUnitLine{EF,AE}.
 
-\startsubproposition{Figure II.}
+\startsubproposition{Figura II.}
 \begin{center}
 Se $\drawAngle{KFE} = \drawAngle{GFE}$, então $\drawUnitLine{FM,MK} = \drawUnitLine{FG}$,\\
-se não, pegue $\drawUnitLine{FM} = \drawUnitLine{FG}$, desenhe \drawUnitLine{EM,MH}\\
+se não, pegue $\drawUnitLine{FM} = \drawUnitLine{FG}$, trace \drawUnitLine{EM,MH}\\
 então, em \drawLine[middle][triangleEFM]{EM,EF,FM} e \drawLine[middle][triangleEFG]{FG,EF,EG}, com \drawUnitLine{EF} comum,\\
-$\drawAngle{KFE} = \drawAngle{GFE}$ and $\drawUnitLine{FG} = \drawUnitLine{FM}$
+$\drawAngle{KFE} = \drawAngle{GFE}$ e $\drawUnitLine{FG} = \drawUnitLine{FM}$
 
 $\therefore \drawUnitLine{EG} = \drawUnitLine{EM}$ \byref{prop:I.IV}
 
@@ -5271,20 +5274,20 @@ draw byLabelsOnPolygon(M, B, G)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 2);
 draw byLabelsOnPolygon(M, N, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 2);
 }
 \drawCurrentPictureInMargin
-Também são iguais as linhas que fazem ângulos iguais com aquela que passa pelo centro, quer caiam na circunferência côncava ou convexa; e nenhuma terceira linha igual a eles pode ser traçada do mesmo ponto até a circunferência.
+Também são iguais as linhas que fazem ângulos iguais com aquela que passa pelo centro, quer caiam na circunferência côncava ou convexa; e nenhuma terceira linha igual a elas pode ser traçada do mesmo ponto até a circunferência.
 
 \begin{center}
-For if $\drawUnitLine{DO,ON} > \drawUnitLine{DH}$, but making $\drawAngle{HDM} = \drawAngle{MDN}$;\\
+Pois, se $\drawUnitLine{DO,ON} > \drawUnitLine{DH}$, mas fazendo $\drawAngle{HDM} = \drawAngle{MDN}$;\\
 faça $\drawUnitLine{DO} = \drawUnitLine{DH}$ e trace \drawUnitLine{BM,BO}.
 
-Then in \drawLine[middle][triangleDMO]{DM,DO,BO,BM} and \drawLine[middle][triangleDMH]{HM,DH,DM} we have $\drawUnitLine{DO} = \drawUnitLine{DH}$\\
-and \drawUnitLine{DM} common, and also $\drawAngle{MDN} = \drawAngle{HDM}$,
+Então, em \drawLine[middle][triangleDMO]{DM,DO,BO,BM} e \drawLine[middle][triangleDMH]{HM,DH,DM}, temos $\drawUnitLine{DO} = \drawUnitLine{DH}$\\
+e \drawUnitLine{DM} é comum, e também $\drawAngle{MDN} = \drawAngle{HDM}$,
 
 $\therefore \drawUnitLine{BM,BO} = \drawUnitLine{HM}$ \byref{prop:I.IV};\\
-but $\drawUnitLine{HM} = \drawUnitLine{BM}$;\\
-$\therefore \drawUnitLine{BM} = \drawUnitLine{BM,BO}$, which is absurd.
+mas $\drawUnitLine{HM} = \drawUnitLine{BM}$;\\
+$\therefore \drawUnitLine{BM} = \drawUnitLine{BM,BO}$, o que é absurdo.
 
-$\therefore \drawUnitLine{DH} \mbox{ is } \neq \drawUnitLine{DO}$, nem a qualquer parte do \drawUnitLine{DO,ON}, $\therefore \drawUnitLine{DO,ON} \mbox{ is } \ngtr \drawUnitLine{DH}$. % \mbox{ não é } =, \mbox{ não é } >
+$\therefore \drawUnitLine{DH} \mbox{ não é } \neq \drawUnitLine{DO}$, nem a qualquer parte do \drawUnitLine{DO,ON}, $\therefore \drawUnitLine{DO,ON} \mbox{ não é } \ngtr \drawUnitLine{DH}$.
 
 Nem o $\drawUnitLine{DH} > \drawUnitLine{DO,ON}$, eles são $\therefore =$ um para o outro.
 \end{center}
@@ -5382,11 +5385,11 @@ draw byLabelPoint(Hd, 0, 2);
 draw byLabelsOnPolygon(Hd, Pdd, Bd)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem{O}{ne}{circle \drawFromCurrentPicture{draw byNamedCircle(PII);} cannot intersect another \drawFromCurrentPicture[middle][circlePI]{draw byNamedCircle(PI);} in more points than two.}
+\problem{U}{m}{círculo \drawFromCurrentPicture{draw byNamedCircle(PII);} não pode intersectar outro \drawFromCurrentPicture[middle][circlePI]{draw byNamedCircle(PI);} em mais de dois pontos.}
 
-Pois, se for possível, que se cruze em três pontos; do centro de \drawCircle{PII} desenhe \drawUnitLine{PG}, \drawUnitLine{PB} e \drawUnitLine{PH} até os pontos de intersecção;
+Pois, se for possível, que se cruze em três pontos; do centro de \drawCircle{PII} trace \drawUnitLine{PG}, \drawUnitLine{PB} e \drawUnitLine{PH} até os pontos de intersecção;
 
-$\therefore \drawUnitLine{PG} = \drawUnitLine{PB} = \drawUnitLine{PH}$ \byref{def:I.XV}, but as the circles intersect, they have not the same centre \byref{prop:III.V}:
+$\therefore \drawUnitLine{PG} = \drawUnitLine{PB} = \drawUnitLine{PH}$ \byref{def:I.XV}, mas, como os círculos se intersectam, não têm o mesmo centro \byref{prop:III.V}:
 
 $\therefore$ o ponto assumido não é o centro de \circlePI e $\therefore$ como \drawUnitLine{PG}, \drawUnitLine{PB} e \drawUnitLine{PH} são traçados a partir de um ponto que não é o centro, eles não são iguais a \byref{prop:III.VII,prop:III.VIII}; mas antes foi demonstrado que eram iguais, o que é um absurdo; os círculos, portanto, não se cruzam em três pontos.
 
@@ -5426,12 +5429,12 @@ draw byLabelsOnPolygon(A, D, N)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 draw byLabelsOnCircle(A, H)(M);
 }
 \drawCurrentPictureInMargin
-\problem[4]{S}{e}{duas circunferências \drawCircle[middle][1/4]{N} e \drawCircle[middle][1/5]{M} se tocam internamente, a linha direita que une seus centros, ao ser produzida, deverá passar por um ponto de contato.}
+\problem[4]{S}{e}{duas circunferências \drawCircle[middle][1/4]{N} e \drawCircle[middle][1/5]{M} se tocam internamente, a linha reta que une seus centros, ao ser produzida, deverá passar por um ponto de contato.}
 
-Pois, se for possível, deixe o \drawSizedLine{GF} unir seus centros e produzi-lo nos dois sentidos; de um ponto de contato desenhe \drawSizedLine{AG} para o centro de \circleN, e do mesmo ponto de contato desenhe \drawSizedLine{AF} para o centro de \circleM.
+Pois, se for possível, deixe o \drawSizedLine{GF} unir seus centros e produzi-lo nos dois sentidos; de um ponto de contato trace \drawSizedLine{AG} para o centro de \circleN, e do mesmo ponto de contato trace \drawSizedLine{AF} para o centro de \circleM.
 
 \begin{center}
-Because in
+Pois, na figura,
 \drawFromCurrentPicture{
 startAutoLabeling;
 draw byNamedPolygon(AFG);
@@ -5440,10 +5443,10 @@ draw byNamedLineFull(A, A, 1, 1,  0, 0)(GF);
 };
 $\drawSizedLine{GF} + \drawSizedLine{AG} > \drawSizedLine{AF}$ \byref{prop:I.XX},\\
 e $\drawSizedLine{AF} = \drawSizedLine{HD,DG,GF}$ pois são raios de \circleM,\\
-but $\drawSizedLine{GF} + \drawSizedLine{AG} > \drawSizedLine{HD,DG,GF}$;\\
-take away \drawSizedLine{GF} which is common,\\
-and $\drawSizedLine{AG} > \drawSizedLine{HD,DG}$;\\
-but $\drawSizedLine{AG} = \drawSizedLine{DG}$,\\
+mas $\drawSizedLine{GF} + \drawSizedLine{AG} > \drawSizedLine{HD,DG,GF}$;\\
+retire \drawSizedLine{GF}, que é comum,\\
+e $\drawSizedLine{AG} > \drawSizedLine{HD,DG}$;\\
+mas $\drawSizedLine{AG} = \drawSizedLine{DG}$,\\
 porque eles são raios de \circleN,\\
 e $\therefore \drawSizedLine{DG} > \drawSizedLine{HD,DG}$ uma parte maior que o todo, o que é um absurdo.
 \end{center}
@@ -5491,8 +5494,8 @@ Se for possível, seja o \drawUnitLine{FC,CD,DG} ingressar nos centros, e não p
 
 \begin{center}
 $\because \drawUnitLine{AF} + \drawUnitLine{AG} > \drawUnitLine{FC,CD,DG}$ \byref{prop:I.XX}\\ %because
-and $\drawUnitLine{FC} = \drawUnitLine{AF}$ \byref{def:I.XV},\\
-and $\drawUnitLine{DG} = \drawUnitLine{AG}$ \byref{def:I.XV},
+e $\drawUnitLine{FC} = \drawUnitLine{AF}$ \byref{def:I.XV},\\
+e $\drawUnitLine{DG} = \drawUnitLine{AG}$ \byref{def:I.XV},
 
 $\therefore \drawUnitLine{FC} + \drawUnitLine{DG} > \drawUnitLine{FC,CD,DG}$,\\
 uma parte maior que o todo, o que é um absurdo.
@@ -5537,21 +5540,21 @@ draw byLabelsOnCircle(D, B)(M);
 draw byLabelsOnPolygon(B, G, H, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 
-\startsubproposition{Figure I.}\drawCurrentPictureInMargin
-Pois, se for possível, deixe \drawCircle{M} e \drawCircle{N} se tocarem internamente em dois pontos; desenhar \drawUnitLine{GH} unindo seus centros, e produzi-lo até passar por um dos pontos de contato \byref{prop:III.XI};
+\startsubproposition{Figura I.}\drawCurrentPictureInMargin
+Pois, se for possível, deixe \drawCircle{M} e \drawCircle{N} se tocarem internamente em dois pontos; trace \drawUnitLine{GH} unindo seus centros, e prolongue-o até passar por um dos pontos de contato \byref{prop:III.XI};
 
 \begin{center}
-trace \drawUnitLine{DH} e \drawUnitLine{DG}.
+Trace \drawUnitLine{DH} e \drawUnitLine{DG}.
 
-But $\drawUnitLine{BG} = \drawUnitLine{DG}$ \byref{def:I.XV},\\
+Mas $\drawUnitLine{BG} = \drawUnitLine{DG}$ \byref{def:I.XV},\\
 $\therefore$ se \drawUnitLine{GH} for adicionado a ambos,\\
 $\drawUnitLine{GH,BG} = \drawUnitLine{GH} + \drawUnitLine{DG}$;
 
-but $\drawUnitLine{GH,BG} = \drawUnitLine{DH}$ \byref{def:I.XV},\\
-and $\therefore \drawUnitLine{GH} + \drawUnitLine{DG} = \drawUnitLine{DH}$;
+mas $\drawUnitLine{GH,BG} = \drawUnitLine{DH}$ \byref{def:I.XV},\\
+e $\therefore \drawUnitLine{GH} + \drawUnitLine{DG} = \drawUnitLine{DH}$;
 
-but $\therefore \drawUnitLine{GH} + \drawUnitLine{DG} > \drawUnitLine{DH}$ \byref{prop:I.XX},\\
-which is absurd.
+mas $\therefore \drawUnitLine{GH} + \drawUnitLine{DG} > \drawUnitLine{DH}$ \byref{prop:I.XX},\\
+o que é absurdo.
 \end{center}
 
 \defineNewPicture{
@@ -5577,8 +5580,8 @@ draw byArcBE.PII(P, t4, t3 + 8, r1, byblack, 0, 0, 0, 0);
 draw byArcBE.QI(Q, t5, t6 + 8, r1, byblue, 0, 0, 0, 0);
 draw byArcBE.QII(Q, t5, t6, r1, byblack, 0, 0, 0, 0);
 }
-\startsubproposition{Figure II.}\drawCurrentPictureInMargin
-Mas se os pontos de contato forem as extremidades da linha direita que une os centros, esta linha reta deve ser dividida ao meio em dois pontos diferentes para os dois centros; porque é o diâmetro dos dois círculos, o que é um absurdo.
+\startsubproposition{Figura II.}\drawCurrentPictureInMargin
+Mas se os pontos de contato forem as extremidades da linha reta que une os centros, esta linha reta deve ser dividida ao meio em dois pontos diferentes para os dois centros; porque é o diâmetro dos dois círculos, o que é um absurdo.
 
 \vfill\pagebreak
 
@@ -5608,16 +5611,16 @@ byCircleDefineR(G, r2, byblue, 0, 0, 0);
 draw byLabelsOnPolygon(H, G, C)(ALL_LABELS, 0);
 draw byLabelPoint(A, angle(G-A)+45, 3);
 }
-\startsubproposition{Figure III.}\drawCurrentPictureInMargin
-A seguir, se for possível, deixe \drawCircle{H} e \drawCircle{G} se tocarem externamente em dois pontos; desenhe \drawUnitLine{HA,AG} unindo os centros dos círculos, e passando por um dos pontos de contato, e desenhe \drawUnitLine{CH} e \drawUnitLine{CG}.
+\startsubproposition{Figura III.}\drawCurrentPictureInMargin
+A seguir, se for possível, deixe \drawCircle{H} e \drawCircle{G} se tocarem externamente em dois pontos; trace \drawUnitLine{HA,AG} unindo os centros dos círculos, e passando por um dos pontos de contato, e trace \drawUnitLine{CH} e \drawUnitLine{CG}.
 
 \begin{center}
 $\drawUnitLine{CH} = \drawUnitLine{HA}$ \byref{def:I.XV};\\
-and $\drawUnitLine{AG} = \drawUnitLine{CG}$ \byref{def:I.XV};
+e $\drawUnitLine{AG} = \drawUnitLine{CG}$ \byref{def:I.XV};
 
 $\therefore \drawUnitLine{CG} + \drawUnitLine{CH} = \drawUnitLine{HA,AG}$;
 
-but $\drawUnitLine{CG} + \drawUnitLine{CH} > \drawUnitLine{HA,AG}$ \byref{prop:I.XX}, which is absurd.
+mas $\drawUnitLine{CG} + \drawUnitLine{CH} > \drawUnitLine{HA,AG}$ \byref{prop:I.XX}, o que é absurdo.
 \end{center}
 
 Não há, portanto, caso algum em que dois círculos possam tocar-se em dois pontos.
@@ -5657,22 +5660,22 @@ draw byLabelLineEnd(G, E, 0);
 draw byLabelLineEnd(F, E, 0);
 }
 \drawCurrentPictureInMargin
-\problem{E}{qual}{straight lines
+\problem{E}{qual}{retas
 $\left(\vcenter{\nointerlineskip\hbox{\drawProportionalLine{AF,FB}}\nointerlineskip\hbox{\drawProportionalLine{CG,GD}}}\right)$
-inscrito em um círculo estão igualmente distantes do centro; e também, linhas retas igualmente distantes do centro são iguais.}
+inscritas em um círculo estão igualmente distantes do centro; e também, linhas retas igualmente distantes do centro são iguais.}
 
 \begin{center}
 Do centro de \drawCircle[middle][1/5]{E} trace \drawProportionalLine{EF} $\perp$ para \drawProportionalLine{AF,FB} e $\drawProportionalLine{EG} \perp \drawProportionalLine{CG,GD}$, junte \drawProportionalLine{EA} e \drawProportionalLine{EC}.
 
-Then $\drawProportionalLine{CG} = \mbox{ half } \drawProportionalLine{CG,GD}$ \byref{prop:III.III}\\
-and $\drawProportionalLine{AF} = \frac{1}{2} \drawProportionalLine{AF,FB}$ \byref{prop:III.III},\\
-since $\drawProportionalLine{CG,GD} = \drawProportionalLine{AF,FB}$ \byref{\hypref}\\
+Então $\drawProportionalLine{CG} = \mbox{ metade de } \drawProportionalLine{CG,GD}$ \byref{prop:III.III}\\
+e $\drawProportionalLine{AF} = \frac{1}{2} \drawProportionalLine{AF,FB}$ \byref{prop:III.III},\\
+como $\drawProportionalLine{CG,GD} = \drawProportionalLine{AF,FB}$ \byref{\hypref}\\
 $\therefore \drawProportionalLine{CG} = \drawProportionalLine{AF}$,\\
-and $\drawProportionalLine{EA} = \drawProportionalLine{EC}$ \byref{def:I.XV}\\
+e $\drawProportionalLine{EA} = \drawProportionalLine{EC}$ \byref{def:I.XV}\\
 $\therefore \drawProportionalLine{EA}^2 = \drawProportionalLine{EC}^2$;\\
-but since \drawAngle{F} is a right angle\\
+mas como \drawAngle{F} é um ângulo reto,\\
 $\drawProportionalLine{EA}^2 = \drawProportionalLine{EF}^2 + \drawProportionalLine{AF}^2$ \byref{prop:I.XLVII}\\
-and $\drawProportionalLine{EC}^2 = \drawProportionalLine{EG}^2 + \drawProportionalLine{CG}^2$ for the same reason,\\
+e $\drawProportionalLine{EC}^2 = \drawProportionalLine{EG}^2 + \drawProportionalLine{CG}^2$ pela mesma razão,\\
 $\therefore \drawProportionalLine{EF}^2 + \drawProportionalLine{AF}^2 = \drawProportionalLine{EG}^2 + \drawProportionalLine{CG}^2$\\
 $\therefore \drawProportionalLine{EF}^2 = \drawProportionalLine{EG}^2$\\
 $\therefore \drawProportionalLine{EF} = \drawProportionalLine{EG}$
@@ -5681,9 +5684,9 @@ $\therefore \drawProportionalLine{EF} = \drawProportionalLine{EG}$
 Além disso, se as linhas \drawProportionalLine{AF,FB} e \drawProportionalLine{CG,GD} estiverem igualmente distantes do centro; isto é, se as perpendiculares \drawProportionalLine{EF} e \drawProportionalLine{EG} forem iguais, então $\drawProportionalLine{AF,FB} = \drawProportionalLine{CG,GD}$.
 
 \begin{center}
-For, as in the preceding case,\\
+Pois, como no caso precedente,\\
 $\drawProportionalLine{EG}^2 + \drawProportionalLine{CG}^2 = \drawProportionalLine{AF}^2 + \drawProportionalLine{EF}^2$\\
-but $\drawProportionalLine{EG}^2 = \drawProportionalLine{EF}^2$
+mas $\drawProportionalLine{EG}^2 = \drawProportionalLine{EF}^2$
 
 $\therefore \drawProportionalLine{CG} = \drawProportionalLine{AF}$,% de melhoria: no original havia quadrados desses aqui
 e os duplos destes \drawProportionalLine{AF,FB} e \drawProportionalLine{CG,GD} também são iguais.
@@ -5694,7 +5697,7 @@ e os duplos destes \drawProportionalLine{AF,FB} e \drawProportionalLine{CG,GD} t
 \starttheorem{Prop. XV. Teor.}\label{prop:III.XV}
 \problem{O}{}{diâmetro é a maior linha reta num círculo: e, de todas as outras, aquela que está mais próxima do centro é maior que a mais remota.}
 
-\startsubproposition{Figure I.}
+\startsubproposition{Figura I.}
 \defineNewPicture[2/3]{
 pair A, D, E, F, G, M, N;
 numeric r;
@@ -5728,10 +5731,10 @@ O diâmetro \drawUnitLine{DE,EA} é $>$ qualquer linha \drawUnitLine{MN}.
 
 Para traçar \drawUnitLine{EN} e \drawUnitLine{EM}.
 
-Then $\drawUnitLine{EM} = \drawUnitLine{EA}$\\
-and $\drawUnitLine{EN} = \drawUnitLine{DE}$,\\
+Então $\drawUnitLine{EM} = \drawUnitLine{EA}$\\
+e $\drawUnitLine{EN} = \drawUnitLine{DE}$,\\
 $\therefore \drawUnitLine{EN} + \drawUnitLine{EM} = \drawUnitLine{DE,EA}$\\
-but $\drawUnitLine{EN} + \drawUnitLine{EM} > \drawUnitLine{MN}$ \byref{prop:I.XX}
+mas $\drawUnitLine{EN} + \drawUnitLine{EM} > \drawUnitLine{MN}$ \byref{prop:I.XX}
 
 $\therefore \drawUnitLine{DE,EA} > \drawUnitLine{MN}$.
 \end{center}
@@ -5741,7 +5744,7 @@ Novamente, a linha que está mais próxima do centro é maior que a que está ma
 Primeiro, sejam as linhas fornecidas \drawUnitLine{MN} e \drawUnitLine{FG}, que estão no mesmo lado do centro e não se cruzam;
 
 \begin{center}
-draw $\left\{
+trace $\left\{
 \vcenter{
 \nointerlineskip\hbox{\drawUnitLine{EN},}
 \nointerlineskip\hbox{\drawUnitLine{EM},}
@@ -5750,14 +5753,14 @@ draw $\left\{
 }
 \right.$
 
-In
+Na figura,
 \drawFromCurrentPicture{
 draw byNamedAngle(NEG,GEF,FEM);
 startAutoLabeling;
 draw byNamedLineSeq(0)(MN,EM,EN);
 stopAutoLabeling;
 }
-and
+e
 \drawFromCurrentPicture{
 draw byNamedAngle(GEF);
 startAutoLabeling;
@@ -5765,14 +5768,14 @@ draw byNamedLineSeq(0)(FG,EF,EG);
 stopAutoLabeling;
 },\\
 $\drawUnitLine{EN} \mbox{ e } \drawUnitLine{EM} = \drawUnitLine{EG} \mbox{ e } \drawUnitLine{EF}$;\\
-but $\drawAngle{NEG,GEF,FEM} > \drawAngle{GEF}$,
+mas $\drawAngle{NEG,GEF,FEM} > \drawAngle{GEF}$,
 
 $\therefore \drawUnitLine{MN} > \drawUnitLine{EF}$ \byref{prop:I.XXIV}
 \end{center}
 
 \vfill\pagebreak
 
-\startsubproposition{Figure II.}
+\startsubproposition{Figura II.}
 \defineNewPicture{
 pair A, B, C, D, E, F, G, M, N, K, L, H;
 numeric r;
@@ -5807,11 +5810,11 @@ draw byLabelPoint(L, angle(E-H)-45, 2);
 Sejam as linhas fornecidas \drawUnitLine{BC} e \drawUnitLine{FG} que estão em lados diferentes do centro ou se cruzam; do centro trace \drawUnitLine{EL,LK} e $\drawUnitLine{EH} \perp \drawUnitLine{FG} \mbox{ e } \drawUnitLine{BC}$,
 
 \begin{center}
-make $\drawUnitLine{EH} = \drawUnitLine{EL}$,\\
+faça $\drawUnitLine{EH} = \drawUnitLine{EL}$,\\
 e trace $\drawUnitLine{MN} \perp \drawUnitLine{EL,LK}$.
 
 Como \drawUnitLine{BC} e \drawUnitLine{MN} estão igualmente distantes do centro, $\drawUnitLine{BC} = \drawUnitLine{MN}$ \byref{prop:III.XIV};\\
-but $\drawUnitLine{MN} > \drawUnitLine{FG}$ \byref{prop:III.XV},
+mas $\drawUnitLine{MN} > \drawUnitLine{FG}$ \byref{prop:III.XV},
 
 $\therefore \drawUnitLine{BC} > \drawUnitLine{FG}$.
 \end{center}
@@ -5863,26 +5866,26 @@ E se qualquer linha reta \drawUnitLine{AG} for traçada a partir de um ponto per
 Se for possível, seja \drawUnitLine{AC}, que encontra o círculo novamente, ser $\perp \drawUnitLine{DA}$ e trace \drawUnitLine{DC}.
 
 \begin{center}
-Then, $\because \drawUnitLine{DA} = \drawUnitLine{DC}$,  $\drawAngle{CAD} = \drawAngle{C}$ \byref{prop:I.V},\\
+Então, $\because \drawUnitLine{DA} = \drawUnitLine{DC}$, $\drawAngle{CAD} = \drawAngle{C}$ \byref{prop:I.V},\\
 e $\therefore$ cada um desses ângulos é agudo \byref{prop:I.XVII}\\
-but $\drawAngle{CAD} = \drawRightAngle$ \byref{\hypref}, which is absurd,
+mas $\drawAngle{CAD} = \drawRightAngle$ \byref{\hypref}, o que é absurdo,
 
 portanto, \drawUnitLine{AC} traçado $\perp \drawUnitLine{DA}$ não encontra o círculo novamente.
 \end{center}
 
 \startsubproposition{Parte II.}
-Seja \drawUnitLine{EK} $\perp \drawUnitLine{DA}$ e seja \drawUnitLine{AG} desenhado a partir de um ponto \drawFromCurrentPicture{draw byNamedPointLines(G,"GF");} entre \drawUnitLine{EK} e o círculo, que, se for possível, não corta o círculo.
+Seja \drawUnitLine{EK} $\perp \drawUnitLine{DA}$ e seja \drawUnitLine{AG} traçado a partir de um ponto \drawFromCurrentPicture{draw byNamedPointLines(G,"GF");} entre \drawUnitLine{EK} e o círculo, que, se for possível, não corta o círculo.
 
 \begin{center}
 $\because \drawAngle{DAG,GAE} = \drawRightAngle$,\\ %Because
-$\therefore \drawAngle{DAG}$ is an acute angle;\\
+$\therefore \drawAngle{DAG}$ é um ângulo agudo;\\
 suponha que $\drawUnitLine{DH,HG} \perp \drawUnitLine{AG}$, traçado a partir do centro do círculo, deve cair ao lado de \drawAngle{DAG} o ângulo agudo.
 
 $\therefore$ \drawAngle{G} que deveria ser um ângulo reto, é $> \drawAngle{DAG}$,
 
 $\therefore \drawUnitLine{DA} > \drawUnitLine{DH,HG}$;
 
-but $\drawUnitLine{DH} = \drawUnitLine{DA}$,
+mas $\drawUnitLine{DH} = \drawUnitLine{DA}$,
 \end{center}
 
 \noindent e $\therefore \drawUnitLine{DH} > \drawUnitLine{DH,HG}$, uma parte maior que o todo, o que é um absurdo. Portanto, o ponto não fica fora do círculo e, portanto, a linha reta \drawUnitLine{AG} corta o círculo.
@@ -5978,14 +5981,14 @@ draw byLabelPoint(D, angle(D-C)-90, 1);
 
 \begin{center}
 Pois, se for possível, seja \drawUnitLine{FB,BG} $\perp \drawUnitLine{CD}$,\\
-then $\because \drawAngle{G} = \drawRightAngle$, \drawAngle{C} is acute \byref{prop:I.XVII} %because
+então $\because \drawAngle{G} = \drawRightAngle$, \drawAngle{C} é agudo \byref{prop:I.XVII}
 
 $\therefore \drawUnitLine{FC} > \drawUnitLine{FB,BG}$ \byref{prop:I.XIX};
 
-but $\drawUnitLine{FC} = \drawUnitLine{FB}$,\\
+mas $\drawUnitLine{FC} = \drawUnitLine{FB}$,\\
 e $\therefore \drawUnitLine{FB} > \drawUnitLine{FB,BG}$, uma parte maior que o todo, o que é um absurdo.
 
-$\therefore \drawUnitLine{FB,BG}$ is not $\perp \drawUnitLine{CD}$;
+$\therefore \drawUnitLine{FB,BG}$ não é $\perp \drawUnitLine{CD}$;
 \end{center}
 
 \noindent e da mesma maneira pode ser demonstrado que nenhuma outra linha exceto \drawUnitLine{FC} é perpendicular a \drawUnitLine{CD}.
@@ -6016,12 +6019,12 @@ draw byLabelLineEnd(E, C, 0);
 \drawCurrentPictureInMargin
 \problem{S}{e}{uma linha reta \drawUnitLine{CE} for tangente a um círculo, a linha reta \drawUnitLine{AC}, traçada perpendicularmente a ela a partir do ponto de contato, passa pelo centro do círculo.}
 
-Pois, se for possível, deixe o centro sem \drawUnitLine{AC}, e desenhe \drawUnitLine{CF} do suposto centro até o ponto de contato.
+Pois, se for possível, deixe o centro sem \drawUnitLine{AC}, e trace \drawUnitLine{CF} do suposto centro até o ponto de contato.
 
 \begin{center}
 $\because \drawUnitLine{CF} \perp \drawUnitLine{CE}$ \byref{prop:III.XVIII}\\ % Because
-$\therefore \drawAngle{FCE} = \drawRightAngle$, a right angle;\\
-but $\drawAngle{ACF,FCE} = \drawRightAngle$ \byref{\hypref},
+$\therefore \drawAngle{FCE} = \drawRightAngle$, um ângulo reto;\\
+mas $\drawAngle{ACF,FCE} = \drawRightAngle$ \byref{\hypref},
 
 e $\therefore \drawAngle{FCE} = \drawAngle{ACF,FCE}$, uma parte igual ao todo, o que é um absurdo.
 \end{center}
@@ -6033,7 +6036,7 @@ Portanto o ponto assumido não é o centro; e da mesma maneira pode ser demonstr
 \starttheorem{Prop. XX. Teor.}\label{prop:III.XX}
 \problem[4]{O}{}{ângulo no centro de um círculo é o dobro do ângulo na circunferência, quando eles têm a mesma parte da circunferência como base.}
 
-\startsubproposition{Figure I.}
+\startsubproposition{Figura I.}
 \defineNewPicture{
 pair A, E, F, C;
 r := 7/4u;
@@ -6057,16 +6060,16 @@ draw byLabelsOnPolygon(F, E, A)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \drawCurrentPictureInMargin
 \begin{center}
 Seja o centro do círculo estar em \drawUnitLine{EF,EA}\\
-a side of \drawAngle{CAF}.
+um lado de \drawAngle{CAF}.
 
 $\because \drawUnitLine{EC} = \drawUnitLine{EA}$,\\ %Because
 $\drawAngle{CAF} = \drawAngle{C}$ \byref{prop:I.V}.
 
-But $\drawAngle{CEF} = \drawAngle{CAF} + \drawAngle{C}$,\\
-or $\drawAngle{CEF} = \mbox{ twice } \drawAngle{CAF}$ \byref{prop:I.XXXII}.
+Mas $\drawAngle{CEF} = \drawAngle{CAF} + \drawAngle{C}$,\\
+ou $\drawAngle{CEF} = \mbox{ duas vezes } \drawAngle{CAF}$ \byref{prop:I.XXXII}.
 \end{center}
 
-\startsubproposition{Figure II.}
+\startsubproposition{Figura II.}
 \defineNewPicture{
 pair A, E, F, C, B;
 r := 7/4u;
@@ -6098,16 +6101,16 @@ Seja o centro estar dentro de \drawAngle{BAF,CAF}, o ângulo na circunferência;
 trace \drawUnitLine{AF} do ponto angular até o centro do círculo;\\
 depois $\drawAngle{B} = \drawAngle{BAF}$ e $\drawAngle{C} = \drawAngle{CAF}$, devido à igualdade dos lados \byref{prop:I.V}.
 
-Hence $\drawAngle{BAF} + \drawAngle{B} + \drawAngle{CAF} + \drawAngle{C} = \mbox{ twice } \drawAngle{BAF,CAF}$.
+Daí $\drawAngle{BAF} + \drawAngle{B} + \drawAngle{CAF} + \drawAngle{C} = \mbox{ duas vezes } \drawAngle{BAF,CAF}$.
 
-But $\drawAngle{BEF} = \drawAngle{BAF} + \drawAngle{B}$,\\
-and $\drawAngle{CEF} = \drawAngle{CAF} + \drawAngle{C}$,\\
-$\therefore \drawAngle{BEF,CEF} = \mbox{ twice } \drawAngle{BAF,CAF}$.
+Mas $\drawAngle{BEF} = \drawAngle{BAF} + \drawAngle{B}$,\\
+e $\drawAngle{CEF} = \drawAngle{CAF} + \drawAngle{C}$,\\
+$\therefore \drawAngle{BEF,CEF} = \mbox{ duas vezes } \drawAngle{BAF,CAF}$.
 \end{center}
 
 \vfill\pagebreak
 
-\startsubproposition{Figure III.}
+\startsubproposition{Figura III.}
 \defineNewPicture{
 pair E, C, F, G, D;
 r := 7/4u;
@@ -6134,10 +6137,10 @@ draw byLabelsOnPolygon(G, E, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 Seja o centro ficar sem \drawAngle{FDC}\\
 e trace \drawUnitLine{DG}, o diâmetro.
 
-$\because \drawAngle{GEF,FEC} = \mbox{ twice } \drawAngle{GDF,FDC}$;\\ %Because
-and $\drawAngle{GEF} = \mbox{ twice } \drawAngle{GDF}$ (case I.);
+$\because \drawAngle{GEF,FEC} = \mbox{ duas vezes } \drawAngle{GDF,FDC}$;\\
+e $\drawAngle{GEF} = \mbox{ duas vezes } \drawAngle{GDF}$ (caso I.);
 
-$\therefore \drawAngle{FEC} = \mbox{ twice } \drawAngle{FDC}$.
+$\therefore \drawAngle{FEC} = \mbox{ duas vezes } \drawAngle{FDC}$.
 \end{center}
 
 \qed
@@ -6170,12 +6173,12 @@ draw byCircleR(F, r, byblue, 0, 0, 0);
 draw byLabelsOnCircle(B, D, E, A)(F);
 draw byLabelsOnPolygon(B, F, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
-\startsubproposition{Figure I.}
+\startsubproposition{Figura I.}
 \drawCurrentPictureInMargin
 Seja o segmento ser maior que um semicírculo e trace \drawUnitLine{DF} e \drawUnitLine{BF} no centro.
 
 \begin{center}
-$\drawAngle{F} = \mbox{ twice } \drawAngle{A} \mbox{ or twice } = \drawAngle{E}$ \byref{prop:III.XX};
+$\drawAngle{F} = \mbox{ duas vezes } \drawAngle{A} \mbox{ ou duas vezes } = \drawAngle{E}$ \byref{prop:III.XX};
 
 $\therefore \drawAngle{A} = \drawAngle{E}$
 \end{center}
@@ -6209,12 +6212,12 @@ draw byLine(D, E, byblack, SOLID_LINE, THIN_WIDTH);
 draw byCircleR(F, r, byblue, 0, 0, 0);
 draw byLabelsOnCircle(B, D, E, A, G)(F);
 }
-\startsubproposition{Figure II.}
+\startsubproposition{Figura II.}
 \drawCurrentPictureInMargin
 Seja o segmento um semicírculo, ou menos que um semicírculo, trace \drawUnitLine{GA} o diâmetro, trace também \drawUnitLine{GE}.
 
 \begin{center}
-$\drawAngle{BAG} = \drawAngle{BEG}$ and $\drawAngle{GAD} = \drawAngle{GED}$ (case I.)
+$\drawAngle{BAG} = \drawAngle{BEG}$ e $\drawAngle{GAD} = \drawAngle{GED}$ (caso I.)
 
 $\therefore \drawAngle{BAG,GAD} = \drawAngle{BEG,GED}$.
 \end{center}
@@ -6250,18 +6253,18 @@ draw byCircleR(E, r, byred, 0, 0, 1/2);
 draw byLabelsOnCircle(A, B, C, D)(E);
 }
 \drawCurrentPictureInMargin
-\problem{O}{s}{ângulos opostos \drawAngle{DAC,CAB} e \drawAngle{BCA,ACD}, \drawAngle{CDB,BDA} e \drawAngle{ABD,DBC} de qualquer figura quadrilátera inscrito em um círculo, são juntos iguais a dois ângulos retos.}
+\problem{O}{s}{ângulos opostos \drawAngle{DAC,CAB} e \drawAngle{BCA,ACD}, \drawAngle{CDB,BDA} e \drawAngle{ABD,DBC} de qualquer figura quadrilátera inscrita em um círculo, são juntos iguais a dois ângulos retos.}
 
 \begin{center}
 Trace \drawUnitLine{AC} e \drawUnitLine{BD} as diagonais;\\
 e porque os ângulos no mesmo segmento são iguais\\
 $\drawAngle{CDB} = \drawAngle{CAB}$,\\
-and $\drawAngle{DAC} = \drawAngle{DBC}$;
+e $\drawAngle{DAC} = \drawAngle{DBC}$;
 
-add \drawAngle{BCA,ACD} to both.\\
-$\drawAngle{DAC,CAB} + \drawAngle{BCA,ACD} = \drawAngle{BCA,ACD} + \drawAngle{CDB} + \drawAngle{DBC} = \mbox{ two right angles }$ \byref{prop:I.XXXII}.
+adicione \drawAngle{BCA,ACD} a ambos.\\
+$\drawAngle{DAC,CAB} + \drawAngle{BCA,ACD} = \drawAngle{BCA,ACD} + \drawAngle{CDB} + \drawAngle{DBC} = \mbox{ dois ângulos retos }$ \byref{prop:I.XXXII}.
 
-In like manner it may be shown that,\\
+Da mesma maneira pode-se demonstrar que,\\
 $\drawAngle{CDB,BDA} + \drawAngle{ABD,DBC} = \drawTwoRightAngles$.
 \end{center}
 
@@ -6309,23 +6312,23 @@ draw byNamedLine(AB);
 draw byNamedArcExact(N);
 draw byLabelsOnPolygon(A, B, noPoint)(ALL_LABELS, 0);
 }
-and
+e
 \drawFromCurrentPicture[bottom]{
 draw byNamedLine(AB);
 draw byNamedArcExact(M);
 draw byLabelsOnPolygon(A, B, noPoint)(ALL_LABELS, 0);
 }
-be constructed;
+sejam construídos;
 
-trace qualquer linha direita \drawUnitLine{AD} cortando ambos os segmentos,
+trace qualquer linha reta \drawUnitLine{AD} cortando ambos os segmentos,
 
 trace \drawUnitLine{BC} e \drawUnitLine{BD}.
 
 Como os segmentos são semelhantes,\\
 $\drawAngle{C} = \drawAngle{D}$ \byref{def:III.XI}, % improvement: definition 10 in the original seems to be irrelevant
 
-but $\drawAngle{C} > \drawAngle{D}$ \byref{prop:I.XVI}\\
-which is absurd;
+mas $\drawAngle{C} > \drawAngle{D}$ \byref{prop:I.XVI}\\
+o que é absurdo;
 
 portanto, nenhum ponto em nenhum dos segmentos cai sem o outro e, portanto, os segmentos coincidem.
 \end{center}
@@ -6359,14 +6362,14 @@ draw byLabelsOnPolygon(B, A, noPoint)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(D, C, noPoint)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{S}{imilar}{segments
+\problem{S}{egmentos}{semelhantes
 \drawFromCurrentPicture[bottom]{
 draw byNamedFilledCircleSegment(M);
 draw byNamedLine(AB);
 draw byNamedArcExact(M);
 draw byLabelsOnPolygon(B, A, noPoint)(ALL_LABELS, 0);
 }
-and
+e
 \drawFromCurrentPicture[bottom]{
 draw byNamedFilledCircleSegment(N);
 draw byNamedLine(CD);
@@ -6375,21 +6378,21 @@ draw byLabelsOnPolygon(D, C, noPoint)(ALL_LABELS, 0);
 }, de círculos sobre linhas retas iguais (\drawUnitLine{AB} e \drawUnitLine{CD}) são iguais entre si.}
 
 \begin{center}
-For, if
+Pois, se
 \drawFromCurrentPicture[bottom]{
 draw byNamedFilledCircleSegment(N);
 draw byLabelsOnPolygon(D, C, noPoint)(ALL_LABELS, 0);
 }
-be so applied to
+for aplicado a
 \drawFromCurrentPicture[bottom]{
 draw byNamedFilledCircleSegment(M);
 draw byLabelsOnPolygon(B, A, noPoint)(ALL_LABELS, 0);
 },\\
-that \drawUnitLine{CD} may fall on \drawUnitLine{AB},\\
+de modo que \drawUnitLine{CD} possa coincidir com \drawUnitLine{AB},\\
 as extremidades do \drawUnitLine{CD} podem estar nas extremidades do \drawUnitLine{AB}\\
 e \drawArc{M} no mesmo lado que \drawArc{N};\\
 $\because \drawUnitLine{CD} = \drawUnitLine{AB}$,\\ %because
-\drawUnitLine{CD} must wholly coincide with \drawUnitLine{AB};
+\drawUnitLine{CD} deve coincidir inteiramente com \drawUnitLine{AB};
 \end{center}
 
 \noindent e os segmentos semelhantes estando então na mesma reta e no mesmo lado dela, também devem coincidir com \byref{prop:III.XXIII} e, portanto, são iguais.
@@ -6425,8 +6428,8 @@ draw byLabelsOnPolygon(D, F, E)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \begin{center}
 De qualquer ponto do segmento trace \drawUnitLine{BC} e \drawUnitLine{AB},\\
 divida-os ao meio e dos pontos de bissecção\\
-draw $\drawUnitLine{EF} \perp \drawUnitLine{BC}$\\
-and $\drawUnitLine{DF} \perp \drawUnitLine{AB}$\\
+trace $\drawUnitLine{EF} \perp \drawUnitLine{BC}$\\
+e $\drawUnitLine{DF} \perp \drawUnitLine{AB}$\\
 onde eles se encontram é o centro do círculo.
 \end{center}
 
@@ -6490,15 +6493,15 @@ draw byLabelsOnPolygon(E, H, F)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \begin{center}
 Pois, seja $\drawAngle{G} = \drawAngle{H}$ no centro,\\
 trace \drawUnitLine{BC} e \drawUnitLine{EF}.\\
-Then since $\circleG = \circleH$,\\
+Então, como $\circleG = \circleH$,\\
 \drawLine[bottom]{BG,CG,BC}
-and
+e
 \drawLine[bottom]{EH,FH,EF}
-have\\
+tem\\
 $\drawUnitLine{BG} = \drawUnitLine{CG} = \drawUnitLine{EH} = \drawUnitLine{FH}$,\\
-and $\drawAngle{G} = \drawAngle{H}$,\\
+e $\drawAngle{G} = \drawAngle{H}$,\\
 $\therefore \drawUnitLine{BC} = \drawUnitLine{EF}$ \byref{prop:I.IV}.\\
-But $\drawAngle{A} = \drawAngle{D}$ \byref{prop:III.XX};\\
+Mas $\drawAngle{A} = \drawAngle{D}$ \byref{prop:III.XX};\\
 $\therefore$
 \drawFromCurrentPicture{
 startTempScale(1/5);
@@ -6507,7 +6510,7 @@ draw byNamedLine(BC);
 draw byLabelsOnCircle(B, C)(G);
 stopTempScale;
 }
-and
+e
 \drawFromCurrentPicture{
 startTempScale(1/5);
 draw byNamedArc(H);
@@ -6522,7 +6525,7 @@ eles também são iguais \byref{prop:III.XXIV}
 Se, portanto, os segmentos iguais forem retirados dos círculos iguais, os segmentos restantes serão iguais;
 
 \begin{center}
-hence $
+portanto $
 \drawFromCurrentPicture{
 draw byNamedFilledCircleSegment(G);
 draw byNamedArcLabel(Gb);
@@ -6533,7 +6536,7 @@ draw byNamedFilledCircleSegment(H);
 draw byNamedArcLabel(Hb);
 }
 $ \byref{ax:I.III};\\
-and $\therefore \drawArc{Gb} = \drawArc{Hb}$.
+e $\therefore \drawArc{Gb} = \drawArc{Hb}$.
 \end{center}
 
 Mas se os ângulos iguais dados estiverem na circunferência, é evidente que os ângulos no centro, sendo o dobro daqueles na circunferência, também são iguais e, portanto, os arcos sobre os quais eles se apoiam são iguais.
@@ -6600,12 +6603,12 @@ draw byLabelsOnPolygon(E, H, F)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 
 \begin{center}
 Pois se for possível, deixe um deles\\
-\drawAngle{D} be greater than the other \drawAngle{BAK}\\
-and make $\drawAngle{BAK,KAC} = \drawAngle{D}$
+\drawAngle{D} seja maior que o outro \drawAngle{BAK}\\
+e faça $\drawAngle{BAK,KAC} = \drawAngle{D}$
 
 $\therefore \drawArc{GbI,GbII} = \drawArc{Hb}$ \byref{prop:III.XXVI}
 
-but $\drawArc{GbI} = \drawArc{Hb}$ \byref{\hypref}\\
+mas $\drawArc{GbI} = \drawArc{Hb}$ \byref{\hypref}\\
 $\therefore \drawArc{GbI} = \drawArc{GbI,GbII}$ uma parte igual ao todo, o que é um absurdo;
 
 $\therefore$ nenhum ângulo é maior que o outro,
@@ -6662,15 +6665,15 @@ draw byLabelsOnPolygon(D, L, E)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 Dos centros dos círculos iguais,\\
 trace \drawUnitLine{AK}, \drawUnitLine{BK} e \drawUnitLine{DL}, \drawUnitLine{EL};
 
-and $\because \circleK = \circleL$\\ % because
+e, porque $\because \circleK = \circleL$\\ % because
 $\drawUnitLine{AK}, \drawUnitLine{BK} = \drawUnitLine{DL}, \drawUnitLine{EL}$\\
-also $\drawUnitLine{AB} = \drawUnitLine{DE}$ \byref{\hypref}
+também $\drawUnitLine{AB} = \drawUnitLine{DE}$ \byref{\hypref}
 
 $\therefore \drawAngle{K} = \drawAngle{L}$
 
 $\therefore \drawArc{Kb} = \drawArc{Lb}$ \byref{prop:III.XXVI}
 
-and $\therefore \drawArc[bottom][1/3]{K} = \drawArc[bottom][1/3]{L}$ \byref{ax:I.III}.
+e $\therefore \drawArc[bottom][1/3]{K} = \drawArc[bottom][1/3]{L}$ \byref{ax:I.III}.
 \end{center}
 
 \qed
@@ -6724,9 +6727,9 @@ Se os arcos iguais forem semicírculos, a proposição é evidente. Mas se não,
 seja \drawUnitLine{AK}, \drawUnitLine{BK} e \drawUnitLine{DL}, \drawUnitLine{EL} serem atraídos para os centros;
 
 $\because \drawArc{Kb} = \drawArc{Lb}$ \byref{\hypref}\\ % because
-and $\drawAngle{K} = \drawAngle{L}$ \byref{prop:III.XXVII};
+e $\drawAngle{K} = \drawAngle{L}$ \byref{prop:III.XXVII};
 
-but $\drawUnitLine{AK} \mbox{ e } \drawUnitLine{BK} = \drawUnitLine{DL} \mbox{ e } \drawUnitLine{EL}$
+mas $\drawUnitLine{AK} \mbox{ e } \drawUnitLine{BK} = \drawUnitLine{DL} \mbox{ e } \drawUnitLine{EL}$
 
 $\therefore \drawUnitLine{AB} = \drawUnitLine{DE}$ \byref{prop:I.IV};
 
@@ -6769,15 +6772,15 @@ draw byLabelLineEnd(C, D, 0);
 \problem{P}{ara}{bisseccionar um determinado arco \drawArc[middle][1/5]{El,Er}.}
 
 \begin{center}
-Draw \drawUnitLine{AC,CB};\\
-make $\drawUnitLine{AC} = \drawUnitLine{CB}$,\\
+Trace \drawUnitLine{AC,CB};\\
+faça $\drawUnitLine{AC} = \drawUnitLine{CB}$,\\
 trace $\drawUnitLine{DC} \perp \drawUnitLine{AC,CB}$ e ele divide o arco ao meio.
 
 Trace \drawUnitLine{DA} e \drawUnitLine{DB}.
 
 $\drawUnitLine{AC} = \drawUnitLine{CB}$ \byref{\constref}\\
 \drawUnitLine{DC} é comum,\\ % comum a quê? provavelmente triângulos ACD e CBD
-and $\drawAngle{ACD} = \drawAngle{DCB}$ \byref{\constref}
+e $\drawAngle{ACD} = \drawAngle{DCB}$ \byref{\constref}
 
 $\therefore \drawUnitLine{DA} = \drawUnitLine{DB}$ \byref{prop:I.IV}\\
 $
@@ -6827,13 +6830,13 @@ draw byCircleR(E, r, byblack, 0, 0, 0);
 draw byLabelsOnCircle(A, B, C)(E);
 draw byLabelsOnPolygon(C, E, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
-\startsubproposition{Figure I.}
+\startsubproposition{Figura I.}
 \drawCurrentPictureInMargin
 \begin{center}
 O ângulo \drawAngle{EAB,CAE} em um semicírculo é um ângulo reto.
 
 Trace \drawUnitLine{AE} e \drawUnitLine{BE,EC}\\
-$\drawAngle{B}=\drawAngle{EAB}$ and $\drawAngle{C} = \drawAngle{CAE}$ \byref{prop:I.V}\\
+$\drawAngle{B}=\drawAngle{EAB}$ e $\drawAngle{C} = \drawAngle{CAE}$ \byref{prop:I.V}\\
 $\drawAngle{C} + \drawAngle{B} = \drawAngle{EAB,CAE} = \mbox{ a metade de } \drawTwoRightAngles= \drawRightAngle$ \byref{prop:I.XXXII}
 \end{center}
 
@@ -6857,13 +6860,13 @@ draw byLine(B, C, byred, SOLID_LINE, REGULAR_WIDTH);
 draw byCircleR(E, r, byblue, 0, 0, 0);
 draw byLabelsOnCircle(A, B, C, D)(E);
 }
-\startsubproposition{Figure II.}
+\startsubproposition{Figura II.}
 \drawCurrentPictureInMargin
 \begin{center}
 O ângulo \drawAngle{BAD} em um segmento maior que um semicírculo é agudo
 
 Trace \drawUnitLine{BC} o diâmetro e \drawUnitLine{AC}\\
-$\therefore \drawAngle{BAD,DAC} = \mbox{ a right angle}$, $\therefore$ \drawAngle{BAD} is acute.
+$\therefore \drawAngle{BAD,DAC} = \mbox{ um ângulo reto}$, $\therefore$ \drawAngle{BAD} é agudo.
 \end{center}
 
 \defineNewPicture{
@@ -6885,14 +6888,14 @@ draw byLine(D, A, byblack, SOLID_LINE, THIN_WIDTH);
 draw byCircleR(E, r, byblue, 0, 0, 0);
 draw byLabelsOnCircle(A, B, C, D)(E);
 }
-\startsubproposition{Figure III.}
+\startsubproposition{Figura III.}
 \drawCurrentPictureInMargin
 \begin{center}
 O ângulo \drawAngle{D} em um segmento menor que um semicírculo é obtuso.
 
 Pegue qualquer ponto na circunferência oposta, para o qual trace \drawUnitLine{BC} e \drawUnitLine{AB}.\\
 $\because \drawAngle{B} + \drawAngle{D} = \drawTwoRightAngles$ \byref{prop:III.XXII}\\ % Because
-but $\drawAngle{B} < \drawRightAngle$ (figure II.), $\therefore$ \drawAngle{D} is obtuse.
+mas $\drawAngle{B} < \drawRightAngle$ (figura II.), $\therefore$ \drawAngle{D} é obtuso.
 \end{center}
 
 \qed
@@ -6932,7 +6935,7 @@ draw byLabelsOnPolygon(E, F, noPoint)(ALL_LABELS, 0);
 
 Se a corda passar pelo centro, é evidente que os ângulos são iguais, pois cada um deles é um ângulo reto. \byref{prop:III.XVI,prop:III.XXXI}
 
-Mas se não, desenhe $\drawUnitLine{AB} \perp \drawUnitLine{EF}$ a partir do ponto de contato, ele deve passar pelo centro do círculo, \byref{prop:III.XIX}
+Mas se não, trace $\drawUnitLine{AB} \perp \drawUnitLine{EF}$ a partir do ponto de contato, ele deve passar pelo centro do círculo, \byref{prop:III.XIX}
 
 \begin{center}
 $\therefore \drawAngle{ADB} = \drawAngle{ABE} $ \byref{prop:III.XXXI}
@@ -6941,7 +6944,7 @@ $\drawAngle{A} + \drawAngle{DBA} = \drawAngle{ABE} = \drawAngle{FBA}$ \byref{pro
 
 $\therefore \drawAngle{A} = \drawAngle{FBD}$ \byref{ax:I.III}. % de melhoria: parece ser o axioma III aqui e ali embaixo
 
-Again $\drawAngle{B} = \drawTwoRightAngles = \drawAngle{A} + \drawAngle{C}$ \byref{prop:III.XXII}
+Novamente $\drawAngle{B} = \drawTwoRightAngles = \drawAngle{A} + \drawAngle{C}$ \byref{prop:III.XXII}
 
 $\therefore \drawAngle{DBE} = \drawAngle{C}$, \byref{ax:I.III}, que é o ângulo no segmento alternativo.
 \end{center}
@@ -6991,8 +6994,8 @@ Se o ângulo dado for agudo ou obtuso, faça com a linha dada, em sua extremidad
 \begin{center}
 $\drawAngle{DAB} = \drawAngle{givenAcute}$,
 
-draw $\drawUnitLine{AG} \perp \drawUnitLine{KD}$\\
-and make $\drawAngle{B} = \drawAngle{BAE}$,
+trace $\drawUnitLine{AG} \perp \drawUnitLine{KD}$\\
+e faça $\drawAngle{B} = \drawAngle{BAE}$,
 
 descreva \drawCircle[middle][1/5]{G} com \drawUnitLine{AG} ou \drawUnitLine{GB} como raio, pois eles são iguais.
 
@@ -7072,7 +7075,7 @@ $\left\{\vcenter{
 \nointerlineskip\hbox{\drawSizedLine{AE,EC}}
 \nointerlineskip\hbox{\drawSizedLine{DE,EB}}}\right\}$
 em um círculo se cruzam, o retângulo compreendido pelos segmentos de um é igual ao retângulo compreendido pelos segmentos do outro.}
-\startsubproposition{Figure I.}
+\startsubproposition{Figura I.}
 \drawCurrentPictureInMargin
 Se as linhas retas dadas passam pelo centro, elas são cortadas ao meio no ponto de intersecção, portanto os retângulos sob seus segmentos são quadrados de suas metades e, portanto, iguais.
 
@@ -7099,12 +7102,12 @@ draw byLabelsOnCircle(B, D, C, A)(E);
 draw byLabelsOnPolygon(D, H, C)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 draw byLabelsOnPolygon(B, E, A)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
-\startsubproposition{Figure II.}
+\startsubproposition{Figura II.}
 \drawCurrentPictureInMargin
 \begin{center}
 Seja \drawSizedLine{HC,EH,AE} passar pelo centro e \drawSizedLine{BH,HD} não; trace \drawSizedLine{EB} e \drawSizedLine{DE}.
 
-Then $\drawSizedLine{BH} \times \drawSizedLine{HD} = \drawSizedLine{EB}^2 - \drawSizedLine{EH}^2$ \byref{prop:II.VI}, or $\drawSizedLine{BH} \times \drawSizedLine{HD} = \drawSizedLine{HC,EH}^2 - \drawSizedLine{EH}^2$.
+Então $\drawSizedLine{BH} \times \drawSizedLine{HD} = \drawSizedLine{EB}^2 - \drawSizedLine{EH}^2$ \byref{prop:II.VI}, ou $\drawSizedLine{BH} \times \drawSizedLine{HD} = \drawSizedLine{HC,EH}^2 - \drawSizedLine{EH}^2$.
 
 $\therefore \drawSizedLine{BH} \times \drawSizedLine{HD} = \drawSizedLine{EH,AE} \times \drawSizedLine{AE}$ \byref{prop:II.V}.
 \end{center}
@@ -7134,13 +7137,13 @@ draw byCircleR(F, r, byblue, 0, 0, 0);
 draw byLabelsOnCircle(B, D, K, L, A, C)(F);
 draw byLabelsOnPolygon(B, E, K)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
-\startsubproposition{Figure III.}
+\startsubproposition{Figura III.}
 \drawCurrentPictureInMargin
-Seja nenhuma das linhas fornecidas passar pelo centro, trace através de sua interseção um diâmetro \drawSizedLine{KE,EL},
+Se nenhuma das linhas fornecidas passar pelo centro, trace através de sua interseção um diâmetro \drawSizedLine{KE,EL},
 
 \begin{center}
-and $\drawSizedLine{KE} \times \drawSizedLine{EL} = \drawSizedLine{BE} \times \drawSizedLine{ED}$ (part 2.),\\
-also $\drawSizedLine{KE} \times \drawSizedLine{EL} = \drawSizedLine{AE} \times \drawSizedLine{EC}$ (part 2.);
+e $\drawSizedLine{KE} \times \drawSizedLine{EL} = \drawSizedLine{BE} \times \drawSizedLine{ED}$ (parte II.),\\
+também $\drawSizedLine{KE} \times \drawSizedLine{EL} = \drawSizedLine{AE} \times \drawSizedLine{EC}$ (parte II.);
 
 $\therefore \drawSizedLine{BE} \times \drawSizedLine{ED} = \drawSizedLine{AE} \times \drawSizedLine{EC}$.
 \end{center}
@@ -7173,7 +7176,7 @@ draw byLabelPoint(C, angle(C-F) - 45, 2);
 }
 \problem{S}{e}{a partir de um ponto sem círculo forem traçadas duas linhas retas até ele, uma das quais \drawSizedLine{DB} é tangente ao círculo e a outra \drawSizedLine{FA,CF,DC} o corta; o retângulo sob toda a linha de corte \drawSizedLine{FA,CF,DC} e o segmento externo \drawSizedLine{DC} é igual ao quadrado da tangente \drawSizedLine{DB}.}
 \drawCurrentPictureInMargin
-\startsubproposition{Figure I.}
+\startsubproposition{Figura I.}
 \begin{center}
 Seja \drawSizedLine{FA,CF,DC} passar pelo centro;
 
@@ -7181,7 +7184,7 @@ trace \drawSizedLine{BF} do centro até o ponto de contato;
 
 $\drawSizedLine{DB}^2 = \drawSizedLine{CF,DC}^2 - \drawSizedLine{BF}^2$ \byref{prop:I.XLVII}, %\mbox{ minus }
 
-or $\drawSizedLine{DB}^2 = \drawSizedLine{CF,DC}^2 - \drawSizedLine{CF}^2$, %\mbox{ minus }
+ou $\drawSizedLine{DB}^2 = \drawSizedLine{CF,DC}^2 - \drawSizedLine{CF}^2$,
 
 $\therefore \drawSizedLine{DB}^2 = \drawSizedLine{FA,CF,DC} \times \drawSizedLine{DC}$ \byref{prop:II.VI}.
 \end{center}
@@ -7212,15 +7215,15 @@ draw byLabelsOnCircle(A, B)(E);
 draw byLabelsOnPolygon(B, D, E, A)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 draw byLabelPoint(C, angle(C-E) + 45, 2);
 }\drawCurrentPictureInMargin
-\startsubproposition{Figure II.}
+\startsubproposition{Figura II.}
 \begin{center}
 Se \drawSizedLine{CA,DC} não passar pelo centro,
 
 trace \drawSizedLine{EA} e \drawSizedLine{EC}.
 
-Then $\drawSizedLine{CA,DC} \times \drawSizedLine{CA} = \drawSizedLine{DE}^2 - \drawSizedLine{EC}^2$ \byref{prop:II.VI}, %\mbox{ minus }
+Então $\drawSizedLine{CA,DC} \times \drawSizedLine{CA} = \drawSizedLine{DE}^2 - \drawSizedLine{EC}^2$ \byref{prop:II.VI}, %\mbox{ minus }
 
-that is, $\drawSizedLine{CA,DC} \times \drawSizedLine{CA} = \drawSizedLine{DE}^2 - \drawSizedLine{EB}^2$, %\mbox{ minus }
+isto é, $\drawSizedLine{CA,DC} \times \drawSizedLine{CA} = \drawSizedLine{DE}^2 - \drawSizedLine{EB}^2$, %\mbox{ minus }
 
 $\therefore \drawSizedLine{CA,DC} \times \drawSizedLine{CA} = \drawSizedLine{DB}^2$ \byref{prop:III.XVIII}.
 \end{center}
@@ -7303,7 +7306,7 @@ byLineDefine(C, D, byblack, SOLID_LINE, REGULAR_WIDTH);
 byLineDefine(D, A, byblack, SOLID_LINE, REGULAR_WIDTH);
 draw byNamedLineSeq(1)(AB,BC,CD,DA);
 }\drawCurrentPictureInMargin[inside]
-Uma figura retilínea é dita \emph{inscrito em} outra, quando todos os pontos angulares da figura inscrita estão nos lados da figura na qual ela está inscrita.
+Uma figura retilínea é dita \emph{inscrita em} outra, quando todos os pontos angulares da figura inscrita estão nos lados da figura na qual ela está inscrita.
 
 \startdefinition{}\label{def:IV.II}
 Diz-se que uma figura está descrita sobre outra figura, quando todos os lados da figura circunscrita passam pelos pontos angulares da outra figura.
@@ -7332,7 +7335,7 @@ draw byNamedLineSeq(-1)(DA,CD,BC,AB);
 draw byCircleR(O, r, byblack, 0, 0, 1);
 }
 \drawCurrentPictureInMargin[inside]
-Uma figura retilínea é dita \emph{inscrito em} um círculo, quando o vértice de cada ângulo da figura está na circunferência do círculo.
+Uma figura retilínea é dita \emph{inscrita em} um círculo, quando o vértice de cada ângulo da figura está na circunferência do círculo.
 
 \startdefinition{}\label{def:IV.IV}
 \defineNewPicture{
@@ -7348,7 +7351,7 @@ draw byPolygon(A,B,C,D)(byred);
 draw byArbitraryFigure.ABCDo(A--B--C--D--cycle, byred, 0, 0);
 draw byFilledCircleSector(O, r, 0, 8, white);
 }\drawCurrentPictureInMargin[inside]
-Diz-se que uma figura retilínea é \emph{circunscrito a} um círculo, quando cada um dos seus lados é uma tangente ao círculo.
+Diz-se que uma figura retilínea é \emph{circunscrita a} um círculo, quando cada um dos seus lados é uma tangente ao círculo.
 
 \startdefinition{}\label{def:IV.V}
 \defineNewPicture{
@@ -7395,7 +7398,7 @@ draw byCircleR(I, r, byblack, 0, 0, -1);
 }\drawCurrentPictureInMargin[inside]
 Diz-se que um círculo é \emph{circunscrito a} uma figura retilínea, quando a circunferência passa pelo vértice de cada ângulo da figura.
 
-\drawPolygon{GHK} is circumscribed.
+\drawPolygon{GHK} é circunscrito.
 
 \startdefinition{}\label{def:IV.VII}
 \defineNewPicture{
@@ -7408,7 +7411,7 @@ B := dir(100)*r;
 draw byLine(A, B, byblack, SOLID_LINE, REGULAR_WIDTH);
 draw byCircleR(O, r, byblue, 0, 0, 0);
 }\drawCurrentPictureInMargin[inside]
-Diz-se que uma linha reta é \emph{inscrito em} um círculo, quando suas extremidades estão na circunferência.
+Diz-se que uma linha reta é \emph{inscrita em} um círculo, quando suas extremidades estão na circunferência.
 
 \vskip 1cm
 
@@ -7455,12 +7458,12 @@ e se for $\drawUnitLine{EC,BE} = \drawUnitLine{GH}$, o problema está resolvido.
 Mas se \drawUnitLine{EC,BE} não for igual a \drawUnitLine{GH},\\
 $\drawUnitLine{EC,BE} > \drawUnitLine{GH}$ \byref{\hypref};
 
-make $\drawUnitLine{EC} = \drawUnitLine{GH}$ \byref{prop:I.III}\\
-with \drawUnitLine{EC} as radius,\\
-describe \drawCircle{C}, cutting \circleO, \\
+faça $\drawUnitLine{EC} = \drawUnitLine{GH}$ \byref{prop:I.III}\\
+com \drawUnitLine{EC} como raio,\\
+descreva \drawCircle{C}, cortando \circleO, \\
 e trace \drawUnitLine{AC}, que é a linha necessária.
 
-For $\drawUnitLine{AC} = \drawUnitLine{EC} = \drawUnitLine{GH}$ \byref{prop:I.XV,\constref}.
+Pois $\drawUnitLine{AC} = \drawUnitLine{EC} = \drawUnitLine{GH}$ \byref{prop:I.XV,\constref}.
 \end{center}
 
 \qed
@@ -7511,19 +7514,19 @@ Para qualquer ponto do círculo dado trace \drawUnitLine{GH}, uma tangente \byre
 
 e no ponto de contato faça $\drawAngle{CAH} = \drawAngle{E}$ \byref{prop:I.XXIII}
 
-and in like manner $\drawAngle{GAB} = \drawAngle{F}$,
+e da mesma maneira $\drawAngle{GAB} = \drawAngle{F}$,
 
 e trace \drawUnitLine{BC}.
 
 $\because \drawAngle{CAH} = \drawAngle{E}$ \byref{\constref}\\ %Because
-and $\drawAngle{CAH} = \drawAngle{B}$ \byref{prop:III.XXXII}\\
+e $\drawAngle{CAH} = \drawAngle{B}$ \byref{prop:III.XXXII}\\
 $\therefore \drawAngle{B} = \drawAngle{E}$;\\
-also $\drawAngle{C} = \drawAngle{F}$ for the same reason.
+e também $\drawAngle{C} = \drawAngle{F}$ pela mesma razão.
 
 $\therefore \drawAngle{BAC} = \drawAngle{D}$ \byref{prop:I.XXXII},
 \end{center}
 
-\noindent e portanto o triângulo inscrito em o círculo é equiângulo ao dado.
+\noindent e portanto o triângulo inscrito no círculo é equiângulo ao dado.
 
 \qed
 
@@ -7594,8 +7597,8 @@ Produza qualquer lado \drawUnitLine{GH}, do triângulo dado em ambos os sentidos
 
 do centro do círculo fornecido, trace \drawUnitLine{KC}, qualquer raio.
 
-Make $\drawAngle{CKA} = \drawAngle{DFH}$ \byref{prop:I.XXIII}\\
-and $\drawAngle{BKC} = \drawAngle{GED}$.
+Faça $\drawAngle{CKA} = \drawAngle{DFH}$ \byref{prop:I.XXIII}\\
+e $\drawAngle{BKC} = \drawAngle{GED}$.
 
 Nas extremidades dos raios, trace \drawUnitLine{NL}, \drawUnitLine{LM} e \drawUnitLine{MN}, tangentes ao círculo dado. \byref{prop:III.XVII}
 
@@ -7611,16 +7614,16 @@ juntos são iguais a quatro ângulos retos. \byref{prop:I.XXXII}
 
 mas \drawAngle{C} e \drawAngle{A} são ângulos retos \byref{\constref}
 
-$\therefore \drawAngle{L} + \drawAngle{CKA} = \drawTwoRightAngles$, two right angles
+$\therefore \drawAngle{L} + \drawAngle{CKA} = \drawTwoRightAngles$, isto é, dois ângulos retos
 
-but $\drawAngle{DFH,DFE} = \drawTwoRightAngles$ \byref{prop:I.XIII}\\
-and $\drawAngle{CKA} = \drawAngle{DFH}$ \byref{\constref} and $\therefore \drawAngle{L} = \drawAngle{DFE}$.
+mas $\drawAngle{DFH,DFE} = \drawTwoRightAngles$ \byref{prop:I.XIII}\\
+e $\drawAngle{CKA} = \drawAngle{DFH}$ \byref{\constref} e, portanto, $\therefore \drawAngle{L} = \drawAngle{DFE}$.
 
-In the same manner it can be demonstrated that\\
+Da mesma maneira pode-se demonstrar que\\
 $\drawAngle{N} = \drawAngle{FED}$;
 
 $\therefore \drawAngle{M} = \drawAngle{D}$ \byref{prop:I.XXXII}\\
-e, portanto, o triângulo circunscrito a do círculo dado é equiângulo ao triângulo dado.
+e, portanto, o triângulo circunscrito ao círculo dado é equiângulo ao triângulo dado.
 \end{center}
 
 \qed
@@ -7668,12 +7671,12 @@ startAutoLabeling;
 draw byNamedLineSeq(0)(CA,BC,AB);
 stopAutoLabeling;
 stopTempScale;
-} to inscribe a circle.}
+} para inscrever um círculo.}
 
 Divida \drawAngle{EBD,DBF} e \drawAngle{GCD,DCF} \byref{prop:I.IX} por \drawUnitLine{BD} e \drawUnitLine{CD}; a partir do ponto onde essas linhas se encontram, trace \drawUnitLine{FD}, \drawUnitLine{ED} e \drawUnitLine{GD} respectivamente perpendiculares a \drawUnitLine{BC}, \drawUnitLine{AB} e \drawUnitLine{CA}.
 
 \begin{center}
-In
+Nos triângulos,
 \drawFromCurrentPicture{
 startTempScale(3/4);
 draw byNamedAngle(F, DBF);
@@ -7682,7 +7685,7 @@ draw byNamedLineSeq(0)(BD,FD,BF);
 stopAutoLabeling;
 stopTempScale;
 }
-and
+e
 \drawFromCurrentPicture{
 startTempScale(3/4);
 draw byNamedAngle(E, EBD);
@@ -7691,15 +7694,15 @@ draw byNamedLineSeq(0)(BE,ED,BD);
 stopAutoLabeling;
 stopTempScale;
 }\\
-$\drawAngle{DBF} = \drawAngle{EBD}$, $\drawAngle{F} = \drawAngle{E}$ and \drawUnitLine{BD} common,\\
+$\drawAngle{DBF} = \drawAngle{EBD}$, $\drawAngle{F} = \drawAngle{E}$ e \drawUnitLine{BD} comum,\\
 $\therefore \drawUnitLine{ED} = \drawUnitLine{FD}$ \byref{prop:I.IV,prop:I.XXVI}.
 
-In like manner, it may be shown also that $\drawUnitLine{GD} = \drawUnitLine{FD}$,
+Da mesma maneira, também se pode demonstrar que $\drawUnitLine{GD} = \drawUnitLine{FD}$,
 
 $\therefore \drawUnitLine{FD} = \drawUnitLine{ED} = \drawUnitLine{GD}$;
 \end{center}
 
-portanto, com qualquer uma dessas linhas como raio, descreva \drawCircle[middle][1/2]{D} e ela passará pelas extremidades das outras duas; e os lados do triângulo dado, sendo perpendiculares aos três raios em suas extremidades, tocam o círculo \byref{prop:III.XVI}, que é portanto inscrito em o triângulo dado.
+portanto, com qualquer uma dessas linhas como raio, descreva \drawCircle[middle][1/2]{D} e ela passará pelas extremidades das outras duas; e os lados do triângulo dado, sendo perpendiculares aos três raios em suas extremidades, tocam o círculo \byref{prop:III.XVI}, que é portanto inscrito no triângulo dado.
 
 \qed
 
@@ -7748,19 +7751,19 @@ proptmp(100, 200, -30, (0, 0));
 \drawCurrentPictureInMargin
 \problem{P}{ara}{descrever um círculo em torno de um determinado triângulo.}
 
-Make $\drawUnitLine{AD} = \drawUnitLine{DB}$ and $\drawUnitLine{CE} = \drawUnitLine{EA}$ \byref{prop:I.X}
+Faça $\drawUnitLine{AD} = \drawUnitLine{DB}$ e $\drawUnitLine{CE} = \drawUnitLine{EA}$ \byref{prop:I.X}
 
 Dos pontos de bissecção trace \drawUnitLine{DF} e \drawUnitLine{EF} $\perp$ \drawUnitLine{AD} e \drawUnitLine{CE} respectivamente \byref{prop:I.XI}, e de seu ponto de encontro trace \drawUnitLine{BF}, \drawUnitLine{AF} e \drawUnitLine{CF} e descreva um círculo com qualquer um deles, e será o círculo necessário.
 
 \begin{center}
-In
+Na figura
 \drawFromCurrentPicture{
 draw byNamedAngle(FDB);
 startAutoLabeling;
 draw byNamedLineSeq(0)(DF,BF,DB);
 stopAutoLabeling;
 }
-and
+e
 \drawFromCurrentPicture{
 draw byNamedAngle(ADF);
 startAutoLabeling;
@@ -7768,12 +7771,12 @@ draw byNamedLineSeq(0)(AF,DF,AD);
 stopAutoLabeling;
 }\\
 $\drawUnitLine{DB} = \drawUnitLine{AD}$ \byref{\constref},\\
-\drawUnitLine{DF} common,\\
+\drawUnitLine{DF} é comum,\\
 $\drawAngle{FDB} = \drawAngle{ADF}$ \byref{\constref},
 
 $\therefore \drawUnitLine{AF} = \drawUnitLine{BF}$ \byref{prop:I.IV}.
 
-In like manner it may be shown that $\drawUnitLine{CF} = \drawUnitLine{AF}$.
+Da mesma maneira pode-se demonstrar que $\drawUnitLine{CF} = \drawUnitLine{AF}$.
 \end{center}
 
 $\therefore \drawUnitLine{AF} = \drawUnitLine{BF} = \drawUnitLine{CF}$; e, portanto, um círculo descrito a partir do encontro dessas três linhas com qualquer uma delas como um raio circunscreverá o triângulo dado.
@@ -7815,22 +7818,22 @@ draw byLabelsOnPolygon(C, E, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 Trace os dois diâmetros do círculo $\perp$ entre si e trace \drawUnitLine{BC}, \drawUnitLine{AB}, \drawUnitLine{DA} e \drawUnitLine{CD}.
 
 \begin{center}
-\drawLine[middle][squareABCD]{DA,CD,BC,AB} is a square.
+\drawLine[middle][squareABCD]{DA,CD,BC,AB} é um quadrado.
 
 Pois, como \drawAngle{A} e \drawAngle{D} estão, cada um deles, em semicírculo, são ângulos retos \byref{prop:III.XXXI},
 
 $\therefore \drawUnitLine{CD} \parallel \drawUnitLine{AB}$ \byref{prop:I.XXVIII}:
 
-and in like manner $\drawUnitLine{DA} \parallel \drawUnitLine{BC}$.
+e da mesma maneira $\drawUnitLine{DA} \parallel \drawUnitLine{BC}$.
 
-And $\because \drawAngle{AEB} = \drawAngle{DEA}$ \byref{\constref}, %because
+E $\because \drawAngle{AEB} = \drawAngle{DEA}$ \byref{\constref},
 
-and $\drawUnitLine{BE} = \drawUnitLine{AE} = \drawUnitLine{DE}$ \byref{def:I.XV}.
+e $\drawUnitLine{BE} = \drawUnitLine{AE} = \drawUnitLine{DE}$ \byref{def:I.XV}.
 
 $\therefore \drawUnitLine{AB} = \drawUnitLine{DA}$ \byref{prop:I.IV};
 \end{center}
 
-e como os lados e ângulos adjacentes do paralelogramo \squareABCD\ são iguais, eles são todos iguais \byref{prop:I.XXXIV}; e $\therefore$ \squareABCD, inscrito em o círculo dado, é um quadrado.
+e como os lados e ângulos adjacentes do paralelogramo \squareABCD\ são iguais, eles são todos iguais \byref{prop:I.XXXIV}; e $\therefore$ \squareABCD, inscrito no círculo dado, é um quadrado.
 
 \qed
 
@@ -7874,19 +7877,19 @@ Trace dois diâmetros do círculo dado perpendiculares entre si e, através de s
 \begin{center}
 e \drawLine[bottom][squareFGHK]{KF,HK,GH,FG} é um quadrado.
 
-$\drawAngle{C} = \drawRightAngle$ a right angle, \byref{prop:III.XVIII}
+$\drawAngle{C} = \drawRightAngle$ um ângulo reto, \byref{prop:III.XVIII}
 
-also $\drawAngle{E} = \drawRightAngle$ \byref{\constref},
+também $\drawAngle{E} = \drawRightAngle$ \byref{\constref},
 
 $\therefore \drawUnitLine{HK} \parallel \drawUnitLine{BD}$; da mesma forma pode-se demonstrar que $\drawUnitLine{FG} \parallel \drawUnitLine{BD}$, e também que $\drawUnitLine{GH} \mbox{ e } \drawUnitLine{KF} \parallel \drawUnitLine{AC}$;
 
-$\therefore$ \squareFGHK\ is a parallelogram,
+$\therefore$ \squareFGHK\ é um paralelogramo,
 
 e $\because \drawAngle{C} = \drawAngle{G} = \drawAngle{F} = \drawAngle{K} = \drawAngle{H}$ são todos ângulos retos \byref{prop:I.XXXIV}; % porque
 
 também é evidente que \drawUnitLine{HK}, \drawUnitLine{GH}, \drawUnitLine{FG} e \drawUnitLine{KF} são iguais.
 
-$\therefore$ \squareFGHK\ is a square.
+$\therefore$ \squareFGHK\ é um quadrado.
 \end{center}
 
 \qed
@@ -7926,25 +7929,25 @@ draw byLabelsOnPolygon(F, G, E)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \problem{I}{nscrever}{um círculo em um determinado quadrado.}
 
 \begin{center}
-Make $\drawUnitLine{ED} = \drawUnitLine{AE}$,\\
-and $\drawUnitLine{KC} = \drawUnitLine{DK}$,\\
-draw $\drawUnitLine{FG,GK} \parallel \drawUnitLine{AE,ED}$,\\
-and $\drawUnitLine{EG,GH} \parallel \drawUnitLine{DK,KC}$\\
+Faça $\drawUnitLine{ED} = \drawUnitLine{AE}$,\\
+e $\drawUnitLine{KC} = \drawUnitLine{DK}$,\\
+trace $\drawUnitLine{FG,GK} \parallel \drawUnitLine{AE,ED}$,\\
+e $\drawUnitLine{EG,GH} \parallel \drawUnitLine{DK,KC}$\\
 \byref{prop:I.XXXI}
 
-$\therefore$ \drawPolygon[bottom]{EDKG} is a parallelogram;
+$\therefore$ \drawPolygon[bottom]{EDKG} é um paralelogramo;
 
-and since $\drawUnitLine{AE,ED} = \drawUnitLine{DK,KC}$ \byref{\hypref}\\
+e, como $\drawUnitLine{AE,ED} = \drawUnitLine{DK,KC}$ \byref{\hypref}\\
 $\drawUnitLine{ED} = \drawUnitLine{DK}$
 
-$\therefore$ \polygonEDKG\ is equilateral \byref{prop:I.XXXIV}
+$\therefore$ \polygonEDKG\ é equilátero \byref{prop:I.XXXIV}
 
-In like manner it can be shown that $ \drawPolygon[bottom]{GKCH} = \drawPolygon[bottom]{FGHB}$ are equilateral parallelograms;
+Da mesma maneira pode-se demonstrar que $ \drawPolygon[bottom]{GKCH} = \drawPolygon[bottom]{FGHB}$ são paralelogramos equiláteros;
 
 $\therefore \drawUnitLine{AE} = \drawUnitLine{GK} = \drawUnitLine{GH} = \drawUnitLine{FG}$.
 \end{center}
 
-\noindent e portanto se um círculo for descrito a partir do encontro destas linhas com qualquer uma delas como raio, será inscrito em o quadrado dado \byref{prop:III.XVI}.
+\noindent e portanto se um círculo for descrito a partir do encontro destas linhas com qualquer uma delas como raio, será inscrito no quadrado dado \byref{prop:III.XVI}.
 
 \qed
 
@@ -7983,16 +7986,16 @@ então, como \drawPolygon{ACD} e \drawPolygon{ABC} têm seus lados iguais, e a b
 
 \begin{center}
 $\drawAngle{DAE} = \drawAngle{EAB}$ \byref{prop:I.VIII},\\
-or \drawAngle{DAE,EAB} is bisected: \\
-in like manner it can be shown that \drawAngle{ABE,EBC} is bisected;
+ou \drawAngle{DAE,EAB} é bisseccionado: \\
+da mesma maneira pode-se demonstrar que \drawAngle{ABE,EBC} é bisseccionado;
 
-but $\drawAngle{DAE,EAB} = \drawAngle{ABE,EBC}$,
+mas $\drawAngle{DAE,EAB} = \drawAngle{ABE,EBC}$,
 
-hence $\drawAngle{EAB} = \drawAngle{ABE}$ their halves,
+portanto $\drawAngle{EAB} = \drawAngle{ABE}$, suas metades,
 
 $\therefore \drawUnitLine{BE} = \drawUnitLine{AE}$ \byref{prop:I.VI};
 
-and in like manner it can be proved that \\
+e da mesma maneira pode-se demonstrar que \\
 $\drawUnitLine{AE} = \drawUnitLine{BE} = \drawUnitLine{EC} = \drawUnitLine{ED}$.
 \end{center}
 
@@ -8039,28 +8042,28 @@ draw byLabelsOnPolygon(A, C, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 
 \begin{center}
 Pegue qualquer linha reta \drawProportionalLine{AC,CB} \\
-and divide it so that $\drawProportionalLine{AC,CB} \times \drawProportionalLine{CB} = \drawProportionalLine{AC}^2$ \byref{prop:II.XI}
+e divida-a de modo que $\drawProportionalLine{AC,CB} \times \drawProportionalLine{CB} = \drawProportionalLine{AC}^2$ \byref{prop:II.XI}
 
 Tendo \drawProportionalLine{AC,CB} como raio, descreva \drawCircle[middle][1/5]{A} e coloque nele a partir da extremidade do raio, $\drawProportionalLine{BD} = \drawProportionalLine{AC}$ \byref{prop:IV.I};\\
-draw \drawProportionalLine{AD}.
+trace \drawProportionalLine{AD}.
 
 Então \drawLine{AD,BD,CB,AC} é o triângulo necessário.
 
 Pára, trace \drawProportionalLine{CD} e descreva \drawCircle[middle][1/3]{F} sobre \drawLine{AD,CD,AC} \byref{prop:IV.V}
 
-Since $\drawProportionalLine{AC,CB} \times \drawProportionalLine{CB} = \drawProportionalLine{AC}^2 = \drawProportionalLine{BD}^2$,\\
+Como $\drawProportionalLine{AC,CB} \times \drawProportionalLine{CB} = \drawProportionalLine{AC}^2 = \drawProportionalLine{BD}^2$,\\
 $\therefore$ \drawProportionalLine{BD} é tangente a \circleF\ \byref{prop:III.XXXVII}\\
 $\therefore \drawAngle{BDC} = \drawAngle{A}$ \byref{prop:III.XXXII},\\
-add \drawAngle{CDA} to each, $\therefore \drawAngle{BDC} + \drawAngle{CDA} = \drawAngle{A} + \drawAngle{CDA}$;
+adicione \drawAngle{CDA} a cada um, $\therefore \drawAngle{BDC} + \drawAngle{CDA} = \drawAngle{A} + \drawAngle{CDA}$;
 
-but $\drawAngle{BDC} + \drawAngle{CDA} \mbox{ ou } \drawAngle{BDC,CDA} = \drawAngle{B}$ \byref{prop:I.V}:\\
-since $\drawProportionalLine{AD} = \drawProportionalLine{AC,CB}$ \byref{prop:I.V}\\
+mas $\drawAngle{BDC} + \drawAngle{CDA} \mbox{ ou } \drawAngle{BDC,CDA} = \drawAngle{B}$ \byref{prop:I.V}:\\
+como $\drawProportionalLine{AD} = \drawProportionalLine{AC,CB}$ \byref{prop:I.V}\\
 consequently $\drawAngle{B} = \drawAngle{A} + \drawAngle{CDA} = \drawAngle{C}$ \byref{prop:I.XXXII}\\
 $\therefore \drawProportionalLine{CD} = \drawProportionalLine{BD}$ \byref{prop:I.VI}\\
 $\therefore \drawProportionalLine{BD} = \drawProportionalLine{AC} = \drawProportionalLine{CD}$ \byref{\constref}\\
 $\therefore \drawAngle{A} = \drawAngle{CDA}$ \byref{prop:I.V}
 
-$\therefore \drawAngle{B} = \drawAngle{BDC,CDA} = \drawAngle{C} = \drawAngle{A} + \drawAngle{CDA} = \mbox{ twice } \drawAngle{A}$;
+$\therefore \drawAngle{B} = \drawAngle{BDC,CDA} = \drawAngle{C} = \drawAngle{A} + \drawAngle{CDA} = \mbox{ duas vezes } \drawAngle{A}$;
 
 e conseqüentemente cada ângulo na base é o dobro do ângulo vertical.
 \end{center}
@@ -8108,7 +8111,7 @@ draw byLabelsOnCircle(A, B, C, D, E)(O);
 Construa um triângulo isósceles, em que cada um dos ângulos da base seja o dobro do ângulo do vértice, e inscreva no círculo dado um triângulo \drawPolygon[bottom]{ACD} equiângulo a ele \byref{prop:IV.II};
 
 \begin{center}
-Bisect \drawAngle{ECA,DCE} and \drawAngle{ADB,BDC} \byref{prop:I.IX},\\
+Bissecte \drawAngle{ECA,DCE} e \drawAngle{ADB,BDC} \byref{prop:I.IX},\\
 trace \drawUnitLine{BC}, \drawUnitLine{AB}, \drawUnitLine{EA} e \drawUnitLine{DE}.
 \end{center}
 
@@ -8163,12 +8166,12 @@ draw byLabelsOnPolygon(B, F, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \drawCurrentPictureInMargin
 \problem{P}{ara}{descrever um pentágono equilátero e equiângulo em torno de um determinado círculo \drawCircle[middle][1/4]{F}.}
 
-Desenhe cinco tangentes através dos vértices dos ângulos de qualquer pentágono regular inscrito em do círculo dado \circleF\ \byref{prop:III.XVII}.
+Desenhe cinco tangentes através dos vértices dos ângulos de qualquer pentágono regular inscrito no círculo dado \circleF\ \byref{prop:III.XVII}.
 
-These five tangents will form the required pentagon.
+Essas cinco tangentes formarão o pentágono requerido.
 
 \begin{center}
-Draw
+Trace
 $\left\{\vcenter{
 \nointerlineskip\hbox{\drawProportionalLine{FB}}
 \nointerlineskip\hbox{\drawProportionalLine{FK}}
@@ -8177,28 +8180,28 @@ $\left\{\vcenter{
 \nointerlineskip\hbox{\drawProportionalLine{FD}}
 }\right.$.
 
-In \drawLine{FB,FK,BK} and \drawLine{FK,FC,KC}\\
+Em \drawLine{FB,FK,BK} e \drawLine{FK,FC,KC}\\
 $\drawProportionalLine{BK} = \drawProportionalLine{KC}$ \byref{prop:I.XLVII} \\
-$\drawProportionalLine{FC} = \drawProportionalLine{FB}$, and \drawProportionalLine{FK} common;
+$\drawProportionalLine{FC} = \drawProportionalLine{FB}$, e \drawProportionalLine{FK} é comum;
 
-$\therefore \drawAngle{FKB} = \drawAngle{CKF}$ and $\therefore \drawAngle{BFK} = \drawAngle{KFC}$ \byref{prop:I.VIII}
+$\therefore \drawAngle{FKB} = \drawAngle{CKF}$ e $\therefore \drawAngle{BFK} = \drawAngle{KFC}$ \byref{prop:I.VIII}
 
-$\therefore \drawAngle{FKB,CKF} = \mbox{ twice } \drawAngle{CKF}$, and $\drawAngle{BFK,KFC} = \mbox{ twice } \drawAngle{KFC}$.
+$\therefore \drawAngle{FKB,CKF} = \mbox{ duas vezes } \drawAngle{CKF}$, e $\drawAngle{BFK,KFC} = \mbox{ duas vezes } \drawAngle{KFC}$.
 
-In the same manner it can be demonstrated that\\
-$\drawAngle{FLC,DLF} = \mbox{ twice } \drawAngle{FLC}$, and $\drawAngle{CFL,LFD} = \mbox{ twice } \drawAngle{CFL}$;
+Da mesma maneira pode-se demonstrar que\\
+$\drawAngle{FLC,DLF} = \mbox{ duas vezes } \drawAngle{FLC}$, e $\drawAngle{CFL,LFD} = \mbox{ duas vezes } \drawAngle{CFL}$;
 
-but $\drawAngle{BFK,KFC} = \drawAngle{CFL,LFD}$ \byref{prop:III.XXVII},
+mas $\drawAngle{BFK,KFC} = \drawAngle{CFL,LFD}$ \byref{prop:III.XXVII},
 
-$\therefore$ their halves $\drawAngle{KFC} = \drawAngle{CFL}$, also $\drawAngle{FCK} = \drawAngle{LCF}$,\\
-and \drawProportionalLine{FC} common;
+$\therefore$ suas metades $\drawAngle{KFC} = \drawAngle{CFL}$, e também $\drawAngle{FCK} = \drawAngle{LCF}$,\\
+e \drawProportionalLine{FC} é comum;
 
-$\therefore \drawAngle{CKF} = \drawAngle{FLC}$ and $\drawProportionalLine{KC} = \drawProportionalLine{CL}$,
+$\therefore \drawAngle{CKF} = \drawAngle{FLC}$ e $\drawProportionalLine{KC} = \drawProportionalLine{CL}$,
 
-$\therefore \drawProportionalLine{KC,CL} = \mbox{ twice } \drawProportionalLine{KC}$.
+$\therefore \drawProportionalLine{KC,CL} = \mbox{ duas vezes } \drawProportionalLine{KC}$.
 
-In the same manner it can be demonstrated that $\drawProportionalLine{BK,HB} = \mbox{ twice } \drawProportionalLine{BK}$,\\
-but $\drawProportionalLine{BK} = \drawProportionalLine{KC}$
+Da mesma maneira pode-se demonstrar que $\drawProportionalLine{BK,HB} = \mbox{ duas vezes } \drawProportionalLine{BK}$,\\
+mas $\drawProportionalLine{BK} = \drawProportionalLine{KC}$
 
 $\therefore \drawProportionalLine{BK,HB} = \drawProportionalLine{KC,CL}$;
 \end{center}
@@ -8206,9 +8209,9 @@ $\therefore \drawProportionalLine{BK,HB} = \drawProportionalLine{KC,CL}$;
 Da mesma forma pode-se demonstrar que os outros lados são iguais e, portanto, o pentágono é equilátero, também é equiângulo, por
 
 \begin{center}
-$\drawAngle{FLC,DLF} = \mbox{ twice } \drawAngle{FLC}$ and $\drawAngle{FKB,CKF} = \mbox{ twice } \drawAngle{CKF}$,
+$\drawAngle{FLC,DLF} = \mbox{ duas vezes } \drawAngle{FLC}$ e $\drawAngle{FKB,CKF} = \mbox{ duas vezes } \drawAngle{CKF}$,
 
-and therefore $ \drawAngle{CKF} = \drawAngle{FLC}$,
+e portanto $ \drawAngle{CKF} = \drawAngle{FLC}$,
 
 $\therefore \drawAngle{FLC,DLF} = \drawAngle{FKB,CKF}$;
 
@@ -8270,14 +8273,14 @@ draw byLabelsOnPolygon(E, F, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 2);
 \drawCurrentPictureInMargin
 \problem{I}{nscrever}{um círculo em um determinado pentágono equiângulo e equilátero.}
 
-Let
+Seja
 \drawLine[bottom]{EA,DE,KD,CK,HC,BH,AB}
 ser um dado pentágono equilátero e equilátero; é necessário inscrever um círculo nele.
 
 \begin{center}
-Make $\drawAngle{HCF} = \drawAngle{FCK}$, and $\drawAngle{FDE} = \drawAngle{KDF}$ \byref{prop:I.IX}
+Faça $\drawAngle{HCF} = \drawAngle{FCK}$, e $\drawAngle{FDE} = \drawAngle{KDF}$ \byref{prop:I.IX}
 
-Draw \drawUnitLine{FD}, \drawUnitLine{FC}, \drawUnitLine{FB}, \drawUnitLine{FE}, \&c.
+Trace \drawUnitLine{FD}, \drawUnitLine{FC}, \drawUnitLine{FB}, \drawUnitLine{FE}, \&c.
 
 $\because \drawUnitLine{KD,CK} = \drawUnitLine{HC,BH}$, $\drawAngle{HCF} = \drawAngle{FCK}$ e \drawUnitLine{FC} comuns aos dois triângulos %Porque
 
@@ -8289,7 +8292,7 @@ draw byNamedLineSeq(0)(FB,FC,HC,BH);
 stopAutoLabeling;
 stopTempScale;
 }
-and
+e
 \drawFromCurrentPicture{
 startTempScale(1/2);
 draw byNamedAngle(FCK,KDF);
@@ -8299,11 +8302,11 @@ stopAutoLabeling;
 stopTempScale;
 };
 
-$\therefore \drawUnitLine{FB} = \drawUnitLine{FD}$ and $\drawAngle{FBH} = \drawAngle{KDF}$ \byref{prop:I.IV}
+$\therefore \drawUnitLine{FB} = \drawUnitLine{FD}$ e $\drawAngle{FBH} = \drawAngle{KDF}$ \byref{prop:I.IV}
 
-And $\because \drawAngle{B} = \drawAngle{D} = \mbox{ twice } \drawAngle{KDF}$ %because
+E, porque $\drawAngle{B} = \drawAngle{D} = \mbox{ duas vezes } \drawAngle{KDF}$ %because
 
-$\therefore \mbox{ twice } \drawAngle{FBH}$, hence \drawAngle{B} is bisected by \drawUnitLine{FB}.
+$\therefore \mbox{ duas vezes } \drawAngle{FBH}$, portanto \drawAngle{B} é bisseccionado por \drawUnitLine{FB}.
 
 Da mesma forma, pode ser demonstrado que \drawAngle{DEF,FEM} é dividido ao meio por \drawUnitLine{FE} e que o ângulo restante do polígono é dividido ao meio de maneira semelhante.
 
@@ -8318,7 +8321,7 @@ draw byNamedLineSeq(0)(FH,FC,HC);
 stopAutoLabeling;
 stopTempScale;
 }
-and
+e
 \drawFromCurrentPicture{
 startTempScale(2/3);
 draw byNamedAngle(FCK,K);
@@ -8327,8 +8330,8 @@ draw byNamedLineSeq(0)(CK,FC,FK);
 stopAutoLabeling;
 stopTempScale;
 }\\
-we have $\drawAngle{HCF} = \drawAngle{FCK}$ \byref{\constref}, \drawUnitLine{FC} common,\\
-e $\drawAngle{H} = \drawAngle{K} = \mbox{ a right angle }$;
+temos $\drawAngle{HCF} = \drawAngle{FCK}$ \byref{\constref}, \drawUnitLine{FC} é comum,\\
+e $\drawAngle{H} = \drawAngle{K} = \mbox{ um ângulo reto }$;
 
 $\therefore \drawUnitLine{FK} = \drawUnitLine{FH}$ \byref{prop:I.XXVI}
 \end{center}
@@ -8384,29 +8387,29 @@ $\drawAngle{FCD} = \drawAngle{CDF}$,
 
 $\therefore \drawUnitLine{FD} = \drawUnitLine{FC}$ \byref{prop:I.VI};
 
-and since in
+e, como na figura
 \drawFromCurrentPicture{
 draw byNamedAngle(BCF);
 startAutoLabeling;
 draw byNamedLineSeq(0)(FB,FC,BC);
 stopAutoLabeling;
 }
-and
+e
 \drawFromCurrentPicture{
 draw byNamedAngle(FCD);
 startAutoLabeling;
 draw byNamedLineSeq(0)(FC,FD,CD);
 stopAutoLabeling;
 },\\
-$\drawUnitLine{BC} = \drawUnitLine{CD}$, and \drawUnitLine{FC} common,\\
-also $\drawAngle{BCF} = \drawAngle{FCD}$;
+$\drawUnitLine{BC} = \drawUnitLine{CD}$, e \drawUnitLine{FC} é comum,\\
+também $\drawAngle{BCF} = \drawAngle{FCD}$;
 
 $\therefore \drawUnitLine{FB} = \drawUnitLine{FD}$ \byref{prop:I.IV}.
 
-In like manner it may be proved that\\
+Da mesma maneira pode-se demonstrar que\\
 $\drawUnitLine{FA} = \drawUnitLine{FE} = \drawUnitLine{FB}$.
 
-and therefore $\drawUnitLine{FA} = \drawUnitLine{FB} = \drawUnitLine{FC} = \drawUnitLine{FD} = \drawUnitLine{FE}$.
+e, portanto, $\drawUnitLine{FA} = \drawUnitLine{FB} = \drawUnitLine{FC} = \drawUnitLine{FD} = \drawUnitLine{FE}$.
 \end{center}
 
 Portanto, se um círculo for descrito a partir do ponto onde estas cinco linhas se encontram, com qualquer uma delas como raio, ele circunscreverá o pentágono dado.
@@ -8457,7 +8460,7 @@ draw byLabelsOnPolygon(G, E, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \drawCurrentPictureInMargin
 \problem[2]{P}{ara}{inscrever um hexágono equilátero e equiângulo em um determinado círculo \drawCircle[middle][1/4]{G}.}
 
-A partir de qualquer ponto da circunferência do círculo dado, descreva \drawCircle[middle][1/4]{D} passando pelo seu centro, e trace os diâmetros \drawUnitLine{AD}, \drawUnitLine{CF} e \drawUnitLine{BE}; trace \drawUnitLine{CD}, \drawUnitLine{DE}, \drawUnitLine{EF}, \&c.\ e o hexágono necessário é inscrito em o círculo fornecido.
+A partir de qualquer ponto da circunferência do círculo dado, descreva \drawCircle[middle][1/4]{D} passando pelo seu centro, e trace os diâmetros \drawUnitLine{AD}, \drawUnitLine{CF} e \drawUnitLine{BE}; trace \drawUnitLine{CD}, \drawUnitLine{DE}, \drawUnitLine{EF}, \&c.\ e o hexágono necessário é inscrito no círculo fornecido.
 
 Como o \drawUnitLine{GD} passa pelos centros dos círculos,
 \drawFromCurrentPicture{
@@ -8466,16 +8469,16 @@ startAutoLabeling;
 draw byNamedLineSeq(0)(GC,GD,CD);
 stopAutoLabeling;
 }
-and
+e
 \drawFromCurrentPicture{
 draw byNamedAngle(EGD);
 startAutoLabeling;
 draw byNamedLineSeq(0)(GD,GE,DE);
 stopAutoLabeling;
 }
-são triângulos equiláteros, portanto $\drawAngle{DGC} = \drawAngle{EGD} = \mbox{ one-third of } \drawTwoRightAngles$ \byref{prop:I.XXXII} mas $\drawAngle{DGC,EGD,FGE} = \drawTwoRightAngles$ \byref{prop:I.XIII};
+são triângulos equiláteros, portanto $\drawAngle{DGC} = \drawAngle{EGD} = \mbox{ um terço de } \drawTwoRightAngles$ \byref{prop:I.XXXII}, mas $\drawAngle{DGC,EGD,FGE} = \drawTwoRightAngles$ \byref{prop:I.XIII};
 
-$\therefore \drawAngle{DGC} = \drawAngle{EGD} = \drawAngle{FGE} = \mbox{ one-third of } \drawTwoRightAngles$ \byref{prop:I.XXXII}, e os ângulos verticalmente opostos a estes são todos iguais entre si \byref{prop:I.XV}, e estão em arcos iguais \byref{prop:III.XXVI}, que são subtendidos por cordas iguais \byref{prop:III.XXIX}; e como cada um dos ângulos do hexágono é o dobro do ângulo de um triângulo equilátero, ele também é equiângulo.
+$\therefore \drawAngle{DGC} = \drawAngle{EGD} = \drawAngle{FGE} = \mbox{ um terço de } \drawTwoRightAngles$ \byref{prop:I.XXXII}, e os ângulos verticalmente opostos a estes são todos iguais entre si \byref{prop:I.XV}, e estão em arcos iguais \byref{prop:III.XXVI}, que são subtendidos por cordas iguais \byref{prop:III.XXIX}; e como cada um dos ângulos do hexágono é o dobro do ângulo de um triângulo equilátero, ele também é equiângulo.
 
 \qed
 
@@ -8509,23 +8512,23 @@ draw byLabelsOnCircle(A, B, C, F)(O);
 \drawCurrentPictureInMargin
 \problem{I}{nscrever}{um círculo em um quindecágono equilátero e equiângulo em um determinado círculo.}
 
-Sejam \drawUnitLine{AB} e \drawUnitLine{BF} os lados de um pentágono equilátero inscrito em o círculo dado, e \drawUnitLine{AC} o lado de um triângulo equilátero inscrito.
+Sejam \drawUnitLine{AB} e \drawUnitLine{BF} os lados de um pentágono equilátero inscrito no círculo dado, e \drawUnitLine{AC} o lado de um triângulo equilátero inscrito.
 
 \begin{center}
 $$
-\left.\vcenter{\hbox{The arc subtended} \hbox{por \drawUnitLine{AB} e \drawUnitLine{BF}}}\right\} = \dfrac{2}{5} = \dfrac{6}{15} \left\{\vcenter{\hbox{of the whole} \hbox{circumference}}\right.
+\left.\vcenter{\hbox{O arco subtendido} \hbox{por \drawUnitLine{AB} e \drawUnitLine{BF}}}\right\} = \dfrac{2}{5} = \dfrac{6}{15} \left\{\vcenter{\hbox{da circunferência} \hbox{total}}\right.
 $$
 
 $$
-\left.\vcenter{\hbox{The arc subtended} \hbox{by \drawUnitLine{AC}}}\right\} = \dfrac{1}{3} = \dfrac{5}{15} \left\{\vcenter{\hbox{of the whole} \hbox{circumference}}\right.
+\left.\vcenter{\hbox{O arco subtendido} \hbox{por \drawUnitLine{AC}}}\right\} = \dfrac{1}{3} = \dfrac{5}{15} \left\{\vcenter{\hbox{da circunferência} \hbox{total}}\right.
 $$
 
-Their difference $ = \dfrac{1}{15}$
+A diferença entre eles $ = \dfrac{1}{15}$
 \end{center}
 
 $\therefore$ o arco subtendido pela diferença $\drawUnitLine{CF} = \dfrac{1}{15}$ de toda a circunferência.
 
-Portanto, se linhas retas iguais a \drawUnitLine{CF} forem colocadas no círculo \byref{prop:IV.I}, um quindecágono equilátero e equiangular será, portanto, inscrito em o círculo.
+Portanto, se linhas retas iguais a \drawUnitLine{CF} forem colocadas no círculo \byref{prop:IV.I}, um quindecágono equilátero e equiangular será, portanto, inscrito no círculo.
 
 \qed
 
@@ -8559,7 +8562,7 @@ Equimúltiplos ou equissubmúltiplos iguais ou de magnitudes iguais são iguais.
 \begin{center}
 $
 \begin{aligned}
-	\mbox{Se } A &= B \mbox{, then}\\
+\mbox{Se } A &= B \mbox{, então}\\
 	\mbox{duas vezes } A &= \mbox{duas vezes } B \mbox{,}\\
 	\mbox{isto é, }2A &= 2B \mbox{;}\\
 	3A &= 3B \mbox{;}\\
@@ -8592,12 +8595,12 @@ Aquela grandeza, da qual um múltiplo é maior que o mesmo múltiplo de outro, �
 
 \begin{center}
 $\begin{aligned}
-\mbox{Let } 2A &> 2B \mbox{,}\\
-\mbox{then } A &> B \mbox{;}\\
-\mbox{or, let } 3A &> 3B \mbox{,}\\
-\mbox{then } A &> B \mbox{;}\\
-\mbox{or, let } mA &> mB  \mbox{,}\\
-\mbox{then } A &> B \mbox{.}\\
+\mbox{Se } 2A &> 2B \mbox{,}\\
+\mbox{então } A &> B \mbox{;}\\
+\mbox{ou, seja } 3A &> 3B \mbox{,}\\
+\mbox{então } A &> B \mbox{;}\\
+\mbox{ou, seja } mA &> mB  \mbox{,}\\
+\mbox{então } A &> B \mbox{.}\\
 \end{aligned}$
 \end{center}
 
@@ -8756,15 +8759,15 @@ Quatro magnitudes, \drawMagnitude{A}, \drawMagnitude{B}, \drawMagnitude{C}, \dra
 \sepSpace
 
 \vbox{\hfill\hbox{
-\vbox{\hbox{of the first}\hbox{\drawMagnitude{Am}}\hbox{\&c.}}
-\vbox{\hbox{of the third}\hbox{\drawMagnitude{Cm}}\hbox{\&c.}}
+\vbox{\hbox{do primeiro}\hbox{\drawMagnitude{Am}}\hbox{\&c.}}
+\vbox{\hbox{do terceiro}\hbox{\drawMagnitude{Cm}}\hbox{\&c.}}
 }\hfill\ }
 
 \sepSpace
 
 \vbox{\hfill\hbox{
-\vbox{\hbox{of the second}\hbox{\drawMagnitude{Bm}}\hbox{\&c.}}
-\vbox{\hbox{of the fourth}\hbox{\drawMagnitude{Dm}}\hbox{\&c.}}
+\vbox{\hbox{do segundo}\hbox{\drawMagnitude{Bm}}\hbox{\&c.}}
+\vbox{\hbox{do quarto}\hbox{\drawMagnitude{Dm}}\hbox{\&c.}}
 }\hfill\ }
 
 \sepSpace
@@ -9059,18 +9062,18 @@ $\magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$
 A seguir, seja \magnitudeII a mesma parte de \magnitudeI \\
 que \magnitudeIV\ é de \magnitudeIII.
 
-In this case also $\magnitudeII : \magnitudeI :: \magnitudeIV : \magnitudeIII$.
+Neste caso também $\magnitudeII : \magnitudeI :: \magnitudeIV : \magnitudeIII$.
 
 Pois, porque \magnitudeII\ é a mesma parte de \magnitudeI\ que \magnitudeIV\ é de \magnitudeIII,
 
 portanto \magnitudeI\ é o mesmo múltiplo de \magnitudeII \\
 que \magnitudeIII\ é de \magnitudeIV.
 
-Therefore, by the preceding case, \\
+Portanto, pelo caso anterior, \\
 $\magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$;
 
-and $\therefore \magnitudeII : \magnitudeI :: \magnitudeIV : \magnitudeIII$, \\
-by proposition B.
+e $\therefore \magnitudeII : \magnitudeI :: \magnitudeIV : \magnitudeIII$, \\
+pela proposição B.
 
 $\therefore$ Se o primeiro for o mesmo múltiplo, \&c.
 \end{center}
@@ -9097,33 +9100,33 @@ byMagnitudeDefine.VI(0, false)(2, 2)(via, vib);
 \problem{S}{e}{o primeiro estiver para o segundo como o terceiro para o quarto, e se o primeiro for um múltiplo ou parte do segundo; o terceiro é o mesmo múltiplo ou a mesma parte do quarto.}
 
 \begin{center}
-Let $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$;\\
+Seja $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$;\\
 e primeiro, seja \magnitudeI\ um múltiplo \magnitudeII;\\
 \magnitudeIII\ será o mesmo múltiplo de \magnitudeIV.
 
 %\unprotect
 %\ \hfill\vbox{\halign{\hfil # \hfil & \hfil # \hfil & \hfil # \hfil & \hfil # \hfil \\
 \begin{tabular}{c c c c}
-{\footnotesize First} & {\footnotesize Second} & {\footnotesize Third} & {\footnotesize Fourth} \\
+{\footnotesize Primeiro} & {\footnotesize Segundo} & {\footnotesize Terceiro} & {\footnotesize Quarto} \\
 \magnitudeI\ & \magnitudeII\ & \magnitudeIII\ & \magnitudeIV \\
 &\drawMagnitude{V}\ &\drawMagnitude{VI}\ & \\
 \end{tabular}
 %}}\hfill\
 %\protect
 
-Take $\magnitudeV = \magnitudeI$.
+Tome $\magnitudeV = \magnitudeI$.
 
-Qualquer miltiple \magnitudeI\ é de \magnitudeII\\
+Qualquer múltiplo de \magnitudeI\ é de \magnitudeII\\
 tome \magnitudeVI\ o mesmo múltiplo de \magnitudeIV, \\
-then, $\because \magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$\\ %because
+então, $\because \magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$\\ %because
 e do segundo e do quarto, tomamos equimúltiplos,\\
-\magnitudeI\ and \magnitudeVI\ therefore \byref{prop:V.IV}\\
- $\magnitudeI : \magnitudeV :: \magnitudeIII : \magnitudeVI$, but \byref{\constref},\\
+\magnitudeI\ e \magnitudeVI\ portanto, \byref{prop:V.IV}\\
+ $\magnitudeI : \magnitudeV :: \magnitudeIII : \magnitudeVI$, mas \byref{\constref},\\
  $\magnitudeI = \magnitudeV \therefore$ \byref{prop:V.A} $\magnitudeIII = \magnitudeVI$\\
  e \magnitudeVI\ é o mesmo múltiplo de \magnitudeIV\\
  que \magnitudeI\ é de \magnitudeII.
 
- Next, let $\magnitudeII : \magnitudeI :: \magnitudeIV : \magnitudeIII$,\\
+ Em seguida, seja $\magnitudeII : \magnitudeI :: \magnitudeIV : \magnitudeIII$,\\
  e também \magnitudeII\ uma parte de \magnitudeI;\\
  então \magnitudeIV\ será a mesma parte de \magnitudeIII.
 
@@ -9149,21 +9152,21 @@ byMagnitudeSymbolDefine.III("square", byyellow, 0);
 
 \begin{center}
 Seja $\drawMagnitude{I} = \drawMagnitude{II}$ e \drawMagnitude{III} qualquer outra magnitude;\\
-then $\magnitudeI : \magnitudeIII = \magnitudeII : \magnitudeIII$ and $\magnitudeIII : \magnitudeI = \magnitudeIII : \magnitudeII$.
+então $\magnitudeI : \magnitudeIII = \magnitudeII : \magnitudeIII$ e $\magnitudeIII : \magnitudeI = \magnitudeIII : \magnitudeII$.
 
 $\because \magnitudeI = \magnitudeII$,\\ %Because
 $\therefore M \magnitudeI = M \magnitudeII$;
 
-$\therefore$ if $M \magnitudeI >, = \mbox{ ou } < m \magnitudeIII$, then\\
+$\therefore$, se $M \magnitudeI >, = \mbox{ ou } < m \magnitudeIII$, então\\
 $M \magnitudeII >, = \mbox{ ou } < m \magnitudeIII$,\\
-and $\therefore \magnitudeI : \magnitudeIII = \magnitudeII : \magnitudeIII$ \byref{def:V.V}.
+e $\therefore \magnitudeI : \magnitudeIII = \magnitudeII : \magnitudeIII$ \byref{def:V.V}.
 
 Do raciocínio acima fica evidente que,\\
-if $m \magnitudeIII >, = \mbox{ ou } < M \magnitudeI$, then\\
+se $m \magnitudeIII >, = \mbox{ ou } < M \magnitudeI$, então\\
 $m \magnitudeIII >, = \mbox{ ou } < M \magnitudeII$\\
 $\therefore \magnitudeIII : \magnitudeI = \magnitudeIII : \magnitudeII$ \byref{def:V.V}.
 
-$\therefore$ Equal magnitudes, \&c.
+$\therefore$ Grandezas iguais, \&c.
 \end{center}
 
 \vfill\pagebreak
@@ -9215,10 +9218,10 @@ Tomemos os quatro números $\textcolor{byred}{8}$, $\textcolor{byblack}{7}$, $\t
 %
 \begin{tabular}{>{\color{byred}}c >{\color{byblack}}c >{\color{byblue}}c >{\color{byyellow}}c}
 	\noalign{\hrule}
-	\textcolor{byblack}{First}&
-	\textcolor{byblack}{Second}&
-	\textcolor{byblack}{Third}&
-	\textcolor{byblack}{Fourth}\\
+\textcolor{byblack}{Primeira}&
+\textcolor{byblack}{Segunda}&
+\textcolor{byblack}{Terceira}&
+\textcolor{byblack}{Quarta}\\
 	8 	& 7 		& 10 	& 9 \\
 	\noalign{\hrule}
 	16 	& 14 	& 20 	& 18 \\
@@ -9244,7 +9247,7 @@ Tomemos os quatro números $\textcolor{byred}{8}$, $\textcolor{byblack}{7}$, $\t
 %\protect
 \end{center}
 
-Entre os múltiplos acima encontramos $\textcolor{byred}{16} > \textcolor{byblack}{14}$ e $\textcolor{byblue}{20} > \textcolor{byyellow}{18}$; isto é, duas vezes o primeiro é maior que duas vezes o segundo, e duas vezes o terceiro é maior que duas vezes o quarto; e $\textcolor{byred}{16} < \textcolor{byblack}{21}$ e $\textcolor{byblue}{20} < \textcolor{byyellow}{27}$; isto é, duas vezes o primeiro é menor que três vezes o segundo, e duas vezes o terceiro é menor que três vezes o quarto; e entre os mesmos múltiplos podemos encontrar $\textcolor{byred}{72} > \textcolor{byblack}{56}$ e $\textcolor{byblue}{90} > \textcolor{byyellow}{72}$; isto é, 9 vezes o primeiro é maior que 8 vezes o segundo e 9 vezes o terceiro é maior que 8 vezes o quarto. Muitos outros equimúltiplos poderiam ser selecionados, o que tenderia a mostrar que os números $\textcolor{byred}{8}$, $\textcolor{byblack}{7}$, $\textcolor{byblue}{10}$ e $\textcolor{byyellow}{9}$ eram proporcionais, mas não são, pois podemos encontrar múltiplos do primeiro $>$ um múltiplo do segundo, mas o mesmo múltiplo do terceiro que foi tirado do primeiro, não $>$ o mesmo múltiplo do quarto que foi levado para o segundo; por exemplo, 9 vezes o primeiro é $>$ 10 vezes o segundo, mas 9 vezes o terceiro não é $>$ 10 vezes o quarto, ou seja, $\textcolor{byred}{72} > \textcolor{byblack}{70}$, mas $\textcolor{byblue}{90} \ngtr \textcolor{byyellow}{90}$, ou 8 vezes o primeiro encontramos $>$ 9 vezes o segundo, mas 8 vezes o terceiro não é maior que 9 vezes o quarto, ou seja, $\textcolor{byred}{64} > \textcolor{byblack}{63}$, mas $\textcolor{byblue}{80} \mbox{ not } > \textcolor{byyellow}{81}$. Quando quaisquer múltiplos como esses podem ser encontrados, diz-se que o primeiro $\textcolor{byred}{(8)}$ tem o segundo $\textcolor{byblack}{(7)}$ uma proporção maior do que o terceiro $\textcolor{byblue}{(10)}$ tem para o quarto $\textcolor{byyellow}{(9)}$ e, pelo contrário, diz-se que o terceiro $\textcolor{byblue}{(10)}$ tem para o quarto $\textcolor{byyellow}{(9)}$ uma proporção menor do que o primeiro $\textcolor{byred}{(8)}$ tem para o segundo $\textcolor{byblack}{(7)}$.
+Entre os múltiplos acima encontramos $\textcolor{byred}{16} > \textcolor{byblack}{14}$ e $\textcolor{byblue}{20} > \textcolor{byyellow}{18}$; isto é, duas vezes o primeiro é maior que duas vezes o segundo, e duas vezes o terceiro é maior que duas vezes o quarto; e $\textcolor{byred}{16} < \textcolor{byblack}{21}$ e $\textcolor{byblue}{20} < \textcolor{byyellow}{27}$; isto é, duas vezes o primeiro é menor que três vezes o segundo, e duas vezes o terceiro é menor que três vezes o quarto; e entre os mesmos múltiplos podemos encontrar $\textcolor{byred}{72} > \textcolor{byblack}{56}$ e $\textcolor{byblue}{90} > \textcolor{byyellow}{72}$; isto é, 9 vezes o primeiro é maior que 8 vezes o segundo e 9 vezes o terceiro é maior que 8 vezes o quarto. Muitos outros equimúltiplos poderiam ser selecionados, o que tenderia a mostrar que os números $\textcolor{byred}{8}$, $\textcolor{byblack}{7}$, $\textcolor{byblue}{10}$ e $\textcolor{byyellow}{9}$ eram proporcionais, mas não são, pois podemos encontrar múltiplos do primeiro $>$ um múltiplo do segundo, mas o mesmo múltiplo do terceiro que foi tirado do primeiro não é $>$ o mesmo múltiplo do quarto que foi levado para o segundo; por exemplo, 9 vezes o primeiro é $>$ 10 vezes o segundo, mas 9 vezes o terceiro não é $>$ 10 vezes o quarto, ou seja, $\textcolor{byred}{72} > \textcolor{byblack}{70}$, mas $\textcolor{byblue}{90} \ngtr \textcolor{byyellow}{90}$, ou 8 vezes o primeiro encontramos $>$ 9 vezes o segundo, mas 8 vezes o terceiro não é maior que 9 vezes o quarto, ou seja, $\textcolor{byred}{64} > \textcolor{byblack}{63}$, mas $\textcolor{byblue}{80} \ngtr \textcolor{byyellow}{81}$. Quando quaisquer múltiplos como esses podem ser encontrados, diz-se que o primeiro $\textcolor{byred}{(8)}$ tem para o segundo $\textcolor{byblack}{(7)}$ uma proporção maior do que o terceiro $\textcolor{byblue}{(10)}$ tem para o quarto $\textcolor{byyellow}{(9)}$ e, pelo contrário, diz-se que o terceiro $\textcolor{byblue}{(10)}$ tem para o quarto $\textcolor{byyellow}{(9)}$ uma proporção menor do que o primeiro $\textcolor{byred}{(8)}$ tem para o segundo $\textcolor{byblack}{(7)}$.
 
 \vfill\pagebreak
 
@@ -9260,40 +9263,40 @@ byMagnitudeSymbolDefine.III("circle", byblue, 0);
 
 \begin{center}
 Sejam \drawMagnitude[bottom]{I} e \drawMagnitude{II} duas magnitudes desiguais,\\
-and \drawMagnitude{III} any other.
+e \drawMagnitude{III}, qualquer outra.
 \end{center}
 
 Provaremos primeiro que a \magnitudeI\ que é a maior das duas grandezas desiguais, tem uma razão maior para a \magnitudeIII\ do que a \magnitudeII, a menor, tem para a \magnitudeIII; isto é, $\magnitudeI : \magnitudeIII > \magnitudeII : \magnitudeIII$;
 
 \begin{center}
-take $M' \magnitudeI$, $m' \magnitudeIII$, $M' \magnitudeII$, $m' \magnitudeIII$;\\
-such, that $M' \drawMagnitude{Ia}$ and $M' \drawMagnitude{Ib}$ shall be each $>$ \magnitudeIII;\\
+tome $M' \magnitudeI$, $m' \magnitudeIII$, $M' \magnitudeII$, $m' \magnitudeIII$;\\
+de modo que $M' \drawMagnitude{Ia}$ e $M' \drawMagnitude{Ib}$ sejam cada um $>$ \magnitudeIII;\\
 considere também $m' \magnitudeIII$ o menor múltiplo de \magnitudeIII,\\
-which will make $m' \magnitudeIII > M' \magnitudeII = M' \magnitudeIb$;
+que faça $m' \magnitudeIII > M' \magnitudeII = M' \magnitudeIb$;
 
-$\therefore M' \magnitudeII \mbox{ is } \ngtr m' \magnitudeIII$,\\ %\mbox{is not} >
-but $M' \magnitudeI \mbox{ is } > m' \magnitudeIII$, for,\\
+$\therefore M' \magnitudeII \mbox{ não é } \ngtr m' \magnitudeIII$,\\ %\mbox{is not} >
+mas $M' \magnitudeI \mbox{ é } > m' \magnitudeIII$, pois,\\
 como $m' \magnitudeIII$ é o primeiro múltiplo que primeiro se torna $> M' \magnitudeIb$, então $(m' - 1)\magnitudeIII$ ou $m' \magnitudeIII - \magnitudeIII$ é $\ngtr M' \magnitudeIa$, e $\magnitudeIII \ngtr M' \magnitudeIa$ %duas vezes\mbox{ menos } e \mbox{não é} >
 
-$\therefore m' \magnitudeIII - \magnitudeIII + \magnitudeIII$ must be $< M' \magnitudeIb + M' \magnitudeIa$;\\ %\mbox{ minus }
-that is, $m' \magnitudeIII$ must be $< M' \magnitudeI$;
+$\therefore m' \magnitudeIII - \magnitudeIII + \magnitudeIII$ deve ser $< M' \magnitudeIb + M' \magnitudeIa$;\\ %\mbox{ minus }
+isto é, $m' \magnitudeIII$ deve ser $< M' \magnitudeI$;
 
-$\therefore M' \magnitudeI \mbox{ is } > m' \magnitudeIII$; mas foi mostrado acima que $M' \magnitudeII \mbox{ is } \ngtr m' \magnitudeIII$, portanto, pela sétima definição, \magnitudeI\ tem para \magnitudeIII\ uma proporção maior que $\magnitudeII : \magnitudeIII$. % \mbox{ não é } >
+$\therefore M' \magnitudeI \mbox{ é } > m' \magnitudeIII$; mas foi mostrado acima que $M' \magnitudeII \mbox{ não é } \ngtr m' \magnitudeIII$, portanto, pela sétima definição, \magnitudeI\ tem para \magnitudeIII\ uma proporção maior que $\magnitudeII : \magnitudeIII$. % \mbox{ não é } >
 
 A seguir provaremos que \magnitudeIII\ tem uma razão maior para \magnitudeII, quanto menor, do que para \magnitudeI, maior;\\
-or, $\magnitudeIII : \magnitudeII > \magnitudeIII : \magnitudeI$.
+ou, $\magnitudeIII : \magnitudeII > \magnitudeIII : \magnitudeI$.
 
-Take $m' \magnitudeIII$, $M' \magnitudeII$, $m' \magnitudeIII$ and $M' \magnitudeI$,\\
-the same as in the first case, such that\\
+Tome $m' \magnitudeIII$, $M' \magnitudeII$, $m' \magnitudeIII$ e $M' \magnitudeI$,\\
+o mesmo que no primeiro caso, de modo que\\
 $M' \magnitudeIa$ e $M' \magnitudeIb$ serão cada um $> \magnitudeIII$, e $m' \magnitudeIII$ o menor múltiplo de \magnitudeIII, que primeiro se torna maior que $M' \magnitudeIb = M' \magnitudeII$.
 
-$\therefore m' \magnitudeIII - \magnitudeIII \mbox{ is } \ngtr M' \magnitudeIb$,\\ % \mbox{ minus },  \mbox{ is not } >
+$\therefore m' \magnitudeIII - \magnitudeIII \mbox{ não é } \ngtr M' \magnitudeIb$,\\ % \mbox{ minus },  \mbox{ is not } >
 e \magnitudeIII é $\ngtr M' \magnitudeIa$; consequentemente\\ % não $>
-$m' \magnitudeIII - \magnitudeIII + \magnitudeIII \mbox{ is } < M' \magnitudeIb + M' \magnitudeIa$; % \mbox{ minus }
+$m' \magnitudeIII - \magnitudeIII + \magnitudeIII \mbox{ é } < M' \magnitudeIb + M' \magnitudeIa$; % \mbox{ minus }
 
-$\therefore m' \magnitudeIII \mbox{ is } < M' \magnitudeI$ e $\therefore$ pela sétima definição, \magnitudeIII\ tem para \magnitudeII\ uma proporção maior do que \magnitudeIII\ tem para \magnitudeI.
+$\therefore m' \magnitudeIII \mbox{ é } < M' \magnitudeI$ e $\therefore$ pela sétima definição, \magnitudeIII\ tem para \magnitudeII\ uma proporção maior do que \magnitudeIII\ tem para \magnitudeI.
 
-$\therefore$ Of unequal magnitudes, \&c.
+$\therefore$ Das grandezas desiguais, \&c.
 \end{center}
 
 O artifício empregado nesta proposição para encontrar entre os múltiplos tomados, como na quinta definição, um múltiplo do primeiro maior que o múltiplo da segunda, mas o mesmo múltiplo do terceiro que foi tirado do primeiro, não maior que o mesmo múltiplo do quarto que foi tirado do segundo, pode ser ilustrado numericamente da seguinte forma: -
@@ -9309,8 +9312,8 @@ O múltiplo de $\textcolor{byblack}{1}$, que primeiro se torna maior que $\textc
 %\halign{\hfil # \hfil & \hfil # \hfil & \hfil # \hfil & \hfil # \hfil\\
 {\renewcommand{\arraystretch}{0.75}
 \begin{tabular}{c c c c}
-{\footnotesize 8 times} & {\footnotesize 10 times} & {\footnotesize 8 times} & {\footnotesize 10 times} \\
-{\footnotesize the first} & {\footnotesize the second} & {\footnotesize the third} & {\footnotesize the fourth} \\
+{\footnotesize 8 vezes} & {\footnotesize 10 vezes} & {\footnotesize 8 vezes} & {\footnotesize 10 vezes} \\
+{\footnotesize a primeira} & {\footnotesize a segunda} & {\footnotesize a terceira} & {\footnotesize a quarta} \\
 $\textcolor{byred}{64} + \textcolor{byblack}{8}$ & $\textcolor{byblue}{70}$ & $\textcolor{byyellow}{64}$ & $\textcolor{byblue}{70}$ \\
 \end{tabular}
 }
@@ -9343,33 +9346,33 @@ byMagnitudeSymbolDefine.III("square", byyellow, 0);
 \problem{M}{agnitudes}{que têm a mesma proporção e a mesma magnitude são iguais entre si; e aqueles para os quais a mesma magnitude tem a mesma proporção são iguais entre si.}
 
 \begin{center}
-Let $\drawMagnitude{I} : \drawMagnitude{III} :: \drawMagnitude{II} : \drawMagnitude{III}$, then $\magnitudeI = \magnitudeII$.
+Seja $\drawMagnitude{I} : \drawMagnitude{III} :: \drawMagnitude{II} : \drawMagnitude{III}$; então $\magnitudeI = \magnitudeII$.
 
 Pois, se não, deixe $\magnitudeI > \magnitudeII$, então irá\\
 $\magnitudeI : \magnitudeIII > \magnitudeII : \magnitudeIII$ \byref{prop:V.VIII},
 o que é absurdo de acordo com a hipótese.
 
-$\therefore \magnitudeI \mbox{ is } \ngtr \magnitudeII$. % \mbox{ is not } >
+$\therefore \magnitudeI \mbox{ não é } \ngtr \magnitudeII$. % \mbox{ is not } >
 
-In the same manner it may be shown, that\\
-$\magnitudeII \mbox{ is } \ngtr \magnitudeI$, % \mbox{ is not } >
+Da mesma maneira pode-se demonstrar que\\
+$\magnitudeII \mbox{ não é } \ngtr \magnitudeI$, % \mbox{ is not } >
 
 $\therefore \magnitudeI = \magnitudeII$.
 
-Again, let $\magnitudeIII : \magnitudeI :: \magnitudeIII : \magnitudeII$,\\
-then will $\magnitudeI = \magnitudeII$.
+Novamente, seja $\magnitudeIII : \magnitudeI :: \magnitudeIII : \magnitudeII$,\\
+então $\magnitudeI = \magnitudeII$.
 
-For (invert.) $\magnitudeI : \magnitudeIII :: \magnitudeII : \magnitudeIII$,\\
-therefore, by the first case, $\magnitudeI = \magnitudeII$.
+Pois (invert.) $\magnitudeI : \magnitudeIII :: \magnitudeII : \magnitudeIII$,\\
+portanto, pelo primeiro caso, $\magnitudeI = \magnitudeII$.
 
 $\therefore$ Magnitudes que possuem a mesma proporção, \&c.
 \end{center}
 
-This may be shown otherwise, as follows :—
+Isto também pode ser demonstrado de outra maneira, como segue:—
 
-Seja $\textcolor{byyellow}{A} : \textcolor{byblue}{B} = \textcolor{byyellow}{A} : \textcolor{byred}{C}$, depois $\textcolor{byblue}{B} = \textcolor{byred}{C}$, pois, como a fração $\frac{\textcolor{byyellow}{A}}{\textcolor{byblue}{B}} = \mbox{ the fraction } \frac{\textcolor{byyellow}{A}}{\textcolor{byred}{C}}$, e o numerador de uma é igual ao numerador da outra, portanto, os denominadores dessas frações são iguais, ou seja, $\textcolor{byblue}{B} = \textcolor{byred}{C}$.
+Seja $\textcolor{byyellow}{A} : \textcolor{byblue}{B} = \textcolor{byyellow}{A} : \textcolor{byred}{C}$, depois $\textcolor{byblue}{B} = \textcolor{byred}{C}$, pois, como a fração $\frac{\textcolor{byyellow}{A}}{\textcolor{byblue}{B}} = \mbox{ a fração } \frac{\textcolor{byyellow}{A}}{\textcolor{byred}{C}}$, e o numerador de uma é igual ao numerador da outra, portanto, os denominadores dessas frações são iguais, ou seja, $\textcolor{byblue}{B} = \textcolor{byred}{C}$.
 
-Again, if $\textcolor{byblue}{B} : \textcolor{byyellow}{A} = \textcolor{byred}{C} : \textcolor{byyellow}{A}$, $\textcolor{byblue}{B} = \textcolor{byred}{C}$. For, as $\frac{\textcolor{byblue}{B}}{\textcolor{byyellow}{A}} = \frac{\textcolor{byred}{C}}{\textcolor{byyellow}{A}}$, $\textcolor{byblue}{B} \mbox{ must } = \textcolor{byred}{C}$.
+Novamente, se $\textcolor{byblue}{B} : \textcolor{byyellow}{A} = \textcolor{byred}{C} : \textcolor{byyellow}{A}$, $\textcolor{byblue}{B} = \textcolor{byred}{C}$. Pois, como $\frac{\textcolor{byblue}{B}}{\textcolor{byyellow}{A}} = \frac{\textcolor{byred}{C}}{\textcolor{byyellow}{A}}$, $\textcolor{byblue}{B} \mbox{ deve ser } = \textcolor{byred}{C}$.
 
 \vfill\pagebreak
 
@@ -9388,18 +9391,18 @@ Pois se não, deixe $\magnitudeI = \mbox{ ou } < \magnitudeII$;\\
 então, $\magnitudeI : \magnitudeIII = \magnitudeII : \magnitudeIII$ \byref{prop:V.VII} ou\\
 $\magnitudeI : \magnitudeIII < \magnitudeII : \magnitudeIII$ \byref{prop:V.VIII} e (invertido.), o que é um absurdo segundo a hipótese.
 
-$\therefore \magnitudeI \mbox{ is } \neq \mbox{ ou } < \magnitudeII$, and\\ % \mbox{ is not } =
-$\therefore \magnitudeI \mbox{ must be } >\magnitudeII$.
+$\therefore \magnitudeI \mbox{ não é } \neq \mbox{ ou } < \magnitudeII$, e\\ % \mbox{ is not } =
+$\therefore \magnitudeI \mbox{ deve ser } >\magnitudeII$.
 
 Novamente, seja $\magnitudeIII : \magnitudeII > \magnitudeIII : \magnitudeI$,\\
 então, $\magnitudeII < \magnitudeI$.
 
-Pois, se não, $\magnitudeII \mbox{ must be } > \mbox{ ou } = \magnitudeI$,\\
-then $\magnitudeIII : \magnitudeII < \magnitudeIII : \magnitudeI$ \byref{prop:V.VIII} and (invert.);\\
-or $\magnitudeIII : \magnitudeII = \magnitudeIII : \magnitudeI$ \byref{prop:V.VII}, which is absurd \byref{\hypref};
+Pois, se não, $\magnitudeII \mbox{ deve ser } > \mbox{ ou } = \magnitudeI$,\\
+então $\magnitudeIII : \magnitudeII < \magnitudeIII : \magnitudeI$ \byref{prop:V.VIII} e (invert.);\\
+ou $\magnitudeIII : \magnitudeII = \magnitudeIII : \magnitudeI$ \byref{prop:V.VII}, o que é absurdo \byref{\hypref};
 
-$\therefore \magnitudeII \mbox{ is } \ngtr \mbox{ ou } = \magnitudeI$,\\ %  \mbox{ is not } >
-and $\therefore \magnitudeII \mbox{ must be } < \magnitudeI$.
+$\therefore \magnitudeII \mbox{ não é } \ngtr \mbox{ ou } = \magnitudeI$,\\ %  \mbox{ is not } >
+e $\therefore \magnitudeII \mbox{ deve ser } < \magnitudeI$.
 
 $\therefore$ Aquela magnitude que tem, \&c.
 \end{center}
@@ -9426,8 +9429,8 @@ então $M \magnitudeV >, = \mbox{ ou } < m \magnitudeVI$,\\
 e, se $M \magnitudeV >, = \mbox{ ou } < m \magnitudeVI$,\\
 então $M \magnitudeIII >, = \mbox{ ou } < m \magnitudeIV$ \byref{def:V.V};
 
-$\therefore$ if $M \magnitudeI >, = \mbox{ ou } < m \magnitudeII$, $M \magnitudeIII >, = \mbox{ ou } < m \magnitudeIV$\\
-and $\therefore$ \byref{def:V.V} $\magnitudeI : \magnitudeII = \magnitudeIII : \magnitudeIV$.
+$\therefore$, se $M \magnitudeI >, = \mbox{ ou } < m \magnitudeII$, $M \magnitudeIII >, = \mbox{ ou } < m \magnitudeIV$\\
+e $\therefore$ \byref{def:V.V} $\magnitudeI : \magnitudeII = \magnitudeIII : \magnitudeIV$.
 
 $\therefore$ Razões iguais \&c.
 \end{center}
@@ -9460,11 +9463,11 @@ então $\magnitudeI : \magnitudeII =
 \magnitudeII + \magnitudeIV + \magnitudeVI + \magnitudeVIII + \magnitudeX$.
 
 Pois, se $M \magnitudeI > m \magnitudeII$, então $M \magnitudeIII > m \magnitudeIV$,\\
-and $M \magnitudeV > m \magnitudeVI$, $M \magnitudeVII > m \magnitudeVIII$,\\
-also $M \magnitudeIX > m \magnitudeX$ \byref{def:V.V}
+e $M \magnitudeV > m \magnitudeVI$, $M \magnitudeVII > m \magnitudeVIII$,\\
+também $M \magnitudeIX > m \magnitudeX$ \byref{def:V.V}
 
 Portanto, se $M \magnitudeI > m \magnitudeII$, então\\
-$M \magnitudeI + M \magnitudeIII + M \magnitudeV + M \magnitudeVII + M \magnitudeIX$, or $M (\magnitudeI + \magnitudeIII + \magnitudeV + \magnitudeVII + \magnitudeIX)$ be greater than $m \magnitudeII + m \magnitudeIV + m \magnitudeVI + m \magnitudeVIII + m \magnitudeX$, or $m (\magnitudeII + \magnitudeIV + \magnitudeVI + \magnitudeVIII + \magnitudeX)$.
+$M \magnitudeI + M \magnitudeIII + M \magnitudeV + M \magnitudeVII + M \magnitudeIX$, ou $M (\magnitudeI + \magnitudeIII + \magnitudeV + \magnitudeVII + \magnitudeIX)$ seja maior que $m \magnitudeII + m \magnitudeIV + m \magnitudeVI + m \magnitudeVIII + m \magnitudeX$, ou $m (\magnitudeII + \magnitudeIV + \magnitudeVI + \magnitudeVIII + \magnitudeX)$.
 \end{center}
 
 Da mesma forma pode ser mostrado, se $M$ vezes um dos antecedentes for igual ou menor que $m$ vezes um dos consequentes, $M$ vezes todos os antecedentes tomados em conjunto, será igual ou menor que $m$ vezes todos os consequentes tomados em conjunto. Portanto, pela quinta definição, assim como um dos antecedentes está para o seu consequente, também todos os antecedentes são tomados em conjunto para todos os consequentes tomados em conjunto.
@@ -9496,10 +9499,10 @@ Tomemos esses múltiplos e tomemos os mesmos múltiplos de \magnitudeI\ e \magni
 
 $\therefore$ \byref{def:V.V} se $M' \magnitudeI >, =, \mbox{ ou } < m' \magnitudeII$;\\
 então $M' \magnitudeIII >, =, \mbox{ ou } < m' \magnitudeIV$,\\
-mas $M' \magnitudeIII > m' \magnitudeIV$ (construction);
+mas $M' \magnitudeIII > m' \magnitudeIV$ (construção);
 
 $\therefore M' \magnitudeI > m' \magnitudeII$,\\
-but $M' \magnitudeV \mbox{ is } \ngtr m' \magnitudeVI$ (construction);\\ %  \mbox{ is not } >
+mas $M' \magnitudeV \mbox{ não é } \ngtr m' \magnitudeVI$ (construção);\\ %  \mbox{ is not } >
 e, portanto, pela sétima definição,\\
 $\magnitudeI : \magnitudeII > \magnitudeV : \magnitudeVI$
 
@@ -9518,24 +9521,24 @@ byMagnitudeSymbolDefine.IV("rhombus", byblue, 0);
 \problem{S}{e}{o primeiro tem para o segundo a mesma proporção que o terceiro tem para o quarto; então, se o primeiro for maior que o terceiro, o segundo será maior que o quarto; e se for igual, igual; e se menos, menos.}
 
 \begin{center}
-Let $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$, and first suppose\\
-$\magnitudeI > \magnitudeIII$, then will $\magnitudeII > \magnitudeIV$.
+Seja $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$, e suponha-se primeiro que\\
+$\magnitudeI > \magnitudeIII$; então $\magnitudeII > \magnitudeIV$.
 
 Para $\magnitudeI : \magnitudeII > \magnitudeIII : \magnitudeII$ \byref{prop:V.VIII}, e pela hipótese $\magnitudeI : \magnitudeII = \magnitudeIII : \magnitudeIV$;\\
 $\therefore \magnitudeIII : \magnitudeIV > \magnitudeIII : \magnitudeII$ \byref{prop:V.XIII},\\
-$\therefore \magnitudeIV < \magnitudeII$ \byref{prop:V.X}, or $\magnitudeII > \magnitudeIV$.
+$\therefore \magnitudeIV < \magnitudeII$ \byref{prop:V.X}, ou $\magnitudeII > \magnitudeIV$.
 
-Secondly, let $\magnitudeI = \magnitudeIII$, then will $\magnitudeII = \magnitudeIV$.
+Em segundo lugar, seja $\magnitudeI = \magnitudeIII$; então $\magnitudeII = \magnitudeIV$.
 
-For $\magnitudeI : \magnitudeII = \magnitudeIII : \magnitudeII$ \byref{prop:V.VII},\\
-and $\magnitudeI : \magnitudeII = \magnitudeIII : \magnitudeIV$ \byref{\hypref};\\
+Pois $\magnitudeI : \magnitudeII = \magnitudeIII : \magnitudeII$ \byref{prop:V.VII},\\
+e $\magnitudeI : \magnitudeII = \magnitudeIII : \magnitudeIV$ \byref{\hypref};\\
 $\therefore \magnitudeIII : \magnitudeII = \magnitudeIII : \magnitudeIV$ \byref{prop:V.XI},\\
-and $\therefore \magnitudeII = \magnitudeIV$ \byref{prop:V.IX}.
+e $\therefore \magnitudeII = \magnitudeIV$ \byref{prop:V.IX}.
 
-Thirdly, if $\magnitudeI < \magnitudeIII$, then will $\magnitudeII < \magnitudeIV$;\\
-$\because \magnitudeIII > \magnitudeI$ and $\magnitudeIII : \magnitudeIV = \magnitudeI : \magnitudeII$;\\ %because
-$\therefore \magnitudeIV > \magnitudeII$, by the first case,\\
-that is, $\magnitudeII < \magnitudeIV$.
+Em terceiro lugar, se $\magnitudeI < \magnitudeIII$, então $\magnitudeII < \magnitudeIV$;\\
+$\because \magnitudeIII > \magnitudeI$ e $\magnitudeIII : \magnitudeIV = \magnitudeI : \magnitudeII$;\\ %because
+$\therefore \magnitudeIV > \magnitudeII$, pelo primeiro caso,\\
+isto é, $\magnitudeII < \magnitudeIV$.
 
 $\therefore$ Se o primeiro tiver a mesma proporção, \&c.
 \end{center}
@@ -9551,10 +9554,10 @@ byMagnitudeSymbolDefine.II("square", byyellow, 0);
 
 \begin{center}
 Sejam \drawMagnitude{I} e \drawMagnitude{II} duas grandezas;\\
-then, $\magnitudeI : \magnitudeII :: M' \magnitudeI : M' \magnitudeII$.
+então $\magnitudeI : \magnitudeII :: M' \magnitudeI : M' \magnitudeII$.
 
 $\begin{aligned}
-\mbox{For } \magnitudeI : \magnitudeII &= \magnitudeI : \magnitudeII \\
+\mbox{Pois } \magnitudeI : \magnitudeII &= \magnitudeI : \magnitudeII \\
 &= \magnitudeI : \magnitudeII \\
 &= \magnitudeI : \magnitudeII \\
 \end{aligned}$\\
@@ -9578,8 +9581,8 @@ byMagnitudeSymbolDefine.IV("square", byblue, 0);
 O termo técnico permutando, ou alternando, por permutação ou alternadamente, é utilizado quando há quatro proporcionais, e infere-se que a primeira tem a mesma proporção para a terceira que a segunda tem para a quarta; ou que o primeiro está para o terceiro assim como o segundo está para o quarto: como é mostrado na seguinte proposição: -
 
 \begin{center}
-Let $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$,\\
-by \enquote{permutando} or \enquote{alternando} it is inferred\\
+Seja $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$;\\
+por \enquote{permutando} ou \enquote{alternando}, infere-se\\
 $\magnitudeI : \magnitudeIII :: \magnitudeII : \magnitudeIV$.
 \end{center}
 
@@ -9597,17 +9600,17 @@ byMagnitudeSymbolDefine.IV("rhombus", byblue, 0);
 \problem{S}{e}{quatro grandezas do mesmo tipo forem proporcionais, elas também serão proporcionais quando tomadas alternadamente.}
 
 \begin{center}
-Let $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$, then $\magnitudeI : \magnitudeIII :: \magnitudeII : \magnitudeIV$.
+Seja $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$; então $\magnitudeI : \magnitudeIII :: \magnitudeII : \magnitudeIV$.
 
-For $M \magnitudeI : M \magnitudeII :: \magnitudeI : \magnitudeII$ \byref{prop:V.XV},\\
-and $M \magnitudeI : M \magnitudeII :: \magnitudeIII : \magnitudeIV$ \byref{\hypref} and \byref{prop:V.XI};\\
-also $m \magnitudeIII : m \magnitudeIV :: \magnitudeIII : \magnitudeIV$ \byref{prop:V.XV};
+Pois $M \magnitudeI : M \magnitudeII :: \magnitudeI : \magnitudeII$ \byref{prop:V.XV},\\
+e $M \magnitudeI : M \magnitudeII :: \magnitudeIII : \magnitudeIV$ \byref{\hypref} e \byref{prop:V.XI};\\
+também $m \magnitudeIII : m \magnitudeIV :: \magnitudeIII : \magnitudeIV$ \byref{prop:V.XV};
 
 $\therefore M \magnitudeI : M \magnitudeII :: m \magnitudeIII : m \magnitudeIV$ \byref{prop:V.XIV},\\
-and $\therefore$ if $M \magnitudeI >, = \mbox { or } < m \magnitudeIII$,\\
-then will $M \magnitudeII >, =, \mbox{ ou } < m \magnitudeIV$ \byref{prop:V.XIV};
+e $\therefore$, se $M \magnitudeI >, = \mbox { ou } < m \magnitudeIII$,\\
+então $M \magnitudeII >, =, \mbox{ ou } < m \magnitudeIV$ \byref{prop:V.XIV};
 
-therefore, by the fifth definition,\\
+portanto, pela quinta definição,\\
  $\magnitudeI : \magnitudeIII :: \magnitudeII : \magnitudeIV$
 
  $\therefore$ Se houver quatro magnitudes do mesmo tipo, \&c.
@@ -9622,7 +9625,7 @@ Dividendo, por divisão, quando há quatro proporcionais, e infere-se que o exce
 
 \begin{center}
 Seja $\varA : \varB :: \varC : \varD$;\\
-by \enquote{dividendo} it is inferred\\
+por \enquote{dividendo}, infere-se\\
 $\varA - \varB : \varB :: \varC - \varD : \varD$. % duas vezes \mbox{ menos }
 \end{center}
 
@@ -9630,7 +9633,7 @@ De acordo com o acima exposto, $\varA$ deve ser maior que $\varB$ e $\varC$ maio
 
 \begin{center}
 $\varB : \varA :: \varD : \varC$;\\
-then, by \enquote{dividendo,} we infer\\
+então, por \enquote{dividendo}, inferimos\\
 $\varB - \varA : \varA :: \varD - \varC : \varC$ % duas vezes \mbox{ menos }
 \end{center}
 
@@ -9646,18 +9649,18 @@ byMagnitudeSymbolDefine.IV("rhombus", byblue, 0);
 \problem{S}{e}{as grandezas, tomadas em conjunto, forem proporcionais, também serão proporcionais quando tomadas separadamente: isto é, se duas grandezas juntas têm para uma delas a mesma razão que duas outras têm para uma delas, a restante das duas primeiras terá para a outra a mesma razão que a restante das duas últimas tem para a outra.}
 
 \begin{center}
-Let $\drawMagnitude{I} + \drawMagnitude{II} : \magnitudeII :: \drawMagnitude{III} + \drawMagnitude{IV} : \magnitudeIV$,\\
-then will $\magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$.
+Seja $\drawMagnitude{I} + \drawMagnitude{II} : \magnitudeII :: \drawMagnitude{III} + \drawMagnitude{IV} : \magnitudeIV$;\\
+então $\magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$.
 
-Take $\magnitudeI > m \magnitudeII$ to each add $M \magnitudeII$,\\
-then we have $M \magnitudeI + M \magnitudeII > m \magnitudeII + M \magnitudeII$,\\
-or $M (\magnitudeI + \magnitudeII) > (m + M) \magnitudeII$:\\
-but $\because \magnitudeI + \magnitudeII: \magnitudeII :: \magnitudeIII + \magnitudeIV: \magnitudeIV$ \byref{\hypref},\\ %because
-and $M (\magnitudeI + \magnitudeII) > (m + M) \magnitudeII$;\\
+Tome $\magnitudeI > m \magnitudeII$ e adicione $M \magnitudeII$ a cada um,\\
+então temos $M \magnitudeI + M \magnitudeII > m \magnitudeII + M \magnitudeII$,\\
+ou $M (\magnitudeI + \magnitudeII) > (m + M) \magnitudeII$:\\
+mas $\because \magnitudeI + \magnitudeII: \magnitudeII :: \magnitudeIII + \magnitudeIV: \magnitudeIV$ \byref{\hypref},\\ %because
+e $M (\magnitudeI + \magnitudeII) > (m + M) \magnitudeII$;\\
 $\therefore M(\magnitudeIII + \magnitudeIV) > (m + M) \magnitudeIV$ \byref{def:V.V};\\
 $\therefore M \magnitudeIII + M \magnitudeIV > m \magnitudeIV + M \magnitudeIV$;\\
-$\therefore M \magnitudeIII > m \magnitudeIV$, by taking $M \magnitudeIV$ from both sides:\\
-that is, when $M \magnitudeI > m \magnitudeII$, then $M \magnitudeIII > m \magnitudeIV$.
+$\therefore M \magnitudeIII > m \magnitudeIV$, retirando $M \magnitudeIV$ de ambos os lados:\\
+isto é, quando $M \magnitudeI > m \magnitudeII$, então $M \magnitudeIII > m \magnitudeIV$.
 
 Da mesma maneira pode ser provado que se $M \magnitudeI = \mbox{ ou } < m \magnitudeII$, então $M \magnitudeIII = \mbox{ ou } < m \magnitudeIV$;\\
 e $\therefore \magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$ \byref{def:V.V}
@@ -9677,16 +9680,16 @@ O termo componendo, por composição, é utilizado quando há quatro proporciona
 \begin{center}
 Seja $\varA : \varB :: \varC : \varD$;
 
-then, by term \enquote{componendo,} it is inferred that\\
+então, pelo termo \enquote{componendo}, infere-se que\\
 $\varA + \varB : \varB :: \varC + \varD: \varD$
 \end{center}
 
-Bу \enquote{invertion} $\varB$ and $\varD$ may become the first and the third, and $\varA$ and $\varC$ the second and fourth, as
+Por \enquote{inversão}, $\varB$ e $\varD$ podem tornar-se a primeira e a terceira, e $\varA$ e $\varC$ a segunda e a quarta, assim
 
 \begin{center}
 $\varB : \varA :: \varD : \varC$,
 
-then, by \enquote{componendo,} we infer that\\
+então, por \enquote{componendo}, inferimos que\\
 $\varB + \varA : \varA :: \varD + \varC : \varC$.
 \end{center}
 
@@ -9703,14 +9706,14 @@ byMagnitudeSymbolDefine.V("circle", byblack, 0);
 \problem{S}{e}{as grandezas, tomadas separadamente, forem proporcionais, também serão proporcionais tomadas conjuntamente: isto é, se a primeira estiver para a segunda como a terceira estiver para a quarta, a primeira e a segunda juntas estarão para a segunda assim como a terceira e a quarta juntas estão para a quarta.}
 
 \begin{center}
-Let $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$,\\
-then $\magnitudeI + \magnitudeII : \magnitudeII :: \magnitudeIII + \magnitudeIV : \magnitudeIV$;
+Seja $\drawMagnitude{I} : \drawMagnitude{II} :: \drawMagnitude{III} : \drawMagnitude{IV}$;\\
+então $\magnitudeI + \magnitudeII : \magnitudeII :: \magnitudeIII + \magnitudeIV : \magnitudeIV$;
 
-for if not, let $\magnitudeI + \magnitudeII : \magnitudeII :: \magnitudeIII + \drawMagnitude{V} : \magnitudeV$,\\
-supposing $\magnitudeV \neq \magnitudeIV$; %\mbox{ not } =
+pois, se não, seja $\magnitudeI + \magnitudeII : \magnitudeII :: \magnitudeIII + \drawMagnitude{V} : \magnitudeV$,\\
+supondo $\magnitudeV \neq \magnitudeIV$; %\mbox{ not } =
 
 $\therefore \magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeV$ \byref{prop:V.XVII}\\
-but $\magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$ \byref{\hypref};
+mas $\magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$ \byref{\hypref};
 
 $\therefore \magnitudeIII : \magnitudeV :: \magnitudeIII : \magnitudeIV$ \byref{prop:V.XI};
 
@@ -9744,7 +9747,7 @@ Pois $\magnitudeI + \magnitudeII : \magnitudeI :: \magnitudeIII + \magnitudeIV :
 
 $\therefore \magnitudeII : \magnitudeI :: \magnitudeIV : \magnitudeIII$ (divid.),
 
-again $\magnitudeII : \magnitudeIV :: \magnitudeI : \magnitudeIII$ (alter.),
+novamente $\magnitudeII : \magnitudeIV :: \magnitudeI : \magnitudeIII$ (alter.),
 
 mas $\magnitudeI + \magnitudeII : \magnitudeIII + \magnitudeIV :: \magnitudeI : \magnitudeIII$ \byref{\hypref};
 
@@ -9804,8 +9807,8 @@ $\therefore$ Se quatro magnitudes, \&c.
 \enquote{Ex \ae quali,} da igualdade. Este termo é usado simplesmente por si só, quando a primeira grandeza está para a segunda da primeira categoria, como a primeira está para a segunda da outra categoria; e assim como o segundo está para o terceiro da primeira categoria, assim é o segundo para o terceiro da outra; e assim por diante: e a inferência é como mencionada na definição anterior; daí isso é chamado de proposição ordenada. Isso é demonstrado no \byref{prop:V.XXII}.
 
 \begin{center}
-Thus, if there be two ranks of magnitudes,\\
-$\varA, \varB, \varC, \varD, \varE, \varF$, the first rank,
+Assim, se houver duas séries de grandezas,\\
+$\varA, \varB, \varC, \varD, \varE, \varF$, a primeira série,
 e $\varL, \varM, \varN, \varO, \varP, \varQ$, o segundo,
 tal que $\varA : \varB :: \varL : \varM$, $\varB : \varC :: \varM : \varB$, $\varC : \varD :: \varN : \varO$, $\varD : \varE :: \varO : \varP$, $\varE : \varF :: \varP : \varQ$;\\
 inferimos pela expressão \enquote{ex~\ae quali} que $\varA : \varF :: \varL : \varQ$
@@ -9827,8 +9830,8 @@ inferimos pela expressão \enquote{ex~\ae quali} que $\varA : \varF :: \varL : \
 \enquote{Ex \ae quali in proporcional perturbatâ seu inordinatâ,} de igualdade em perturbada, ou proporção desordenada. Este termo é usado quando a primeira magnitude está para a segunda da primeira classificação como a última, mas uma está para a última da segunda classificação; e assim como o segundo está para o terceiro da primeira categoria, o penúltimo dois está para o penúltimo da segunda categoria; e assim como o terceiro está para o quarto da primeira categoria, assim também o terceiro está para o penúltimo penúltimo da segunda categoria; e assim por diante em ordem cruzada: e a inferência está na 18ª definição. É demonstrado em \byref{prop:V.XXIII}.
 
 \begin{center}
-Thus, if there be two ranks of magnitudes,\\
-$\varA, \varB, \varC, \varD, \varE, \varF$, the first rank,
+Assim, se houver duas séries de grandezas,\\
+$\varA, \varB, \varC, \varD, \varE, \varF$, a primeira série,
 e $\varL, \varM, \varN, \varO, \varP, \varQ$, o segundo,
 tal que $\varA : \varB :: \varP : \varQ$, $\varB : \varC :: \varO : \varP$, $\varC : \varD :: \varN : \varO$, $\varD : \varE :: \varM : \varN$, $\varE : \varF :: \varL : \varM$;\\
 o termo \enquote{ex \ae quali in proporcional perturbatâ seu inordinatâ} infere que $\varA : \varF :: \varL : \varQ$
@@ -9890,7 +9893,7 @@ e $\magnitudeII : \magnitudeIII :: \magnitudeIV : \magnitudeV$.
 Então, se $\magnitudeI >, =, \mbox{ ou } < \magnitudeIII$,\\
 então $\magnitudeIV >, =, \mbox{ ou } < \magnitudeVI$.
 
-Primeiro, seja $\magnitudeI \mbox{ be } > \magnitudeIII$:\\
+Primeiro, seja $\magnitudeI > \magnitudeIII$:\\
 então, como \magnitudeII\ é qualquer outra magnitude,\\
 $\magnitudeI : \magnitudeII > \magnitudeIII : \magnitudeII$ \byref{prop:V.VIII};\\
 mas $\magnitudeV : \magnitudeVI :: \magnitudeI : \magnitudeII$ \byref{\hypref};\\
@@ -9905,17 +9908,17 @@ isto é, $\magnitudeIV > \magnitudeVI$.
 Em segundo lugar, seja $\magnitudeI = \magnitudeIII$; então $\magnitudeIV = \magnitudeVI$.\\
 Pois $\because \magnitudeI = \magnitudeIII$,\\ %because
 $\magnitudeI : \magnitudeII = \magnitudeIII : \magnitudeII$ \byref{prop:V.VII};\\
-but $\magnitudeI : \magnitudeII = \magnitudeV : \magnitudeVI$ \byref{\hypref},\\
-and $\magnitudeIII : \magnitudeII = \magnitudeV : \magnitudeIV$ (\hypstr\ and inv.),\\
+mas $\magnitudeI : \magnitudeII = \magnitudeV : \magnitudeVI$ \byref{\hypref},\\
+e $\magnitudeIII : \magnitudeII = \magnitudeV : \magnitudeIV$ (\hypstr\ e inversão),\\
 $\therefore \magnitudeV : \magnitudeVI = \magnitudeV : \magnitudeIV$ \byref{prop:V.XI},\\
 $\therefore \magnitudeIV = \magnitudeVI$ \byref{prop:V.IX}.
 
-Em seguida, seja $\magnitudeI \mbox{ be } < \magnitudeIII$, então $\magnitudeIV \mbox{ shall be } < \magnitudeVI$;\\
+Em seguida, seja $\magnitudeI < \magnitudeIII$; então $\magnitudeIV < \magnitudeVI$;\\
 pois $\magnitudeIII > \magnitudeI$,\\
 e foi mostrado que $\magnitudeIII : \magnitudeII = \magnitudeV : \magnitudeIV$,\\
-and $\magnitudeII : \magnitudeI = \magnitudeVI : \magnitudeV$;\\
-$\therefore$ by the first case $\magnitudeVI \mbox{ is } > \magnitudeIV$,\\
-that is, $\magnitudeIV < \magnitudeVI$.
+e $\magnitudeII : \magnitudeI = \magnitudeVI : \magnitudeV$;\\
+$\therefore$, pelo primeiro caso, $\magnitudeVI > \magnitudeIV$,\\
+isto é, $\magnitudeIV < \magnitudeVI$.
 
 $\therefore$ Se houver três, \&c.
 \end{center}
@@ -10023,9 +10026,9 @@ $M \magnitudeI, M \magnitudeII, m \magnitudeIII, M \magnitudeIV, m \magnitudeV, 
 então $\magnitudeI : \magnitudeII :: M \magnitudeI : M \magnitudeII$ \byref{prop:V.XV};\\
 e pela mesma razão\\
 $\magnitudeV : \magnitudeVI :: m \magnitudeV : m \magnitudeVI$;\\
-but $\magnitudeI : \magnitudeII :: \magnitudeV : \magnitudeVI$ \byref{\hypref},\\
+mas $\magnitudeI : \magnitudeII :: \magnitudeV : \magnitudeVI$ \byref{\hypref},\\
 $\therefore M \magnitudeI : M \magnitudeII :: \magnitudeV : \magnitudeVI$ \byref{prop:V.XI};\\
-and $\because \magnitudeII : \magnitudeIII :: \magnitudeIV : \magnitudeV$ \byref{\hypref},\\ %because
+e $\because \magnitudeII : \magnitudeIII :: \magnitudeIV : \magnitudeV$ \byref{\hypref},\\
 $\therefore M \magnitudeII : m \magnitudeIII :: M \magnitudeIV : m \magnitudeV$ \byref{prop:V.IV};\\
 então, como há três magnitudes,\\
 $M \magnitudeI, M \magnitudeII, m \magnitudeII$,\\
@@ -10075,9 +10078,9 @@ byMagnitudeSymbolDefine.VI("circle", byblue, 0);
 %\offinterlineskip\lineskip3pt
 %\halign{\hfil # \hfil & \hfil # \hfil & \hfil # \hfil & \hfil # \hfil\\
 \begin{tabular}{c c c c}
-{\footnotesize First} & {\footnotesize Second} & {\footnotesize Third} & {\footnotesize Fourth} \\
+{\footnotesize Primeira} & {\footnotesize Segunda} & {\footnotesize Terceira} & {\footnotesize Quarta} \\
 \drawMagnitude{I} & \drawMagnitude{II} & \drawMagnitude{III} & \drawMagnitude{IV} \\
-{\footnotesize Fifth} & & {\footnotesize Sixth} & \\
+{\footnotesize Quinta} & & {\footnotesize Sexta} & \\
 \drawMagnitude{V} & & \drawMagnitude{VI} & \\
 \end{tabular}
 %}}\hfill\
@@ -10085,12 +10088,12 @@ byMagnitudeSymbolDefine.VI("circle", byblue, 0);
 \end{center}
 
 \begin{center}
-Let $\magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$,\\
-and $\magnitudeV : \magnitudeII :: \magnitudeVI : \magnitudeIV$,\\
-then $\magnitudeI + \magnitudeV : \magnitudeII :: \magnitudeIII + \magnitudeVI : \magnitudeIV$.
+Seja $\magnitudeI : \magnitudeII :: \magnitudeIII : \magnitudeIV$,\\
+e $\magnitudeV : \magnitudeII :: \magnitudeVI : \magnitudeIV$,\\
+então $\magnitudeI + \magnitudeV : \magnitudeII :: \magnitudeIII + \magnitudeVI : \magnitudeIV$.
 
-For $\magnitudeV : \magnitudeII :: \magnitudeVI : \magnitudeIV$ \byref{\hypref},\\
-and $\magnitudeII : \magnitudeI :: \magnitudeIV : \magnitudeIII$ \byref{\hypref} and (invert.),
+Pois $\magnitudeV : \magnitudeII :: \magnitudeVI : \magnitudeIV$ \byref{\hypref},\\
+e $\magnitudeII : \magnitudeI :: \magnitudeIV : \magnitudeIII$ \byref{\hypref} e (inversão),
 
 $\therefore \magnitudeV : \magnitudeI :: \magnitudeVI : \magnitudeIII$ \byref{prop:V.XXII};\\
 e, porque essas magnitudes são proporcionais, elas são proporcionais quando tomadas em conjunto,
@@ -10140,9 +10143,9 @@ $\therefore$ Se quatro magnitudes, \&c.
 \def\vararS{\textcolor{byred}{ar^2}}
 \def\varar{\textcolor{byyellow}{ar}}
 \def\vara{\textcolor{byblue}{a}}
-Quando três grandezas são proporcionais, diz-se que a primeira tem para a terceira o razão duplicada daquele que tem para a segunda.
+Quando três grandezas são proporcionais, diz-se que a primeira tem para a terceira a razão duplicada daquela que tem para a segunda.
 
-Por exemplo, se $\varA$, $\varB$, $\varC$, forem proporcionais continuados, ou seja, $\varA : \varB :: \varB : \varC$, $\varA$ tem que $\varC$ o razão duplicada de $\varA : \varB$;
+Por exemplo, se $\varA$, $\varB$, $\varC$, forem proporcionais continuados, ou seja, $\varA : \varB :: \varB : \varC$, $\varA$ tem para $\varC$ a razão duplicada de $\varA : \varB$;
 
 \begin{center}
 ou $\dfrac{\varA}{\varC} = \mbox{ o quadrado de } \dfrac{\varA}{\varB}$.
@@ -10165,12 +10168,12 @@ $\dfrac{\vara}{\vararS} = \dfrac{1}{r^2} = \mbox{ o quadrado de } \dfrac{\vara}{
 \def\vararS{\textcolor{byyellow}{ar^2}}
 \def\varar{\textcolor{byblue}{ar}}
 \def\vara{\textcolor{byblack}{a}}
-Quando quatro grandezas são proporcionais contínuas, diz-se que a primeira tem para a quarta o razão triplicada daquela que tem para a segunda; e assim por diante, quadruplicar, \&c.\ aumentando a denominação ainda pela unidade, em qualquer número de proporcionais.
+Quando quatro grandezas são proporcionais contínuas, diz-se que a primeira tem para a quarta a razão triplicada daquela que tem para a segunda; e assim por diante, quadruplicar, \&c.\ aumentando a denominação ainda pela unidade, em qualquer número de proporcionais.
 
-Por exemplo, sejam $\varA$, $\varB$, $\varC$, $\varD$ quatro proporcionais contínuas, ou seja, $\varA : \varB :: \varB : \varC :: \varC : \varD$; diz-se que $\varA$ tem para $\varD$, o razão triplicada de $\varA$ a $\varB$;
+Por exemplo, sejam $\varA$, $\varB$, $\varC$, $\varD$ quatro proporcionais contínuas, ou seja, $\varA : \varB :: \varB : \varC :: \varC : \varD$; diz-se que $\varA$ tem para $\varD$, a razão triplicada de $\varA$ a $\varB$;
 
 \begin{center}
-or $\dfrac{\varA}{\varD} = \mbox{o cubo de } \dfrac{\varA}{\varB}$.
+ou $\dfrac{\varA}{\varD} = \mbox{o cubo de } \dfrac{\varA}{\varB}$.
 \end{center}
 
 Esta definição será melhor compreendida e aplicada a um número maior de magnitudes do que quatro que são proporcionais continuadas, como segue: -
@@ -10204,7 +10207,7 @@ Ou, sejam $a$, $ar$, $ar^2$, $ar^3$, $ar^4$ cinco magnitudes em proporção cont
 \def\varL{\textcolor{byblue}{L}}
 \def\varM{\textcolor{byyellow}{M}}
 \def\varN{\textcolor{byyellow}{N}}
-Para conhecer um razão composta:—
+Para conhecer uma razão composta:—
 
 Quando há qualquer número de grandezas da mesma espécie, diz-se que a primeira tem para a última a razão composta pela razão que a primeira tem para a segunda, e pela razão que a segunda tem para a terceira, e da razão que a terceira tem para a quarta; e assim por diante, até a última magnitude.
 
@@ -10284,7 +10287,7 @@ e $\therefore \dfrac{\varA}{\varE} = \dfrac{\varF}{\varL}$,\\
 ou a razão de $\varA : \varE$ é igual à razão $\varF : \varL$.
 \end{center}
 
-O mesmo pode ser demonstrado em relação a qualquer número de rácios assim circunstanciados.
+O mesmo pode ser demonstrado em relação a qualquer número de razões assim circunstanciadas.
 
 \begin{center}
 Em seguida, seja $\varA : \varB :: \varK : \varL$,\\
@@ -10414,26 +10417,26 @@ $\therefore$ Se várias razões, \&c.
 \def\varS{\textcolor{byblue}{S}}
 \def\varT{\textcolor{byblue}{T}}
 \def\varX{\textcolor{byblue}{X}}
-\problem{S}{e}{uma proporção que é composta por vários índices for igual a uma proporção que é composta por vários outros índices; e se uma das primeiras razões, ou a razão que é composta por várias delas, for igual a uma das últimas razões, ou à razão que é composta por várias delas; então o rácio restante do primeiro, ou, se houver mais de um, o rácio composto dos rácios restantes, será igual aos restantes rácios, será igual ao rácio restante do último, ou, se houver mais de um, ao rácio composto desses rácios restantes.}
+\problem{S}{e}{uma proporção que é composta por vários índices for igual a uma proporção que é composta por vários outros índices; e se uma das primeiras razões, ou a razão que é composta por várias delas, for igual a uma das últimas razões, ou à razão que é composta por várias delas; então a razão restante da primeira, ou, se houver mais de uma, a razão composta pelas razões restantes, será igual à razão restante da última, ou, se houver mais de uma, à razão composta por essas razões restantes.}
 
 \marginpar{
 ~\hfill\fbox{\parbox{0.5\marginparwidth}{\centering
 ~$\varA\ \varB\ \varC\ \varD\ \varE\ \varF\ \varG\ \varH$~\\
 ~$\varP\ \varQ\ \varR\ \varS\ \varT\ \varX$~\\
 }}\hfill~}
-Sejam $\varA : \varB$, $\varB : \varC$, $\varC : \varD$, $\varD : \varE$, $\varE : \varF$, $\varF : \varG$, $\varG : \varH$ as primeiras proporções, e $\varP : \varQ$, $\varQ : \varR$, $\varR : \varS$, $\varS : \varT$, $\varT : \varX$, o outros rácios; além disso, seja $\varA : \varH$, que é composto pelas primeiras relações, igual à razão de $\varP : \varX$, que é a razão composta pelas demais relações; e, deixe a proporção de $\varA : \varE$, que é composta pelas proporções de $\varA : \varB$, $\varB : \varC$, $\varC : \varD$, $\varD : \varE$, ser a mesma que a proporção de $\varP : \varR$, que é composta pelas proporções $\varP : \varQ$, $\varQ : \varR$.
+Sejam $\varA : \varB$, $\varB : \varC$, $\varC : \varD$, $\varD : \varE$, $\varE : \varF$, $\varF : \varG$, $\varG : \varH$ as primeiras proporções, e $\varP : \varQ$, $\varQ : \varR$, $\varR : \varS$, $\varS : \varT$, $\varT : \varX$, as outras razões; além disso, seja $\varA : \varH$, que é composto pelas primeiras relações, igual à razão de $\varP : \varX$, que é a razão composta pelas demais relações; e, deixe a proporção de $\varA : \varE$, que é composta pelas proporções de $\varA : \varB$, $\varB : \varC$, $\varC : \varD$, $\varD : \varE$, ser a mesma que a proporção de $\varP : \varR$, que é composta pelas proporções $\varP : \varQ$, $\varQ : \varR$.
 
 Então, a razão que é composta pelas primeiras razões restantes, ou seja, a razão composta pelas razões $\varE : \varF$, $\varF : \varG$, $\varG : \varH$, ou seja, a razão de $\varE : \varH$, será a mesma que a razão de $\varR : \varX$, que é composta pelas razões de $\varR : \varS$, $\varS : \varT$, $\varT : \varX$, as demais proporções.
 
 \begin{center}
-Because $\dfrac
+Como $\dfrac
 {\varA \times \varB \times \varC \times \varD \times \varE \times \varF \times \varG}
 {\varB \times \varC \times \varD \times \varE \times \varF \times \varG \times \varH} =
 \dfrac
 {\varP \times \varQ \times \varR \times \varS \times \varT}
 {\varQ \times \varR \times \varS \times \varT \times \varX}$,
 
-or $\dfrac
+ou $\dfrac
 {\varA \times \varB \times \varC \times \varD}
 {\varB \times \varC \times \varD \times \varE}
 \times
@@ -10448,7 +10451,7 @@ or $\dfrac
 {\varR \times \varS \times \varT}
 {\varS \times \varT \times \varX}$,
 
-and $\dfrac
+e $\dfrac
 {\varA \times \varB \times \varC \times \varD}
 {\varB \times \varC \times \varD \times \varE} =
 \dfrac
@@ -10533,7 +10536,7 @@ $\begin{aligned}
 \end{aligned}$
 \end{center}
 
-Então, pela definição de um razão composta, a proporção de $\vara : \varg$ é composta pelas proporções de $\vara : \varb$, $\varb : \varc$, $\varc : \vard$, $\vard : \vare$, $\vare : \varf$, $\varf : \varg$, que são iguais à proporção de $\varA : \varB$, $\varC : \varD$, $\varE : \varF$, $\varG : \varH$, $\varK : \varL$, $\varM : \varN$, cada um para cada.
+Então, pela definição de uma razão composta, a proporção de $\vara : \varg$ é composta pelas proporções de $\vara : \varb$, $\varb : \varc$, $\varc : \vard$, $\vard : \vare$, $\vare : \varf$, $\varf : \varg$, que são iguais à proporção de $\varA : \varB$, $\varC : \varD$, $\varE : \varF$, $\varG : \varH$, $\varK : \varL$, $\varM : \varN$, cada uma à correspondente.
 
 \begin{center}
 $\begin{aligned}
@@ -10557,7 +10560,7 @@ Além disso, deixe a proporção que é composta pelas proporções de $\varA : 
 E deixe as proporções de $h : s$, que são compostas pelas proporções de $h : k$, $k : m$, $m : n$, $n : s$, que são iguais às primeiras proporções restantes, ou seja, $\varE : \varF$, $\varG : \varH$, $\varK : \varL$, $\varM : \varN$; além disso, seja a razão de $e : g$ aquela que é composta pelas razões $e : f$, $f : g$, que são iguais, cada uma para cada, às restantes outras relações, nomeadamente $\varV : \varW$, $\varX : \varY$. Então as proporções de $h : s$ serão iguais às proporções de $e : g$; ou $h : s = e : g$.
 
 \begin{center}
-For $\dfrac
+Para $\dfrac
 {\varA \times \varC \times \varE \times \varG \times \varK \times \varM}
 {\varB \times \varD \times \varF \times \varH \times \varL \times \varN}
 =
@@ -10565,14 +10568,14 @@ For $\dfrac
 {\vara \times \varb \times \varc \times \vard \times \vare \times \varf}
 {\varb \times \varc \times \vard \times \vare \times \varf \times \varg}$,
 
-and $\dfrac
+e $\dfrac
 {\varO \times \varQ \times \varS \times \varV \times \varX}
 {\varP \times \varR \times \varT \times \varW \times \varY}
 =
 \dfrac
 {h \times k \times l \times m \times n}
 {k \times l \times m \times n \times p}$,\\
-pela composição dos rácios;
+pela composição das razões;
 
 $\therefore \dfrac
 {\vara \times \varb \times \varc \times \vard \times \vare \times \varf}
@@ -10582,7 +10585,7 @@ $\therefore \dfrac
 {h \times k \times l \times m \times n}
 {k \times l \times m \times n \times p}$ \byref{\hypref},
 
-or $\dfrac{\vara \times \varb}{\varb \times \varc}
+ou $\dfrac{\vara \times \varb}{\varb \times \varc}
 \times
 \dfrac
 {\varc \times \vard \times \vare \times \varf}
@@ -10615,14 +10618,14 @@ $\therefore
 {m \times n}
 {n \times p}$.
 
-And $\dfrac
+E $\dfrac
 {\varc \times \vard \times \vare \times \varf}
 {\vard \times \vare \times \varf \times \varg}
 = \dfrac
 {h \times k \times l \times m \times n}
 {k \times l \times m \times n \times p}$ \byref{\hypref},
 
-and $\dfrac
+e $\dfrac
 {m \times n}
 {n \times p}
 =
@@ -10773,11 +10776,11 @@ draw byLabelsOnPolygon(A, Q, D, C, B, M)(ALL_LABELS, 0);
 \drawCurrentPictureInMargin
 \problem{T}{riângulos}{e paralelogramos que têm a mesma altura estão entre si como suas bases.}
 
-Seja os triângulos \drawPolygon[bottom]{ABC} e \drawPolygon[bottom]{ACD} terem um vértice comum, e suas bases \drawUnitLine{BC} e \drawUnitLine{CD} na mesma linha reta.
+Sejam os triângulos \drawPolygon[bottom]{ABC} e \drawPolygon[bottom]{ACD} com um vértice comum e com suas bases \drawUnitLine{BC} e \drawUnitLine{CD} na mesma linha reta.
 
 Produza \drawUnitLine{BC,CD} nos dois sentidos, pegue sucessivamente no \drawUnitLine{CD} linhas produzidas iguais a ele; e no \drawUnitLine{BC} produziu linhas sucessivamente iguais a ele; e trace linhas do vértice comum até suas extremidades.
 
-The triangles
+Os triângulos
 \drawFromCurrentPicture[bottom][trianglesAMC]{
 draw byNamedPolygon(AMN,AOH,AGB,ABC);
 draw byNamedLine(MB,BC);
@@ -10787,7 +10790,7 @@ assim formados são todos iguais entre si, pois suas bases são iguais. \byref{p
 
 $\therefore$ \trianglesAMC\ e sua base são respectivamente equimúltiplos de \polygonABC\ e da base \drawUnitLine{BC}.
 
-In like manner
+Da mesma maneira,
 \drawFromCurrentPicture[bottom][trianglesACQ]{
 draw byNamedPolygon(ACD,AKL,APQ);
 draw byNamedLine(CD,DQ);
@@ -10875,18 +10878,18 @@ E se qualquer linha reta \drawUnitLine{DE} dividir os lados de um triângulo, ou
 
 \startsubproposition{Parte I.}
 \begin{center}
-Let $\drawUnitLine{DE} \parallel \drawUnitLine{BC}$, then shall\\
+Seja $\drawUnitLine{DE} \parallel \drawUnitLine{BC}$; então,\\
 $\drawUnitLine{DB} : \drawUnitLine{AD} :: \drawUnitLine{EC} : \drawUnitLine{AE}$.
 
 Trace \drawUnitLine{BE} e \drawUnitLine{CD},\\
-and
+e
 $\drawLine[middle][triangleBDE]{DE,BE,DB}
 =
 \drawLine[middle][triangleCDE]{EC,CD,DE}$ \byref{prop:I.XXXVII};
 
 $\therefore \triangleBDE\ :
 \drawLine[middle][triangleADE]{AD,AE,DE} :: \triangleCDE\ : \triangleADE$ \byref{prop:V.VII};\\
-but $\triangleBDE\ : \triangleADE\ :: \drawUnitLine{DB} : \drawUnitLine{AD}$ \byref{prop:VI.I},\\
+mas $\triangleBDE\ : \triangleADE\ :: \drawUnitLine{DB} : \drawUnitLine{AD}$ \byref{prop:VI.I},\\
 $\therefore \drawUnitLine{DB} : \drawUnitLine{AD} :: \drawUnitLine{EC} : \drawUnitLine{AE}$ \byref{prop:V.XI}.
 \end{center}
 
@@ -10894,8 +10897,8 @@ $\therefore \drawUnitLine{DB} : \drawUnitLine{AD} :: \drawUnitLine{EC} : \drawUn
 
 \startsubproposition{Parte II.}
 \begin{center}
-Let $\drawUnitLine{DB} : \drawUnitLine{AD} :: \drawUnitLine{EC} : \drawUnitLine{AE}$.\\
-then $\drawUnitLine{DE} \parallel \drawUnitLine{BC}$.
+Seja $\drawUnitLine{DB} : \drawUnitLine{AD} :: \drawUnitLine{EC} : \drawUnitLine{AE}$.\\
+então $\drawUnitLine{DE} \parallel \drawUnitLine{BC}$.
 
 Que permaneça a mesma construção,\\
 $\left.
@@ -10904,7 +10907,7 @@ $\left.
 \mbox{ e } \drawUnitLine{EC} : \drawUnitLine{AE} &:: \triangleCDE\ : \triangleADE \\
 \end{aligned}
 \right\}\mbox{ \byref{prop:VI.I} }$;\\
-but $\drawUnitLine{DB} : \drawUnitLine{AD} :: \drawUnitLine{EC} : \drawUnitLine{AE}$ \byref{\hypref}\\
+mas $\drawUnitLine{DB} : \drawUnitLine{AD} :: \drawUnitLine{EC} : \drawUnitLine{AE}$ \byref{\hypref}\\
 $\therefore \triangleBDE\ : \triangleADE :: \triangleCDE\ : \triangleADE$ \byref{prop:V.XI}\\
 $\therefore \triangleBDE\ = \triangleCDE$ \byref{prop:V.IX};
 
@@ -10947,14 +10950,14 @@ E se uma linha reta (\drawUnitLine{AD}) traçada a partir de qualquer ângulo de
 \startsubproposition{Parte I.}
 \begin{center}
 Trace $\drawUnitLine{CE} \parallel \drawUnitLine{AD}$, para atender \drawUnitLine{AE};\\
-then, $\drawAngle{BAD} = \drawAngle{E}$ \byref{prop:I.XXIX}.
+então $\drawAngle{BAD} = \drawAngle{E}$ \byref{prop:I.XXIX}.
 
-$\therefore \drawAngle{DAC} = \drawAngle{E}$; but $\drawAngle{DAC} = \drawAngle{C}$, $\therefore \drawAngle{C} = \drawAngle{E}$,\\
+$\therefore \drawAngle{DAC} = \drawAngle{E}$; mas $\drawAngle{DAC} = \drawAngle{C}$, $\therefore \drawAngle{C} = \drawAngle{E}$,\\
 $\therefore \drawUnitLine{AE} = \drawUnitLine{CA}$ \byref{prop:I.VI};\\
-and $\because \drawUnitLine{AD} \parallel \drawUnitLine{CE}$,\\ %because
+e $\because \drawUnitLine{AD} \parallel \drawUnitLine{CE}$,\\
 $\drawUnitLine{AE} : \drawUnitLine{AB} :: \drawUnitLine{DC} : \drawUnitLine{BD}$ \byref{prop:VI.II};
 
-but $\drawUnitLine{AE} = \drawUnitLine{CA}$;\\
+mas $\drawUnitLine{AE} = \drawUnitLine{CA}$;\\
 $\therefore \drawUnitLine{CA} : \drawUnitLine{AB} :: \drawUnitLine{DC} : \drawUnitLine{BD}$ \byref{prop:V.VII}.
 \end{center}
 
@@ -10963,18 +10966,18 @@ $\therefore \drawUnitLine{CA} : \drawUnitLine{AB} :: \drawUnitLine{DC} : \drawUn
 \startsubproposition{Parte II.}
 \begin{center}
 Que permaneça a mesma construção,\\
-and $\drawUnitLine{AB} : \drawUnitLine{AE} :: \drawUnitLine{BD} : \drawUnitLine{DC}$ \byref{prop:VI.II};
+e $\drawUnitLine{AB} : \drawUnitLine{AE} :: \drawUnitLine{BD} : \drawUnitLine{DC}$ \byref{prop:VI.II};
 
-but $\drawUnitLine{BD} : \drawUnitLine{DC} :: \drawUnitLine{AB} : \drawUnitLine{CA}$ \byref{\hypref}\\
+mas $\drawUnitLine{BD} : \drawUnitLine{DC} :: \drawUnitLine{AB} : \drawUnitLine{CA}$ \byref{\hypref}\\
 $\therefore \drawUnitLine{AB} : \drawUnitLine{AE} :: \drawUnitLine{AB} : \drawUnitLine{CA}$ \byref{prop:V.XI}.
 
-and $\therefore \drawUnitLine{AE} = \drawUnitLine{CA}$ \byref{prop:V.IX},\\
-and $\therefore \drawAngle{E} = \drawAngle{C}$ \byref{prop:I.V};\\
-but since $\drawUnitLine{AD} \parallel \drawUnitLine{CE}$; $\drawAngle{DAC} = \drawAngle{C}$,\\
-and $\drawAngle{BAD} = \drawAngle{E}$ \byref{prop:I.XXIX};
+e $\therefore \drawUnitLine{AE} = \drawUnitLine{CA}$ \byref{prop:V.IX},\\
+e $\therefore \drawAngle{E} = \drawAngle{C}$ \byref{prop:I.V};\\
+mas, como $\drawUnitLine{AD} \parallel \drawUnitLine{CE}$, $\drawAngle{DAC} = \drawAngle{C}$,\\
+e $\drawAngle{BAD} = \drawAngle{E}$ \byref{prop:I.XXIX};
 
-$\therefore \drawAngle{C} = \drawAngle{E}$, and $\drawAngle{BAD} = \drawAngle{DAC}$,\\
-and $\therefore$ \drawUnitLine{AD} bisects \drawAngle{BAD,DAC}.
+$\therefore \drawAngle{C} = \drawAngle{E}$, e $\drawAngle{BAD} = \drawAngle{DAC}$,\\
+e $\therefore$ \drawUnitLine{AD} bissecta \drawAngle{BAD,DAC}.
 \end{center}
 
 \qed
@@ -11007,9 +11010,9 @@ draw byNamedLineSeq(0)(AF,DF,DE,EC,BC,AB);
 draw byLabelsOnPolygon(B, A, F, D, E, C)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{I}{n}{equiangular triangles
+\problem{E}{m}{triângulos equiangulares
 (\drawLine[bottom][triangleABC]{CA,BC,AB}
-and
+e
 \drawLine[bottom][triangleCDE]{CD,DE,EC})
 os lados sobre os ângulos iguais são proporcionais e os lados opostos aos ângulos iguais são homólogos.
 }
@@ -11375,8 +11378,8 @@ $\left\{\vcenter{
 \nointerlineskip\hbox{\drawSizedLine{DF}}}\right\}$
 são $\parallel$,\\
 $\drawSizedLine{GB} : \drawSizedLine{FG} :: \drawSizedLine{EC} : \drawSizedLine{DE}$ \byref{prop:VI.II},\\
-or $\drawSizedLine{GB} : \drawSizedLine{FG} :: \drawSizedLine{E'C'} : \drawSizedLine{D'E'}$ \byref{\constref},\\
-and $\drawSizedLine{FG} : \drawSizedLine{AF} :: \drawSizedLine{DE} : \drawSizedLine{AD}$ \byref{prop:VI.II},\\
+ou $\drawSizedLine{GB} : \drawSizedLine{FG} :: \drawSizedLine{E'C'} : \drawSizedLine{D'E'}$ \byref{\constref},\\
+e $\drawSizedLine{FG} : \drawSizedLine{AF} :: \drawSizedLine{DE} : \drawSizedLine{AD}$ \byref{prop:VI.II},\\
 $\drawSizedLine{FG} : \drawSizedLine{AF} :: \drawSizedLine{D'E'} : \drawSizedLine{A'D'}$ \byref{\constref},
 
 e $\therefore$ a linha fornecida \drawSizedLine{AF,FG,GB} é dividida de forma semelhante a \drawSizedLine{A'D',D'E',E'C'}.
@@ -11461,7 +11464,7 @@ draw byNamedLineSeq(0)(EF,HF,DH,DG,GE);
 draw byLabelsOnPolygon(D, G, E, F, H)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{T}{o}{find a fourth proportional to three given lines
+\problem{E}{ncontrar}{a quarta proporcional a três linhas dadas
 $\left\{\vcenter{
 \nointerlineskip\hbox{\drawSizedLine{A}}
 \nointerlineskip\hbox{\drawSizedLine{B}}
@@ -11469,16 +11472,16 @@ $\left\{\vcenter{
 
 \begin{center}
 Trace \drawSizedLine{DG,GE} e \drawSizedLine{DH,HF} fazendo qualquer ângulo;\\
-take $\drawUnitLine{DG} = \drawUnitLine{A}$,\\
-and $\drawUnitLine{GE} = \drawUnitLine{B}$,\\
-also $\drawUnitLine{DH} = \drawUnitLine{C}$,\\
-draw \drawUnitLine{GH},\\
-and $\drawUnitLine{EF} \parallel \drawUnitLine{GH}$ \byref{prop:I.XXXI};\\
+tome $\drawUnitLine{DG} = \drawUnitLine{A}$,\\
+e $\drawUnitLine{GE} = \drawUnitLine{B}$,\\
+também $\drawUnitLine{DH} = \drawUnitLine{C}$,\\
+trace \drawUnitLine{GH},\\
+e $\drawUnitLine{EF} \parallel \drawUnitLine{GH}$ \byref{prop:I.XXXI};\\
 \drawSizedLine{HF} é o quarto proporcional.
 
 Por conta dos paralelos,\\
 $\drawUnitLine{DG} : \drawUnitLine{GE} :: \drawUnitLine{DH} : \drawUnitLine{HF}$ \byref{prop:VI.II};\\
-but
+mas
 $\left\{\vcenter{
 \nointerlineskip\hbox{\drawSizedLine{A}}
 \nointerlineskip\hbox{\drawSizedLine{B}}
@@ -11532,13 +11535,13 @@ draw byLabelsOnPolygon(C, B, A, noPoint)(ALL_LABELS, 0);
 draw byLabelsOnCircle(D)(O);
 }
 \drawCurrentPictureInMargin
-\problem{T}{o}{encontre um média proporcional entre duas linhas retas dadas $\left\{\vcenter{
+\problem{E}{ncontre}{uma média proporcional entre duas linhas retas dadas $\left\{\vcenter{
 \nointerlineskip\hbox{\drawSizedLine{A}}
 \nointerlineskip\hbox{\drawSizedLine{B}}}\right\}$.}
 
 \begin{center}
 Trace qualquer linha reta \drawSizedLine{AB,BC},\\
-make $\drawSizedLine{AB} = \drawSizedLine{A}$ and $\drawSizedLine{BC} = \drawSizedLine{B}$;\\
+faça $\drawSizedLine{AB} = \drawSizedLine{A}$ e $\drawSizedLine{BC} = \drawSizedLine{B}$;\\
 dividir \drawSizedLine{AB,BC} ao meio; e do ponto de bissecção como centro e da meia linha como raio, descreva um semicírculo
 \drawFromCurrentPicture[bottom]{
 draw byNamedLineFull(A, C, 0, 0,  0, -1)(AC);
@@ -11546,14 +11549,14 @@ draw byNamedArc(O);
 draw byLabelsOnPolygon(C, A, noPoint)(ALL_LABELS, 0);
 },\\
 draw $\drawSizedLine{BD} \perp \drawSizedLine{AB}$:\\
-\drawSizedLine{BD} é o média proporcional necessário.
+\drawSizedLine{BD} é a média proporcional necessária.
 
 Trace \drawUnitLine{AD} e \drawUnitLine{CD}.
 
 Como \drawAngle{D} é um ângulo reto \byref{prop:III.XXXI},\\
 e \drawUnitLine{BD} é $\perp$ dele no lado oposto,\\
-$\therefore$ \drawUnitLine{BD} é um média proporcional entre \drawUnitLine{AB} e \drawUnitLine{BC} \byref{prop:VI.VIII},\\
-and $\therefore$ between \drawUnitLine{A} and \drawUnitLine{B} \byref{\constref}.
+$\therefore$ \drawUnitLine{BD} é uma média proporcional entre \drawUnitLine{AB} e \drawUnitLine{BC} \byref{prop:VI.VIII},\\
+e $\therefore$ entre \drawUnitLine{A} e \drawUnitLine{B} \byref{\constref}.
 \end{center}
 
 \qed
@@ -11862,8 +11865,8 @@ draw byLabelsOnPolygon(G, H, K, B, A)(ALL_LABELS, 0);
 Resolva a figura dada em triângulos desenhando as linhas \drawUnitLine{DF} e \drawUnitLine{DE}.
 
 Nas extremidades do \drawUnitLine{AB} faça\\
-$\drawAngle{GBA} = \drawAngle{FDC}$ and $\drawAngle{A} = \drawAngle{C}$;\\
-novamente nas extremidades do \drawUnitLine{BG} make\\
+$\drawAngle{GBA} = \drawAngle{FDC}$ e $\drawAngle{A} = \drawAngle{C}$;\\
+novamente nas extremidades do \drawUnitLine{BG} faça\\
 $\drawAngle{G} = \drawAngle{F}$ e $\drawAngle{HBG} = \drawAngle{EDF}$;\\
 de modo semelhante faça\\
 $\drawAngle{KBH} = \drawAngle{LDE}$ e $\drawAngle{H} = \drawAngle{E}$.
@@ -11873,7 +11876,7 @@ Então $\polygonCD = \drawPolygon[middle][polygonAB]{BAG,BGH,BHK}$.
 É evidente pela construção e \byref{prop:I.XXXII} que os números são equiangulares; e como os triângulos \drawPolygon{DCF} e \drawPolygon{BAG} são equiângulos;\\
 então, por \byref{prop:VI.IV},
 $\drawUnitLine{AB}:\drawUnitLine{AG} :: \drawUnitLine{CD} : \drawUnitLine{CF}$\\
-and $\drawUnitLine{AG}:\drawUnitLine{BG} :: \drawUnitLine{CF} : \drawUnitLine{DF}$
+e $\drawUnitLine{AG}:\drawUnitLine{BG} :: \drawUnitLine{CF} : \drawUnitLine{DF}$
 
 Novamente, como \drawPolygon{DFE} e \drawPolygon{BGH} são equiangulares,\\
 $\drawUnitLine{BG}:\drawUnitLine{GH} :: \drawUnitLine{DF} : \drawUnitLine{FE}$\\
@@ -11882,8 +11885,8 @@ $\drawUnitLine{AG}:\drawUnitLine{GH} :: \drawUnitLine{CF} : \drawUnitLine{FE}$ \
 
 Da mesma forma, pode-se mostrar que os restantes lados das duas figuras são proporcionais.
 
-$\therefore$ by \byref{prop:VI.I}\\
-\polygonAB\ é semelhante a \polygonCD\ e tem localização semelhante; e na linha fornecida \drawUnitLine{AB}.
+$\therefore$, por \byref{prop:VI.I},\\
+\polygonAB\ é semelhante a \polygonCD\ e está semelhantemente disposta; e na linha fornecida \drawUnitLine{AB}.
 \end{center}
 
 \qed
@@ -11922,18 +11925,18 @@ draw byLabelsOnPolygon(C, G, B, A)(ALL_LABELS, 0);
 \drawCurrentPictureInMargin
 \problem{T}{riângulos}{semelhantes (\drawPolygon[bottom][triangleDEF]{DEF} e \drawPolygon[bottom][triangleABC]{ABG,AGC}) estão entre si na razão duplicada de seus lados homólogos.}
 
-Sejam \drawAngle{E} e \drawAngle{B} ângulos iguais, e \drawUnitLine{BG,GC} e \drawUnitLine{EF} homólogos lados dos triângulos semelhantes \triangleDEF\ e \triangleABC\ e em \drawUnitLine{BG,GC} a maior dessas retas toma \drawUnitLine{BG} uma terceira proporcional, de modo que
+Sejam \drawAngle{E} e \drawAngle{B} ângulos iguais, e \drawUnitLine{BG,GC} e \drawUnitLine{EF} lados homólogos dos triângulos semelhantes \triangleDEF\ e \triangleABC\; na maior dessas retas, \drawUnitLine{BG,GC}, tome \drawUnitLine{BG} como terceira proporcional, de modo que
 \begin{center}
 $\drawUnitLine{BG,GC} : \drawUnitLine{EF} :: \drawUnitLine{EF} : \drawUnitLine{BG}$;\\
 draw \drawUnitLine{AG}.\\
 $\drawUnitLine{BG,GC} : \drawUnitLine{AB} :: \drawUnitLine{EF} : \drawUnitLine{DE}$ \byref{prop:VI.IV};\\
 $\therefore \drawUnitLine{BG,GC} : \drawUnitLine{EF} :: \drawUnitLine{AB} : \drawUnitLine{DE}$ \byref{prop:V.XVI},\\
-but $\drawUnitLine{BG,GC} : \drawUnitLine{EF} :: \drawUnitLine{EF} : \drawUnitLine{BG}$ \byref{\constref},\\
+mas $\drawUnitLine{BG,GC} : \drawUnitLine{EF} :: \drawUnitLine{EF} : \drawUnitLine{BG}$ \byref{\constref},\\
 $\therefore \drawUnitLine{EF} : \drawUnitLine{BG} :: \drawUnitLine{AB} : \drawUnitLine{DE}$\\
-conseqüentemente $\triangleDEF = \drawPolygon[bottom][triangleABG]{ABG}$ pois eles têm os lados aproximadamente nos ângulos iguais \drawAngle{E} e \drawAngle{B} reciprocamente proporcionais \byref{prop:VI.XV};
+consequentemente $\triangleDEF = \drawPolygon[bottom][triangleABG]{ABG}$, pois têm lados que subtendem os ângulos iguais \drawAngle{E} e \drawAngle{B} reciprocamente proporcionais \byref{prop:VI.XV};
 
 $\therefore \triangleABC : \triangleDEF :: \triangleABC : \triangleABG$ \byref{prop:V.VII};\\
-but $\triangleABC : \triangleABG :: \drawUnitLine{BG,GC} : \drawUnitLine{BG}$ \byref{prop:VI.I},
+mas $\triangleABC : \triangleABG :: \drawUnitLine{BG,GC} : \drawUnitLine{BG}$ \byref{prop:VI.I},
 
 $\therefore \triangleABC : \triangleDEF :: \drawUnitLine{BG,GC} : \drawUnitLine{BG}$,\\
 isto é, os triângulos estão entre si na razão duplicada de seus lados homólogos \drawUnitLine{EF} e \drawUnitLine{BG,GC} \byref{def:V.XI}.
@@ -11988,18 +11991,18 @@ draw byLabelsOnPolygon(A, E, D, C, B)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(F, L, K, H, G)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{P}{olígonos}{semelhantes podem ser divididos no mesmo número de triângulos semelhantes, cada par semelhante sendo proporcional aos polígonos; e os polígonos estão entre si no razão duplicada de seus lados homólogos.}
+\problem{P}{olígonos}{semelhantes podem ser divididos no mesmo número de triângulos semelhantes, cada par semelhante sendo proporcional aos polígonos; e os polígonos estão entre si na razão duplicada de seus lados homólogos.}
 
 Trace \drawUnitLine{BE} e \drawUnitLine{BD} e \drawUnitLine{GL} e \drawUnitLine{GK}, resolvendo os polígonos em triângulos. Então, como os polígonos são semelhantes, $\drawAngle{C} = \drawAngle{H}$ e $\drawUnitLine{BC} : \drawUnitLine{CD} :: \drawUnitLine{GH} : \drawUnitLine{HK}$
 
 \begin{center}
 $\therefore$ \drawPolygon{BCD} e \drawPolygon{GHK} são semelhantes,\\
-and $\drawAngle{BDC} = \drawAngle{GKH}$ \byref{prop:VI.VI};
+e $\drawAngle{BDC} = \drawAngle{GKH}$ \byref{prop:VI.VI};
 
 mas $\drawAngle{BDE,BDC} = \drawAngle{GKL,GKH}$ porque são ângulos de polígonos semelhantes; portanto os restos \drawAngle{BDE} e \drawAngle{GKL} são iguais;\\
-hence $\drawUnitLine{BD} : \drawUnitLine{CD} :: \drawUnitLine{GK} : \drawUnitLine{HK}$,\\
+portanto $\drawUnitLine{BD} : \drawUnitLine{CD} :: \drawUnitLine{GK} : \drawUnitLine{HK}$,\\
 por conta dos triângulos semelhantes,\\
-and $\drawUnitLine{CD} : \drawUnitLine{DE} :: \drawUnitLine{HK} : \drawUnitLine{KL}$,\\
+e $\drawUnitLine{CD} : \drawUnitLine{DE} :: \drawUnitLine{HK} : \drawUnitLine{KL}$,\\
 por conta dos polígonos semelhantes,\\
 $\therefore \drawUnitLine{BD} : \drawUnitLine{DE} :: \drawUnitLine{GK} : \drawUnitLine{KL}$,\\
 ex \ae quali \byref{prop:V.XXII}, e como esses lados proporcionais contêm ângulos iguais, os triângulos \drawPolygon{BDE} e \drawPolygon{GKL} são semelhantes a \byref{prop:VI.VI}.
@@ -12048,7 +12051,7 @@ byPointLabelRemove(Aa, Ba, Ca, Ab, Bb, Cb, Ac, Bc, Cc);
 \drawCurrentPictureInMargin
 \problem{F}{iguras}{retilíneas (\drawPolygon[bottom]{A} e \drawPolygon[bottom]{B}) que são semelhantes à mesma figura (\drawPolygon[bottom]{C}) também são semelhantes entre si.}
 
-Como \polygonA\ e \polygonC\ são semelhantes, eles são equiangulares e têm os lados aproximadamente iguais aos ângulos proporcionais \byref{def:VI.I}; e como as figuras \polygonB\ e \polygonC\ também são semelhantes, elas são equiangulares e têm os lados aproximadamente iguais aos ângulos proporcionais; portanto \polygonA\ e \polygonB\ também são equiangulares e têm os lados sobre os ângulos iguais proporcionais \byref{prop:V.XI} e são, portanto, semelhantes.
+Como \polygonA\ e \polygonC\ são semelhantes, são equiangulares e têm lados homólogos proporcionais \byref{def:VI.I}; e como as figuras \polygonB\ e \polygonC\ também são semelhantes, são equiangulares e têm lados homólogos proporcionais; portanto \polygonA\ e \polygonB\ também são equiangulares e têm lados homólogos proporcionais \byref{prop:V.XI} e são, portanto, semelhantes.
 
 \qed
 
@@ -12160,7 +12163,7 @@ draw byLabelsOnPolygon(D, A, B, C, E, F, G, H)(ALL_LABELS, 0);
 \drawCurrentPictureInMargin
 \problem[3]{O}{s}{paralelogramos equiangulares (\drawPolygon[bottom]{ABCD} e \drawPolygon[bottom]{EFGC}) estão entre si em uma proporção composta pelas razões de seus lados.}
 
-Seja dois dos lados \drawUnitLine{BC} e \drawUnitLine{CG} com ângulos aproximadamente iguais serem colocados de modo que possam formar uma linha reta.
+Sejam dois dos lados \drawUnitLine{BC} e \drawUnitLine{CG}, com ângulos correspondentes iguais, colocados de modo que possam formar uma linha reta.
 
 \begin{center}
 Como $\drawAngle{BCD} + \drawAngle{DCG} = \drawTwoRightAngles$,\\
@@ -12218,7 +12221,7 @@ draw byNamedLine(AE,EB,BH,HC,FH,EF);
 draw byNamedPolygon(GFKD,AGF,FCK);
 draw byLabelsOnPolygon(D, C, B, A)(ALL_LABELS, 0);
 })
-the parallelograms
+os paralelogramos
 (\drawFromCurrentPicture[bottom][parallelogramFHCK]{
 draw byNamedLine(FH,HC);
 draw byNamedPolygon(FCK);
@@ -12230,7 +12233,7 @@ draw byNamedLine(AE,EF);
 draw byNamedPolygon(AGF);
 draw byLabelsOnPolygon(G, F, E, A)(ALL_LABELS, 0);
 })
-que estão aproximadamente na diagonal são semelhantes ao todo e entre si.}
+que são semelhantes ao todo e entre si, estando dispostos na diagonal.}
 
 \begin{center}
 Como \parallelogramABCD\ e \parallelogramAEFG\ possuem um ângulo comum eles são equiangulares;\\
@@ -12254,7 +12257,7 @@ são semelhantes \byref{prop:VI.IV},\\
 $\therefore \drawUnitLine{GA} : \drawUnitLine{GF} :: \drawUnitLine{GA,DG} : \drawUnitLine{DK,KC}$;
 
 e os restantes lados opostos são iguais a esses,\\
-$\therefore$ \parallelogramAEFG\ e \parallelogramABCD\ têm os lados aproximadamente iguais em ângulos proporcionais e, portanto, são semelhantes.
+$\therefore$ \parallelogramAEFG\ e \parallelogramABCD\ têm lados homólogos proporcionais e ângulos correspondentes iguais e, portanto, são semelhantes.
 
 Da mesma forma pode-se demonstrar que os paralelogramos \parallelogramABCD\ e \parallelogramFHCK\ são semelhantes.\\
 Como, portanto, cada um dos paralelogramos \parallelogramAEFG\ e \parallelogramFHCK\ é semelhante a \parallelogramABCD, eles são semelhantes entre si.
@@ -12405,7 +12408,7 @@ draw byNamedLine(EAt,AC);
 draw byNamedLineFull(E, F, 0, 1,  0, 1)(AGt);
 draw byLabelsOnPolygon(A, D, C, B)(ALL_LABELS, 0);
 })
-têm um ângulo comum, eles têm aproximadamente a mesma diagonal.}
+têm um ângulo comum, têm diagonais correspondentes iguais.}
 
 \begin{center}
 Pois, se possível, seja
@@ -12417,10 +12420,10 @@ stopGlobalRotation;
 }
 seja a diagonal de \parallelogramABCD\ e trace $\drawUnitLine{KH} \parallel \drawUnitLine{AG}$ \byref{prop:I.XXXI}.
 
-Como \drawLine[bottom][parallelogramAKHG]{AG,GH,KH,AK} e \parallelogramABCD\ têm aproximadamente a mesma diagonal \lineAHC e têm \drawAngle{A} comum, eles são \byref{prop:VI.XXIV} semelhantes;
+Como \drawLine[bottom][parallelogramAKHG]{AG,GH,KH,AK} e \parallelogramABCD\ têm diagonais correspondentes iguais e têm \drawAngle{A} comum, eles são \byref{prop:VI.XXIV} semelhantes;
 
 $\therefore \drawSizedLine{AG} : \drawSizedLine{AK} :: \drawSizedLine{AG,GD} : \drawSizedLine{AK,KE,EB}$;\\
-but $\drawSizedLine{AG} : \drawSizedLine{AK,KE} :: \drawSizedLine{AG,GD} : \drawSizedLine{AK,KE,EB}$ \byref{\hypref},\\
+mas $\drawSizedLine{AG} : \drawSizedLine{AK,KE} :: \drawSizedLine{AG,GD} : \drawSizedLine{AK,KE,EB}$ \byref{\hypref},\\
 $\therefore \drawSizedLine{AG} : \drawSizedLine{AK} :: \drawSizedLine{AG} : \drawSizedLine{AK,KE}$,\\
 e $\therefore \drawSizedLine{AK} = \drawSizedLine{AK,KE}$ \byref{prop:V.IX}, o que é um absurdo.
 
@@ -12454,14 +12457,14 @@ draw byLabelsOnPolygon(E, F, A, D, C, B, H)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(H, G, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem{D}{e}{todos os retângulos compreendido por segmentos de uma determinada reta, o maior é o quadrado descrito na metade da reta.}
+\problem{D}{e}{todos os retângulos compreendidos por segmentos de uma determinada reta, o maior é o quadrado descrito na metade da reta.}
 
 \begin{center}
 Seja \drawSizedLine{AD,DC,CB} a linha fornecida,\\
-\drawSizedLine{AD} and \drawSizedLine{DC,CB} unequal segments,\\
+\drawSizedLine{AD} e \drawSizedLine{DC,CB} são segmentos desiguais,\\
 e segmentos iguais \drawSizedLine{AD,DC} e \drawSizedLine{CB};
 
-then $\drawPolygon[bottom]{ADGKEF,CDGK} > \drawPolygon[bottom]{BCKH,CDGK}$.
+então $\drawPolygon[bottom]{ADGKEF,CDGK} > \drawPolygon[bottom]{BCKH,CDGK}$.
 \end{center}
 
 Pois já foi demonstrado \byref{prop:II.V}, que o quadrado da metade da reta é igual ao retângulo compreendido por quaisquer segmentos desiguais junto com o quadrado da parte intermediária entre o ponto médio e o ponto de seção desigual. O quadrado descrito na metade da linha excede, portanto, o retângulo compreendido por quaisquer segmentos desiguais da linha.
@@ -12501,7 +12504,7 @@ draw byLabelsOnPolygon(A, B, noPoint)(ALL_LABELS, 0);
 draw byLabelPoint(E, angle(E-D) + 45, 2);
 }
 \drawCurrentPictureInMargin
-\problem{D}{ividir}{uma determinada reta (\drawSizedLine{AE,EC,CB}) de modo que o retângulo compreendido por seus segmentos sejam iguais a uma determinada área, não excedendo o quadrado da metade da reta.}
+\problem{D}{ividir}{uma determinada reta (\drawSizedLine{AE,EC,CB}) de modo que o retângulo compreendido por seus segmentos seja igual a uma determinada área, não excedendo o quadrado da metade da reta.}
 
 \begin{center}
 Seja a área fornecida $=\drawSizedLine{G}^2$.
@@ -12557,12 +12560,12 @@ draw byLabelsOnPolygon(F, B, C, A, noPoint)(ALL_LABELS, 0);
 draw byLabelLine(0)(G);
 }
 \drawCurrentPictureInMargin
-\problem{P}{roduzir}{uma dada reta (\drawSizedLine{AC,CB}), de modo que o retângulo compreendido pelos segmentos entre as extremidades da dada reta e o ponto para o qual ela é produzida, possam ser iguais a uma determinada área, ou seja, igual ao quadrado de \drawSizedLine{G}.}
+\problem{P}{roduzir}{uma dada reta (\drawSizedLine{AC,CB}), de modo que o retângulo compreendido pelos segmentos entre as extremidades da dada reta e o ponto para o qual ela é produzida possa ser igual a uma determinada área, ou seja, igual ao quadrado de \drawSizedLine{G}.}
 
 \begin{center}
 Faça $\drawSizedLine{AC} = \drawSizedLine{CB}$,\\
 e trace $\drawSizedLine{BD} \perp \drawSizedLine{CB} = \drawSizedLine{G}$;\\
-draw \drawSizedLine{CD};\\
+trace \drawSizedLine{CD};\\
 e com o raio \drawSizedLine{CD}, descreva um círculo que corresponde ao \drawSizedLine{AC,CB} produzido.
 
 Então $\drawSizedLine{AC,CB,BF} \times \drawSizedLine{BF} + \drawSizedLine{CB}^2 = \drawSizedLine{AC,CB}^2$ \byref{prop:II.VI} $= \drawSizedLine{CD}^2$.
@@ -12746,7 +12749,7 @@ draw byNamedLineSeq(0)(CAt,BCt,ABt);
 draw byLabelsOnPolygon(C, B, A)(ALL_LABELS, 0);
 stopTempAngleScale;
 }
-and
+e
 \drawFromCurrentPicture[bottom]{
 startTempAngleScale(angleScale*3/5);
 draw byNamedAngle(D, DCE);
@@ -12852,7 +12855,7 @@ startAutoLabeling;
 draw byNamedArc(EF);
 stopAutoLabeling;
 stopGlobalRotation;
-}$); so also are sectors.}
+}$); assim também são os setores.}
 
 Pegue a circunferência de \circleG\ qualquer número de arcos
 \drawFromCurrentPicture[middle][arcCK]{
@@ -13044,7 +13047,7 @@ draw byLabelsOnCircle(A, B, C, E)(O);
 draw byLabelsOnPolygon(C, D, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem{S}{e}{de qualquer ângulo de um triângulo for traçada uma linha reta perpendicular à base; o retângulo compreendido pelos lados do triângulo são iguais ao retângulo compreendido por a perpendicular e o diâmetro do círculo descrito em torno do triângulo.}
+\problem{S}{e}{de qualquer ângulo de um triângulo for traçada uma linha reta perpendicular à base; o retângulo compreendido pelos lados do triângulo é igual ao retângulo compreendido pela perpendicular e pelo diâmetro do círculo descrito em torno do triângulo.}
 
 \begin{center}
 De \drawAngle{A} de \drawLine[bottom]{CA,DC,BD,AB}\\
@@ -13098,10 +13101,10 @@ draw byLabelsOnCircle(A, B, C, D)(O);
 draw byLabelsOnPolygon(D, E, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem[4]{O}{}{retângulo compreendido por as diagonais de uma figura quadrilátera inscrito em um círculo, é igual a ambos os retângulos compreendido por seus lados opostos.}
+\problem[4]{O}{}{retângulo compreendido pelas diagonais de uma figura quadrilátera inscrita em um círculo é igual a ambos os retângulos compreendidos por seus lados opostos.}
 
 \begin{center}
-Seja \drawLine{DA,CD,BC,AB} qualquer figura quadrilátera inscrito em \drawCircle[middle][1/5]{O};\\
+Seja \drawLine{DA,CD,BC,AB} qualquer figura quadrilátera inscrita em \drawCircle[middle][1/5]{O};\\
 e trace \drawUnitLine{BE,ED} e \drawUnitLine{AC};\\
 então $\drawUnitLine{BE,ED} \times \drawUnitLine{AC} = \drawUnitLine{AB} \times \drawUnitLine{CD} + \drawUnitLine{DA} \times \drawUnitLine{BC}$.
 
@@ -13119,6 +13122,15 @@ $\therefore \drawUnitLine{BE,ED} \times \drawUnitLine{AC} = \drawUnitLine{AB} \t
 \end{center}
 
 \qed
+
+\clearpage
+\chapter*{Bibliografia}
+\addcontentsline{toc}{chapter}{Bibliografia}
+\begin{description}
+\item[\phantomsection\label{bib:greek-dictionary}\textbf{[B1]}] Centro de Língua Grega, \emph{Λεξικό της Κοινής Νεοελληνικής}, verbete \emph{τραπέζιο}. Disponível em: \href{https://www.greek-language.gr/greekLang/modern_greek/tools/lexica/triantafyllides/search.html?lq=%CF%84%CF%81%CE%B1%CF%80%CE%AD%CE%B6%CE%B9%CE%BF}{greek-language.gr}. Acesso em 15 jul. 2026.
+\item[\phantomsection\label{bib:iep}\textbf{[B2]}] Instituto de Política Educacional da Grécia (ΙΕΠ), \emph{Geometria}, p. 46. Material escolar oficial sobre a classificação euclidiana dos quadriláteros e o uso posterior de \emph{τραπέζιο} em Arquimedes. Disponível em: \href{https://prosvasimo.iep.edu.gr/Books/Eidikh-Agwgh-PI/books/a_likeiou/l_a_arial-18b/l_a_geom_arial_18b/l_a-b_geom_bm_%2895-180%29_18b.pdf}{prosvasimo.iep.edu.gr}. Acesso em 15 jul. 2026.
+\item[\phantomsection\label{bib:mathworld}\textbf{[B3]}] Wolfram MathWorld, \emph{Trapezium}. Disponível em: \href{https://mathworld.wolfram.com/Trapezium.html}{mathworld.wolfram.com}. Acesso em 15 jul. 2026.
+\end{description}
 
 \tableofcontents
 
