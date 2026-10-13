@@ -2495,7 +2495,7 @@ draw byLabelsOnPolygon(G, E, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 draw byLabelsOnPolygon(H, F, C)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem{S}{e}{uma linha reta (\drawUnitLine{GH}), cortando duas outras linhas retas (\drawUnitLine{AB} e \drawUnitLine{CD}), torna o externo igual ao interno e ao ângulo oposto, no mesmo lado da linha cortante (ou seja, $\drawAngle{GEA} = \drawAngle{CFG}$ ou $\drawAngle{BEG} = \drawAngle{GFD}$), ou se torna os dois ângulos internos no mesmo lado (\drawAngle{GFD} e \drawAngle{HEB}, ou \drawAngle{CFG} e \drawAngle{AEH}) juntos iguais a dois ângulos retos, essas duas linhas retas são paralelas.}
+\problem{S}{e}{uma linha reta (\drawUnitLine{GH}), cortando duas outras linhas retas (\drawUnitLine{AB} e \drawUnitLine{CD}), torna o ângulo externo igual ao ângulo interno oposto, no mesmo lado da linha cortante (ou seja, $\drawAngle{GEA} = \drawAngle{CFG}$ ou $\drawAngle{BEG} = \drawAngle{GFD}$), ou se torna os dois ângulos internos no mesmo lado (\drawAngle{GFD} e \drawAngle{HEB}, ou \drawAngle{CFG} e \drawAngle{AEH}) juntos iguais a dois ângulos retos, essas duas linhas retas são paralelas.}
 
 \begin{center}
 Primeiro, se $\drawAngle{GEA} = \drawAngle{CFG}$, então $\drawAngle{GEA} = \drawAngle{HEB}$ \byref{prop:I.XV},\\
@@ -2545,7 +2545,7 @@ draw byLabelPoint(I, lineAngle.IE - 90, 1);
 draw byLabelPoint(J, lineAngle.EJ + 90, 1);
 }
 \drawCurrentPictureInMargin
-\problem{U}{ma}{linha reta (\drawUnitLine{GH}) caindo sobre duas linhas retas paralelas (\drawUnitLine{AB} e \drawUnitLine{CD}), torna os ângulos alternados iguais entre si; e também o externo igual ao interno e ao ângulo oposto no mesmo lado; e os dois ângulos internos no mesmo lado juntos iguais a dois ângulos retos.}
+\problem{U}{ma}{linha reta (\drawUnitLine{GH}) caindo sobre duas linhas retas paralelas (\drawUnitLine{AB} e \drawUnitLine{CD}), torna os ângulos alternados iguais entre si; e também o ângulo externo igual ao ângulo interno oposto no mesmo lado; e os dois ângulos internos no mesmo lado juntos iguais a dois ângulos retos.}
 
 Pois se os ângulos alternados \drawAngle{IEA,HEI} e \drawAngle{GFD} não forem iguais, trace \drawUnitLine{IE}, fazendo $\drawAngle{HEI} = \drawAngle{GFD}$ \byref{prop:I.XXIII}.
 
@@ -4059,7 +4059,7 @@ draw byLabelsOnPolygon(F, G, E, L, K, A, C, D, B, M)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(L, H, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 1);
 }
 \drawCurrentPictureInMargin
-\problem{S}{e}{uma linha reta for dividida ao meio \drawProportionalLine{DC,CA} e produzida em qualquer ponto \drawProportionalLine{BD,DC,CA}, o retângulo compreendido pela reta inteira assim prolongada e pelo prolongamento, somado ao quadrado da metade da reta original, é igual ao quadrado da reta composta por essa metade e pelo prolongamento.\\
+\problem{S}{e}{uma linha reta for dividida ao meio \drawProportionalLine{DC,CA} e prolongada até um ponto qualquer \drawProportionalLine{BD,DC,CA}, o retângulo compreendido pela reta inteira assim prolongada e pelo prolongamento, somado ao quadrado da metade da reta original, é igual ao quadrado da reta composta por essa metade e pelo prolongamento.\\
 $\drawProportionalLine{BD,DC,CA} \cdot \drawProportionalLine{BD} + \drawProportionalLine{DC}^2 = \drawProportionalLine{BD,DC}^2$
 }
 
@@ -4193,7 +4193,7 @@ $\drawProportionalLine{EH,HL,LF}^2 = 4 \cdot \drawProportionalLine{EH,HL} \cdot 
 }
 
 \begin{center}
-Produza \drawProportionalLine{EH,HL} e faça $\drawProportionalLine{LF} = \drawProportionalLine{HL}$
+Prolongue \drawProportionalLine{EH,HL} e faça $\drawProportionalLine{LF} = \drawProportionalLine{HL}$
 
 Construa \drawFromCurrentPicture[bottom]{
 draw byNamedLine(BL,CH,MN,OP);
@@ -4336,7 +4336,7 @@ draw byLabelsOnPolygon(A, E, F, D, G)(ALL_LABELS, 0);
 draw byLabelsOnPolygon(G, B, C, A)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem{S}{e}{uma linha reta \drawProportionalLine{AC,CB} for dividida ao meio e produzida em qualquer ponto \drawProportionalLine{AC,CB,BD}, a soma dos quadrados da reta inteira assim prolongada e do prolongamento é igual ao dobro da soma dos quadrados da metade da reta original e da reta composta por essa metade e pelo prolongamento.\\
+\problem{S}{e}{uma linha reta \drawProportionalLine{AC,CB} for dividida ao meio e prolongada até um ponto qualquer \drawProportionalLine{AC,CB,BD}, a soma dos quadrados da reta inteira assim prolongada e do prolongamento é igual ao dobro da soma dos quadrados da metade da reta original e da reta composta por essa metade e pelo prolongamento.\\
 $\drawProportionalLine{AC,CB,BD}^2 + \drawProportionalLine{BD}^2 = 2 \cdot \drawProportionalLine{CB}^2 + 2 \cdot \drawProportionalLine{CB,BD}^2$
 }
 
@@ -4417,7 +4417,7 @@ trace \drawProportionalLine{BE},\\
 tome $\drawProportionalLine{EA,AF} = \drawProportionalLine{BE}$ \byref{prop:I.III},\\
 sobre \drawProportionalLine{AF} descreva \drawPolygon[bottom]{AHGF} \byref{prop:I.XLVI}.
 
-Produza \drawProportionalLine{KG} \byref{post:I.II}.
+Prolongue \drawProportionalLine{KG} \byref{post:I.II}.
 
 Então, por \byref{prop:II.VI}, $\drawProportionalLine{CE,EA,AF} \cdot \drawProportionalLine{AF} + \drawProportionalLine{EA}^2 = \drawProportionalLine{EA,AF}^2 = \drawProportionalLine{BE}^2 = \drawProportionalLine{AH,HB}^2 + \drawProportionalLine{EA}^2 \therefore \drawProportionalLine{CE,EA,AF} \cdot \drawProportionalLine{AF} = \drawProportionalLine{AH,HB}^2$, ou,\\
 $\drawPolygon[bottom]{AHKC,AHGF} = \drawPolygon[bottom]{AHKC,HBDK} \therefore \drawPolygon[bottom]{AHGF} = \drawPolygon[bottom]{HBDK}$
@@ -4447,7 +4447,7 @@ draw byNamedLineSeq(0)(DB,AD,CA,BC);
 draw byLabelsOnPolygon(C, B, D, A)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{I}{n}{qualquer triângulo de ângulo obtuso, o quadrado do lado que subtende o ângulo obtuso excede a soma dos quadrados dos lados que contêm o ângulo obtuso, em duas vezes o retângulo compreendido por de qualquer um desses lados e as partes produzidas do mesmo do ângulo obtuso à perpendicular caem sobre ele a partir do ângulo agudo oposto.\\
+\problem{E}{m}{qualquer triângulo obtusângulo, o quadrado do lado que subtende o ângulo obtuso excede a soma dos quadrados dos lados que o compreendem em duas vezes o retângulo compreendido por um desses lados e pelo segmento do seu prolongamento entre o vértice do ângulo obtuso e o pé da perpendicular traçada do vértice oposto.\\
 $\drawProportionalLine{BC}^2 > \drawProportionalLine{CA}^2 + \drawProportionalLine{BA}^2$ por $2 \cdot \drawProportionalLine{CA} \cdot \drawProportionalLine{AD}$
 }
 
@@ -4519,7 +4519,7 @@ $\therefore$ \byref{prop:I.XLVII}\\
 $\drawProportionalLine{BD,DC}^2 + \drawProportionalLine{AB}^2 = 2 \cdot \drawProportionalLine{BD,DC} \cdot \drawProportionalLine{BD} + \drawProportionalLine{CA}^2$,\\
 e $\therefore \drawProportionalLine{CA}^2 < \drawProportionalLine{BD,DC}^2 + \drawProportionalLine{AB}^2$ por $2 \cdot \drawProportionalLine{BD,DC} \cdot \drawProportionalLine{BD}$
 
-Em seguida, suponha que a perpendicular caia sem o triângulo, então \byref{prop:II.VII}\\
+Em seguida, suponha que a perpendicular caia fora do triângulo, então \byref{prop:II.VII}\\
 $\drawProportionalLine{FG,GH}^2 + \drawProportionalLine{FG}^2 = 2 \cdot \drawProportionalLine{FG,GH} \cdot \drawProportionalLine{FG} + \drawProportionalLine{GH}^2$,\\
 adicione $\drawProportionalLine{HE}^2$ a ambos, então,\\
 $\drawProportionalLine{FG,GH}^2 + \drawProportionalLine{FG}^2 + \drawProportionalLine{HE}^2= 2 \cdot \drawProportionalLine{FG,GH} \cdot \drawProportionalLine{FG} + \drawProportionalLine{GH}^2 + \drawProportionalLine{HE}^2$\\
@@ -4587,7 +4587,7 @@ Para traçar \drawSizedLine{HE} tal que, $\drawSizedLine{HE}^2 = \drawPolygon{ab
 
 \begin{center}
 Faça $\drawPolygon{BCDE} = \drawPolygon{abcdef}$ \byref{prop:I.XLV},
-produza \drawSizedLine{EG,GB} até que $\drawSizedLine{FE} = \drawSizedLine{ED}$;\\
+prolongue \drawSizedLine{EG,GB} até que $\drawSizedLine{FE} = \drawSizedLine{ED}$;\\
 tome $\drawSizedLine{FE,EG} = \drawSizedLine{GB}$ \byref{prop:I.X}.
 
 Descreva
@@ -4600,7 +4600,7 @@ stopAutoLabeling;
 stopTempScale;
 }
 \byref{post:I.III},\\
-e produza \drawSizedLine{ED} para atendê-lo: trace \drawSizedLine{HG}.
+e prolongue \drawSizedLine{ED} até encontrar o semicírculo: trace \drawSizedLine{HG}.
 
 $\drawSizedLine{BG}^2 \mbox{ ou } \drawSizedLine{HG}^2 = \drawSizedLine{FE} \cdot \drawSizedLine{EG,GB} + \drawSizedLine{EG}^2$ \byref{prop:II.V},\\
 mas $\drawSizedLine{HG}^2 = \drawSizedLine{HE} ^2 + \drawSizedLine{EG}^2$ \byref{prop:I.XLVII};
@@ -4632,7 +4632,7 @@ Círculos iguais são aqueles cujos diâmetros são iguais.
 	draw byCircleR(O, r, byblack, 0, 0, -1);
 	draw byLine(A, B, byblack, SOLID_LINE, REGULAR_WIDTH);
 }\drawCurrentPictureInMargin
-Diz-se que uma linha reta toca um círculo quando encontra o círculo e, ao ser produzida, não o corta.
+Diz-se que uma linha reta toca um círculo quando encontra o círculo e, ao ser prolongada, não o corta.
 
 \startdefinition{}\label{def:III.III}
 \defineNewPicture{
@@ -4651,7 +4651,7 @@ Diz-se que uma linha reta toca um círculo quando encontra o círculo e, ao ser 
 	fill (fullcircle scaled 2r3) shifted C withcolor byblue;
 	draw byCircleR(C, r3, byblue, 0, 0, -1/2);
 }\drawCurrentPictureInMargin
-Diz-se que os círculos se tocam, mas não se cortam.
+Diz-se que dois círculos se tocam quando se encontram, mas não se cortam.
 
 \startdefinition{}\label{def:III.IV}
 \defineNewPicture{
@@ -4672,7 +4672,7 @@ Diz-se que os círculos se tocam, mas não se cortam.
 	draw byNamedLineSeq(0)(OE,OF);
 	draw byCircleR(O, r, byblack, 0, 0, 0);
 }\drawCurrentPictureInMargin
-Diz-se que as linhas retas estão igualmente distantes do centro de um círculo quando as perpendiculares traçadas a elas a partir do centro são iguais.
+Diz-se que as linhas retas estão equidistantes do centro de um círculo quando as perpendiculares traçadas a elas a partir do centro são iguais.
 
 \startdefinition{}\label{def:III.V}
 E diz-se que a linha reta sobre a qual cai a perpendicular maior está mais distante do centro.
@@ -5137,7 +5137,7 @@ $\left\{\vcenter{
 \nointerlineskip\hbox{\drawUnitLine{EF,AE}}
 \nointerlineskip\hbox{\drawUnitLine{FB}}
 \nointerlineskip\hbox{\drawUnitLine{FC}}}\right.$
-são atraídos pela circunferência; a maior dessas linhas é aquela (\drawUnitLine{EF,AE}) que passa pelo centro, e a menor é a parte restante (\drawUnitLine{FD}) do diâmetro.\\
+são traçadas até a circunferência; a maior dessas linhas é aquela (\drawUnitLine{EF,AE}) que passa pelo centro, e a menor é a parte restante (\drawUnitLine{FD}) do diâmetro.\\
 Dos outros, aquele (\drawUnitLine{FB}) que está mais próximo da linha que passa pelo centro, é maior que aquele (\drawUnitLine{FC}) que está mais remoto.\\
 Figura 2. As duas retas (\drawUnitLine{FM,MK} e \drawUnitLine{FG}) que fazem ângulos iguais com aquela que passa pelo centro, em lados opostos deste, são iguais entre si; e não pode ser traçada uma terceira linha igual a elas, do mesmo ponto à circunferência.}
 
@@ -5194,7 +5194,7 @@ $\left\{\vcenter{
 \nointerlineskip\hbox{\drawProportionalLine{DM,MA}}
 \nointerlineskip\hbox{\drawProportionalLine{DE}}
 \nointerlineskip\hbox{\drawProportionalLine{DF}}}\right\}$
-são atraídos pela circunferência; daquelas que caem sobre a circunferência côncava, a maior é aquela (\drawUnitLine{DM,MA}) que passa pelo centro, e a linha (\drawUnitLine{DE}) que está mais próxima da maior é maior que aquela (\drawUnitLine{DF}) que está mais remota.
+são traçadas até a circunferência; daquelas que caem sobre a circunferência côncava, a maior é aquela (\drawUnitLine{DM,MA}) que passa pelo centro, e a linha (\drawUnitLine{DE}) que está mais próxima da maior é maior que aquela (\drawUnitLine{DF}) que está mais remota.
 
 \begin{center}
 Trace \drawUnitLine{MF} e \drawUnitLine{ME} no centro.\\
@@ -5325,7 +5325,7 @@ Pois se for suposto que o ponto \drawPointL[middle][DH,DA,DF]{D} no qual mais de
 startGlobalRotation(-lineAngle.DF);
 draw byNamedPointLines(F)("");
 stopGlobalRotation;
-} deve ser; junte esses dois pontos por \drawUnitLine{DF} e produza-os em ambos os sentidos da circunferência.
+} deve ser; junte esses dois pontos por \drawUnitLine{DF} e prolongue-a em ambos os sentidos até a circunferência.
 
 Então, como mais de duas linhas retas iguais são traçadas de um ponto que não é o centro até a circunferência, pelo menos duas delas devem estar no mesmo lado do diâmetro \drawUnitLine{DH,DF,FL}; e como a partir de um ponto \drawPointL[middle][DA,DF]{D}, que não é o centro, traçam-se retas até a circunferência; o maior é \drawUnitLine{DF,FL}, que passa pelo centro: e \drawUnitLine{DC} que está mais próximo de \drawUnitLine{DF,FL}, $> \drawUnitLine{DB}$ que é mais remoto \byref{prop:III.VIII}; mas $\drawUnitLine{DC} = \drawUnitLine{DB}$ \byref{\hypref} o que é um absurdo.
 
@@ -5429,9 +5429,9 @@ draw byLabelsOnPolygon(A, D, N)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 draw byLabelsOnCircle(A, H)(M);
 }
 \drawCurrentPictureInMargin
-\problem[4]{S}{e}{duas circunferências \drawCircle[middle][1/4]{N} e \drawCircle[middle][1/5]{M} se tocam internamente, a linha reta que une seus centros, ao ser produzida, deverá passar por um ponto de contato.}
+\problem[4]{S}{e}{duas circunferências \drawCircle[middle][1/4]{N} e \drawCircle[middle][1/5]{M} se tocam internamente, a linha reta que une seus centros, ao ser prolongada, deverá passar por um ponto de contato.}
 
-Pois, se for possível, deixe o \drawSizedLine{GF} unir seus centros e produzi-lo nos dois sentidos; de um ponto de contato trace \drawSizedLine{AG} para o centro de \circleN, e do mesmo ponto de contato trace \drawSizedLine{AF} para o centro de \circleM.
+Pois, se for possível, seja \drawSizedLine{GF} a reta que une os centros sem passar pelo ponto de contato; prolongue-a nos dois sentidos; de um ponto de contato trace \drawSizedLine{AG} para o centro de \circleN, e do mesmo ponto de contato trace \drawSizedLine{AF} para o centro de \circleM.
 
 \begin{center}
 Pois, na figura,
@@ -5490,7 +5490,7 @@ draw byLabelPoint(A, angle(F-A)-45, 2);
 \drawCurrentPictureInMargin
 \problem[4]{S}{e}{dois círculos \drawCircle{M} e \drawCircle{N} se tocam externamente, a linha reta \drawUnitLine{FC,CD,DG} que une seus centros passa pelo ponto de contato.}
 
-Se for possível, seja o \drawUnitLine{FC,CD,DG} ingressar nos centros, e não passar por um ponto de contato; em seguida, a partir de um ponto de contato, trace \drawUnitLine{AF} e \drawUnitLine{AG} para os centros.
+Se for possível, seja \drawSizedLine{GF} a reta que une os centros sem passar pelo ponto de contato; então, a partir desse ponto, trace \drawSizedLine{AG} e \drawSizedLine{AF} até os centros.
 
 \begin{center}
 $\because \drawUnitLine{AF} + \drawUnitLine{AG} > \drawUnitLine{FC,CD,DG}$ \byref{prop:I.XX}\\ %because
@@ -5859,8 +5859,8 @@ draw byLabelPoint(H, angle(G-H)+45, 2);
 }
 \drawCurrentPictureInMargin
 \problem{A}{}{reta \drawUnitLine{EK} traçada a partir da extremidade do diâmetro \drawUnitLine{BD,DA}
-de um círculo perpendicular a ele cai sem o círculo\\
-E se qualquer linha reta \drawUnitLine{AG} for traçada a partir de um ponto perpendicular ao ponto de contato, ela corta o círculo.}
+de um círculo perpendicular a ele cai fora do círculo\\
+E se uma reta \drawUnitLine{AG} for traçada até o ponto de contato a partir de um ponto situado entre essa perpendicular e o círculo, ela cortará o círculo.}
 
 \startsubproposition{Parte I.}
 Se for possível, seja \drawUnitLine{AC}, que encontra o círculo novamente, ser $\perp \drawUnitLine{DA}$ e trace \drawUnitLine{DC}.
@@ -5929,7 +5929,7 @@ draw byLabelPoint(D, angle(A-E)+45, 2);
 draw byLabelPoint(B, angle(F-E)-45, 2);
 }
 \drawCurrentPictureInMargin
-\problem{P}{ara}{traçar uma tangente a um determinado círculo \drawCircle[middle][1/5]{EI} a partir de um determinado ponto, dentro ou fora de sua circunferência.}
+\problem{P}{ara}{traçar uma tangente a um determinado círculo \drawCircle[middle][1/5]{EI} a partir de um determinado ponto, situado na circunferência ou fora dela.}
 
 Se um determinado ponto estiver na circunferência, como em \drawPointL[middle][FB]{B}, é claro que a reta $\drawUnitLine{AB} \perp \drawUnitLine{BE}$, o raio, será a tangente necessária \byref{prop:III.XVI}.
 
@@ -6019,7 +6019,7 @@ draw byLabelLineEnd(E, C, 0);
 \drawCurrentPictureInMargin
 \problem{S}{e}{uma linha reta \drawUnitLine{CE} for tangente a um círculo, a linha reta \drawUnitLine{AC}, traçada perpendicularmente a ela a partir do ponto de contato, passa pelo centro do círculo.}
 
-Pois, se for possível, deixe o centro sem \drawUnitLine{AC}, e trace \drawUnitLine{CF} do suposto centro até o ponto de contato.
+Pois, se for possível, suponha que o centro não pertença à reta \drawUnitLine{AC}, e trace \drawUnitLine{CF} do suposto centro até o ponto de contato.
 
 \begin{center}
 $\because \drawUnitLine{CF} \perp \drawUnitLine{CE}$ \byref{prop:III.XVIII}\\ % Because
@@ -6029,7 +6029,7 @@ mas $\drawAngle{ACF,FCE} = \drawRightAngle$ \byref{\hypref},
 e $\therefore \drawAngle{FCE} = \drawAngle{ACF,FCE}$, uma parte igual ao todo, o que é um absurdo.
 \end{center}
 
-Portanto o ponto assumido não é o centro; e da mesma maneira pode ser demonstrado que nenhum outro ponto sem \drawUnitLine{AC} é o centro.
+Portanto o ponto assumido não é o centro; e da mesma maneira pode ser demonstrado que nenhum outro ponto fora da reta \drawUnitLine{AC} é o centro.
 
 \qed
 
@@ -6134,7 +6134,7 @@ draw byLabelsOnCircle(D, G, C, F)(E);
 draw byLabelsOnPolygon(G, E, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin\begin{center}
-Seja o centro ficar sem \drawAngle{FDC}\\
+Suponha que o centro esteja fora do ângulo \drawAngle{FDC}\\
 e trace \drawUnitLine{DG}, o diâmetro.
 
 $\because \drawAngle{GEF,FEC} = \mbox{ duas vezes } \drawAngle{GDF,FDC}$;\\
@@ -6330,7 +6330,7 @@ $\drawAngle{C} = \drawAngle{D}$ \byref{def:III.XI}, % improvement: definition 10
 mas $\drawAngle{C} > \drawAngle{D}$ \byref{prop:I.XVI}\\
 o que é absurdo;
 
-portanto, nenhum ponto em nenhum dos segmentos cai sem o outro e, portanto, os segmentos coincidem.
+portanto, nenhum ponto em nenhum dos segmentos fica fora do outro e, portanto, os segmentos coincidem.
 \end{center}
 
 \qed
@@ -6724,7 +6724,7 @@ draw byLabelsOnPolygon(D, L, E)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \begin{center}
 Se os arcos iguais forem semicírculos, a proposição é evidente. Mas se não,
 
-seja \drawUnitLine{AK}, \drawUnitLine{BK} e \drawUnitLine{DL}, \drawUnitLine{EL} serem atraídos para os centros;
+trace \drawUnitLine{AK}, \drawUnitLine{BK}, \drawUnitLine{DL} e \drawUnitLine{EL} até os centros;
 
 $\because \drawArc{Kb} = \drawArc{Lb}$ \byref{\hypref}\\ % because
 e $\drawAngle{K} = \drawAngle{L}$ \byref{prop:III.XXVII};
@@ -6733,7 +6733,7 @@ mas $\drawUnitLine{AK} \mbox{ e } \drawUnitLine{BK} = \drawUnitLine{DL} \mbox{ e
 
 $\therefore \drawUnitLine{AB} = \drawUnitLine{DE}$ \byref{prop:I.IV};
 
-mas estes são os acordes que subentendem os arcos iguais.
+mas estas são as cordas que subtendem os arcos iguais.
 \end{center}
 
 \qed
@@ -6931,7 +6931,7 @@ draw byLabelsOnCircle(A, B, C, D)(O);
 draw byLabelsOnPolygon(E, F, noPoint)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{S}{e}{uma linha reta \drawUnitLine{EF} for uma tangente a um círculo, e do ponto de contato for traçada uma linha reta \drawUnitLine{DB} cortando o círculo, o ângulo \drawAngle{FBD} feito por esta linha com a tangente é igual ao ângulo \drawAngle{A} no segmento alternativo do círculo.}
+\problem{S}{e}{uma linha reta \drawUnitLine{EF} for uma tangente a um círculo, e do ponto de contato for traçada uma linha reta \drawUnitLine{DB} cortando o círculo, o ângulo \drawAngle{FBD} feito por esta linha com a tangente é igual ao ângulo \drawAngle{A} no segmento oposto do círculo.}
 
 Se a corda passar pelo centro, é evidente que os ângulos são iguais, pois cada um deles é um ângulo reto. \byref{prop:III.XVI,prop:III.XXXI}
 
@@ -6946,7 +6946,7 @@ $\therefore \drawAngle{A} = \drawAngle{FBD}$ \byref{ax:I.III}. % de melhoria: pa
 
 Novamente $\drawAngle{B} = \drawTwoRightAngles = \drawAngle{A} + \drawAngle{C}$ \byref{prop:III.XXII}
 
-$\therefore \drawAngle{DBE} = \drawAngle{C}$, \byref{ax:I.III}, que é o ângulo no segmento alternativo.
+$\therefore \drawAngle{DBE} = \drawAngle{C}$, \byref{ax:I.III}, que é o ângulo no segmento oposto.
 \end{center}
 
 \qed
@@ -7174,7 +7174,7 @@ draw byLabelsOnCircle(A, B)(F);
 draw byLabelsOnPolygon(B, D, F, A)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 draw byLabelPoint(C, angle(C-F) - 45, 2);
 }
-\problem{S}{e}{a partir de um ponto sem círculo forem traçadas duas linhas retas até ele, uma das quais \drawSizedLine{DB} é tangente ao círculo e a outra \drawSizedLine{FA,CF,DC} o corta; o retângulo sob toda a linha de corte \drawSizedLine{FA,CF,DC} e o segmento externo \drawSizedLine{DC} é igual ao quadrado da tangente \drawSizedLine{DB}.}
+\problem{S}{e}{a partir de um ponto fora de um círculo forem traçadas duas linhas retas até ele, uma das quais \drawSizedLine{DB} é tangente ao círculo e a outra \drawSizedLine{FA,CF,DC} o corta; o retângulo sob toda a linha de corte \drawSizedLine{FA,CF,DC} e o segmento externo \drawSizedLine{DC} é igual ao quadrado da tangente \drawSizedLine{DB}.}
 \drawCurrentPictureInMargin
 \startsubproposition{Figura I.}
 \begin{center}
@@ -7593,7 +7593,7 @@ draw byLabelsOnPolygon(A, K, B)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 \problem{S}{obre}{um determinado círculo \drawCircle[middle][1/3]{K} para circunscrever um triângulo equiângulo a um determinado triângulo.}
 
 \begin{center}
-Produza qualquer lado \drawUnitLine{GH}, do triângulo dado em ambos os sentidos;
+Prolongue qualquer lado \drawUnitLine{GH}, do triângulo dado em ambos os sentidos;
 
 do centro do círculo fornecido, trace \drawUnitLine{KC}, qualquer raio.
 
@@ -8038,7 +8038,7 @@ draw byLabelPoint(D, angle(D-A)-15, 2);
 draw byLabelsOnPolygon(A, C, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
-\problem{C}{onstruir}{um triângulo isósceles, em que cada um dos ângulos da base seja o dobro do ângulo vertical.}
+\problem{C}{onstruir}{um triângulo isósceles, em que cada um dos ângulos da base seja o dobro do ângulo do vértice.}
 
 \begin{center}
 Pegue qualquer linha reta \drawProportionalLine{AC,CB} \\
@@ -8049,7 +8049,7 @@ trace \drawProportionalLine{AD}.
 
 Então \drawLine{AD,BD,CB,AC} é o triângulo necessário.
 
-Pára, trace \drawProportionalLine{CD} e descreva \drawCircle[middle][1/3]{F} sobre \drawLine{AD,CD,AC} \byref{prop:IV.V}
+Pois, trace \drawProportionalLine{CD} e descreva \drawCircle[middle][1/3]{F} sobre \drawLine{AD,CD,AC} \byref{prop:IV.V}
 
 Como $\drawProportionalLine{AC,CB} \times \drawProportionalLine{CB} = \drawProportionalLine{AC}^2 = \drawProportionalLine{BD}^2$,\\
 $\therefore$ \drawProportionalLine{BD} é tangente a \circleF\ \byref{prop:III.XXXVII}\\
@@ -8065,7 +8065,7 @@ $\therefore \drawAngle{A} = \drawAngle{CDA}$ \byref{prop:I.V}
 
 $\therefore \drawAngle{B} = \drawAngle{BDC,CDA} = \drawAngle{C} = \drawAngle{A} + \drawAngle{CDA} = \mbox{ duas vezes } \drawAngle{A}$;
 
-e conseqüentemente cada ângulo na base é o dobro do ângulo vertical.
+e conseqüentemente cada ângulo na base é o dobro do ângulo do vértice.
 \end{center}
 
 \qed
@@ -8275,7 +8275,7 @@ draw byLabelsOnPolygon(E, F, D)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 2);
 
 Seja
 \drawLine[bottom]{EA,DE,KD,CK,HC,BH,AB}
-ser um dado pentágono equilátero e equilátero; é necessário inscrever um círculo nele.
+um pentágono dado equilátero e equiângulo; é necessário inscrever um círculo nele.
 
 \begin{center}
 Faça $\drawAngle{HCF} = \drawAngle{FCK}$, e $\drawAngle{FDE} = \drawAngle{KDF}$ \byref{prop:I.IX}
@@ -10733,7 +10733,7 @@ H := (xpart(D), 0);
 draw byPolygon (A,B,C,D,E)(byred);
 draw byLine(D, H)(byred, DASHED_LINE, REGULAR_WIDTH);
 }
-A altura de qualquer figura é a linha reta traçada a partir de seu vértice perpendicular à sua base, ou base produzida.
+A altura de qualquer figura é a linha reta traçada a partir de seu vértice perpendicular à sua base, ou base prolongada.
 
 \vskip\baselineskip
 
@@ -10778,7 +10778,7 @@ draw byLabelsOnPolygon(A, Q, D, C, B, M)(ALL_LABELS, 0);
 
 Sejam os triângulos \drawPolygon[bottom]{ABC} e \drawPolygon[bottom]{ACD} com um vértice comum e com suas bases \drawUnitLine{BC} e \drawUnitLine{CD} na mesma linha reta.
 
-Produza \drawUnitLine{BC,CD} nos dois sentidos, pegue sucessivamente no \drawUnitLine{CD} linhas produzidas iguais a ele; e no \drawUnitLine{BC} produziu linhas sucessivamente iguais a ele; e trace linhas do vértice comum até suas extremidades.
+Prolongue \drawUnitLine{BC,CD} nos dois sentidos; tome sucessivamente, no prolongamento de \drawUnitLine{CD}, segmentos iguais a ele e, no prolongamento de \drawUnitLine{BC}, segmentos iguais a ele; trace retas do vértice comum até suas extremidades.
 
 Os triângulos
 \drawFromCurrentPicture[bottom][trianglesAMC]{
@@ -10874,7 +10874,7 @@ draw byLabelsOnPolygon(Bc, Fc, Dc)(OMIT_FIRST_LABEL+OMIT_LAST_LABEL, 0);
 }
 \drawCurrentPictureInMargin
 \problem{S}{e}{uma linha reta \drawUnitLine{DE} for traçada paralelamente a qualquer lado \drawUnitLine{BC} de um triângulo, ela dividirá os outros lados, ou seus prolongamentos, em segmentos proporcionais.\\
-E se qualquer linha reta \drawUnitLine{DE} dividir os lados de um triângulo, ou os lados produzidos, em segmentos proporcionais, ela será paralela ao lado restante \drawUnitLine{BC}.}
+E se qualquer linha reta \drawUnitLine{DE} dividir os lados de um triângulo, ou os lados prolongados, em segmentos proporcionais, ela será paralela ao lado restante \drawUnitLine{BC}.}
 
 \startsubproposition{Parte I.}
 \begin{center}
@@ -10944,12 +10944,12 @@ draw byNamedLineSeq(0)(AE,CE,DC,BD,AB);
 draw byLabelsOnPolygon(B, A, E, C, D)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{U}{ma}{linha reta (\drawUnitLine{AD}) que divide o ângulo de um triângulo ao meio, divide o lado oposto em segmentos (\drawUnitLine{BD}, \drawUnitLine{DC}) proporcionais aos lados contíguos (\drawUnitLine{AB}, \drawUnitLine{CA}
+\problem{U}{ma}{linha reta (\drawUnitLine{AD}) que divide o ângulo de um triângulo ao meio, divide o lado oposto em segmentos (\drawUnitLine{BD}, \drawUnitLine{DC}) proporcionais aos lados contíguos (\drawUnitLine{AB}, \drawUnitLine{CA}).\\
 E se uma linha reta (\drawUnitLine{AD}) traçada a partir de qualquer ângulo de um triângulo divide o lado oposto (\drawUnitLine{BD,DC}) em segmentos (\drawUnitLine{BD}, \drawUnitLine{DC}) proporcionais aos lados contíguos (\drawUnitLine{AB}, \drawUnitLine{CA}), ela divide o ângulo ao meio.}
 
 \startsubproposition{Parte I.}
 \begin{center}
-Trace $\drawUnitLine{CE} \parallel \drawUnitLine{AD}$, para atender \drawUnitLine{AE};\\
+Trace $\drawUnitLine{CE} \parallel \drawUnitLine{AD}$, até encontrar \drawUnitLine{AE};\\
 então $\drawAngle{BAD} = \drawAngle{E}$ \byref{prop:I.XXIX}.
 
 $\therefore \drawAngle{DAC} = \drawAngle{E}$; mas $\drawAngle{DAC} = \drawAngle{C}$, $\therefore \drawAngle{C} = \drawAngle{E}$,\\
@@ -11301,11 +11301,11 @@ endfor;
 draw byLabelsOnPolygon(B, F, A, D, C, E)(ALL_LABELS, 0); % improvement: drawing in the original seemed to be wrong, fixed here
 }
 \drawCurrentPictureInMargin
-\problem{A}{}{partir de uma determinada linha reta (\drawSizedLine{AF,FB}) para cortar qualquer peça necessária.}
+\problem{A}{}{partir de uma determinada linha reta (\drawSizedLine{AF,FB}) para cortar uma parte requerida.}
 
 \begin{center}
 De qualquer extremidade da linha dada, trace \drawSizedLine{AD,DC} fazendo qualquer ângulo com \drawSizedLine{AF,FB};\\
-e produza \drawSizedLine{AD,DC} até que toda a linha produzida \drawSizedLine{AD,DC,CE} contenha \drawSizedLine{AD} com a mesma freqüência que \drawSizedLine{AF,FB} contém a peça necessária.
+e prolongue \drawSizedLine{AD,DC} até que toda a linha prolongada \drawSizedLine{AD,DC,CE} contenha \drawSizedLine{AD} com a mesma freqüência que \drawSizedLine{AF,FB} contém a parte requerida.
 
 Draw \drawSizedLine{BE},\\
 e trace $\drawSizedLine{DF} \parallel \drawSizedLine{BE}$.\\
@@ -11873,7 +11873,7 @@ $\drawAngle{KBH} = \drawAngle{LDE}$ e $\drawAngle{H} = \drawAngle{E}$.
 
 Então $\polygonCD = \drawPolygon[middle][polygonAB]{BAG,BGH,BHK}$.
 
-É evidente pela construção e \byref{prop:I.XXXII} que os números são equiangulares; e como os triângulos \drawPolygon{DCF} e \drawPolygon{BAG} são equiângulos;\\
+É evidente pela construção e \byref{prop:I.XXXII} que as figuras são equiângulas; e como os triângulos \drawPolygon{DCF} e \drawPolygon{BAG} são equiângulos;\\
 então, por \byref{prop:VI.IV},
 $\drawUnitLine{AB}:\drawUnitLine{AG} :: \drawUnitLine{CD} : \drawUnitLine{CF}$\\
 e $\drawUnitLine{AG}:\drawUnitLine{BG} :: \drawUnitLine{CF} : \drawUnitLine{DF}$
@@ -12560,13 +12560,13 @@ draw byLabelsOnPolygon(F, B, C, A, noPoint)(ALL_LABELS, 0);
 draw byLabelLine(0)(G);
 }
 \drawCurrentPictureInMargin
-\problem{P}{roduzir}{uma dada reta (\drawSizedLine{AC,CB}), de modo que o retângulo compreendido pelos segmentos entre as extremidades da dada reta e o ponto para o qual ela é produzida possa ser igual a uma determinada área, ou seja, igual ao quadrado de \drawSizedLine{G}.}
+\problem{P}{rolongar}{uma dada reta (\drawSizedLine{AC,CB}), de modo que o retângulo compreendido pelos segmentos entre as extremidades da dada reta e o ponto para o qual ela é prolongada possa ser igual a uma determinada área, ou seja, igual ao quadrado de \drawSizedLine{G}.}
 
 \begin{center}
 Faça $\drawSizedLine{AC} = \drawSizedLine{CB}$,\\
 e trace $\drawSizedLine{BD} \perp \drawSizedLine{CB} = \drawSizedLine{G}$;\\
 trace \drawSizedLine{CD};\\
-e com o raio \drawSizedLine{CD}, descreva um círculo que corresponde ao \drawSizedLine{AC,CB} produzido.
+e com o raio \drawSizedLine{CD}, descreva um círculo que encontra a reta \drawSizedLine{AC,CB} prolongada.
 
 Então $\drawSizedLine{AC,CB,BF} \times \drawSizedLine{BF} + \drawSizedLine{CB}^2 = \drawSizedLine{AC,CB}^2$ \byref{prop:II.VI} $= \drawSizedLine{CD}^2$.
 
@@ -12949,7 +12949,7 @@ startAutoLabeling;
 draw byNamedLineSeq(0)(AE,EC,BC,AB);
 stopAutoLabeling;
 stopTempScale;
-} encontrar o lado oposto (\drawSizedLine{AB}) produzido, esse lado produzido por inteiro (\drawSizedLine{AB,BD}) e seu segmento externo (\drawSizedLine{BD}) serão proporcionais aos lados (\drawSizedLine{AE,EC} e \drawSizedLine{BC}) que contêm o ângulo adjacente ao ângulo externo bissectado.}
+} encontrar o lado oposto (\drawSizedLine{AB}) prolongado, esse lado prolongado por inteiro (\drawSizedLine{AB,BD}) e seu segmento externo (\drawSizedLine{BD}) serão proporcionais aos lados (\drawSizedLine{AE,EC} e \drawSizedLine{BC}) que contêm o ângulo adjacente ao ângulo externo bissectado.}
 
 \begin{center}
 Pois, se \drawSizedLine{BE} for traçada $\parallel \drawSizedLine{DC}$,\\
@@ -13003,7 +13003,7 @@ Trace \drawSizedLine{AD}, fazendo $\drawAngle{CAE} = \drawAngle{EAB}$;\\
 então $\drawSizedLine{AB} \times \drawSizedLine{CA} = \drawSizedLine{BD} \times \drawSizedLine{DC} + \drawSizedLine{AD}^2$.
 
 Em torno de \drawLine[bottom]{CA,DC,BD,AB} descreva \drawCircle[middle][1/4]{O} \byref{prop:IV.V},\\
-produza \drawSizedLine{AD} para encontrar o círculo e trace \drawSizedLine{CE}.
+prolongue \drawSizedLine{AD} para encontrar o círculo e trace \drawSizedLine{CE}.
 
 Como $\drawAngle{CAE} = \drawAngle{EAB}$ \byref{\hypref},\\
 e $\drawAngle{B} = \drawAngle{E}$ \byref{prop:III.XXI},\\
