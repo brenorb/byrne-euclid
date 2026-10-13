@@ -15,7 +15,7 @@ At the moment, all the code for this purpose exists as a standalone LaTeX
 ![comparison](https://user-images.githubusercontent.com/7447349/52147564-2c240580-2678-11e9-9803-01a2b7c970da.png)
 
 Beyond merely reproducing Byrne's original design elements, this version
-features some improvments over the original. E.g., it has a mechanism to
+features some improvements over the original. E.g., it has a mechanism to
 add small letters to Byrne's colorful diagrams, as suggested by Edward
 Tufte in [Envisioning Information](https://www.edwardtufte.com/tufte/books_ei).
 This feature is turned on by default in the Russian version and can be
@@ -32,15 +32,31 @@ satisfactory results), is likely to become a part of
 
 ![lettrines](https://user-images.githubusercontent.com/7447349/52147399-a2743800-2677-11e9-83a1-d25620253263.png)
 
-The book itself (byrne-en-latex.tex) and its Russian translation
-(byrne-ru-latex.tex) are licensed under CC-BY-SA 4.0.
+The book itself (`byrne-en-latex.tex`), its Russian translation
+(`byrne-ru-latex.tex`), and the Brazilian Portuguese translation and adaptation
+by Breno Brito (`byrne-pt-br-latex.tex`) are licensed under CC-BY-SA 4.0.
 
 MetaPost library (byrne.mp) and initials generator (lettrines.mp) are 
 licensed under GPLv3 or later.
 
-To build the book run `lualatex byrne-en-latex.tex` or
-`lualatex byrne-ru-latex.tex` within the book directory. To generate the
-initials run `mpost lettrines.mp` within `\lettrines` directory.
+The Brazilian Portuguese edition is maintained on the
+[`fix/translation-audit-findings` branch](https://github.com/brenorb/byrne-euclid/tree/fix/translation-audit-findings).
+Check out that branch to read or build the translation; `master` does not yet
+include it. Translation decisions and the correction status are documented in
+[`docs/translation-audit-report-pt-br.md`](docs/translation-audit-report-pt-br.md).
+
+To build an edition, run LuaLaTeX twice within the book directory:
+
+```sh
+lualatex -interaction=nonstopmode -halt-on-error byrne-pt-br-latex.tex
+lualatex -interaction=nonstopmode -halt-on-error byrne-pt-br-latex.tex
+```
+
+Use `byrne-en-latex.tex` or `byrne-ru-latex.tex` for the other editions.
+Install the `byrne` package and the packages loaded by `byrnebook.cls` (including
+`babel-portuges` for PT-BR). The CI workflow downloads the Byrne library used
+for the build and publishes the three PDFs as artifacts. To generate the
+initials run `mpost lettrines.mp` within the `lettrines/` directory.
 
 See releases for prepared .pdfs (at the moment it's an older ConTeXt 
 version). See Actions for fresher pdfs (unless they are expired).
