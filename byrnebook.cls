@@ -621,6 +621,70 @@
 	  name-pl-ab = prop. ,
 	}
 
+% Brazilian Portuguese uses the Portuguese language alias in zref-clever.
+\zcLanguageSetup{portuguese}{
+  type = axiom,
+    gender = m,
+    Name-sg = Axioma,
+    name-sg = axioma,
+    Name-pl = Axiomas,
+    name-pl = axiomas,
+    Name-sg-ab = Ax.,
+    name-sg-ab = ax.,
+    Name-pl-ab = Ax.,
+    name-pl-ab = ax.,
+  type = definition,
+    gender = f,
+    Name-sg = Definição,
+    name-sg = definição,
+    Name-pl = Definições,
+    name-pl = definições,
+    Name-sg-ab = Def.,
+    name-sg-ab = def.,
+    Name-pl-ab = Def.,
+    name-pl-ab = def.,
+  type = definitionAZ,
+    gender = f,
+    Name-sg = Definição,
+    name-sg = definição,
+    Name-pl = Definições,
+    name-pl = definições,
+    Name-sg-ab = Def.,
+    name-sg-ab = def.,
+    Name-pl-ab = Def.,
+    name-pl-ab = def.,
+  type = postulate,
+    gender = m,
+    Name-sg = Postulado,
+    name-sg = postulado,
+    Name-pl = Postulados,
+    name-pl = postulados,
+    Name-sg-ab = Post.,
+    name-sg-ab = post.,
+    Name-pl-ab = Post.,
+    name-pl-ab = post.,
+  type = proposition,
+    gender = f,
+    Name-sg = Proposição,
+    name-sg = proposição,
+    Name-pl = Proposições,
+    name-pl = proposições,
+    Name-sg-ab = Prop.,
+    name-sg-ab = prop.,
+    Name-pl-ab = Prop.,
+    name-pl-ab = prop.,
+  type = propositionAZ,
+    gender = f,
+    Name-sg = Proposição,
+    name-sg = proposição,
+    Name-pl = Proposições,
+    name-pl = proposições,
+    Name-sg-ab = Prop.,
+    name-sg-ab = prop.,
+    Name-pl-ab = Prop.,
+    name-pl-ab = prop.,
+}
+
 \zcLanguageSetup{russian}{	
 	type = axiom , 
 	  gender = f ,
@@ -889,7 +953,12 @@
 
 \def\bookString{Book}
 
-\iflanguage{russian}{
+\ifthenelse{\equal{\byrnebook@booklanguage}{brazilian}}{
+  \def\hypstr{hip.}%
+  \def\bookString{Livro}%
+}{}
+
+\ifthenelse{\equal{\byrnebook@booklanguage}{russian}}{
 	\def\qedstr{Ч. Т. Д.}%
 	\def\qefstr{Ч. Т. Д.}%
 	\def\hypstr{гип.}%
@@ -899,7 +968,7 @@
 	\def\indefstr{опр.}%
 	\def\inaxstr{акс.}%
 	\def\bookString{Книга}%
-  }
+  }{}
 
 \makeatother
 

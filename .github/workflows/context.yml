@@ -4,9 +4,9 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
+  # Build the maintained translation branch as well as the default branch.
   push:
-    branches: [ "master" ]
+    branches: [ "master", "fix/translation-audit-findings" ]
   pull_request:
     branches: [ "master" ]
 
@@ -26,14 +26,22 @@ jobs:
         run: mpost lettrines.mp
         working-directory: lettrines
         
-      - name: Get fresh byrne-latex
-        run: git clone https://github.com/jemmybutton/byrne-latex.git && cp byrne-latex/byrne.* .
+      - name: Get validated byrne-latex
+        run: |
+          git init byrne-latex
+          git -C byrne-latex remote add origin https://github.com/jemmybutton/byrne-latex.git
+          git -C byrne-latex fetch --depth 1 origin 08c138e09a4ec6326f9c5e3c3b1bfd2201fb695d
+          git -C byrne-latex checkout --detach FETCH_HEAD
+          cp byrne-latex/byrne.sty byrne-latex/byrne.mp .
 
       - name: Build English pdf
-        run: lualatex -interaction=nonstopmode byrne-en-latex.tex && lualatex -interaction=nonstopmode byrne-en-latex.tex
+        run: lualatex -interaction=nonstopmode -halt-on-error byrne-en-latex.tex && lualatex -interaction=nonstopmode -halt-on-error byrne-en-latex.tex
+
+      - name: Build Brazilian Portuguese pdf
+        run: lualatex -interaction=nonstopmode -halt-on-error byrne-pt-br-latex.tex && lualatex -interaction=nonstopmode -halt-on-error byrne-pt-br-latex.tex
 
       - name: Build Russian pdf
-        run: lualatex -interaction=nonstopmode byrne-ru-latex.tex && lualatex -interaction=nonstopmode byrne-ru-latex.tex
+        run: lualatex -interaction=nonstopmode -halt-on-error byrne-ru-latex.tex && lualatex -interaction=nonstopmode -halt-on-error byrne-ru-latex.tex
 
       - uses: actions/upload-artifact@v4
         with:
