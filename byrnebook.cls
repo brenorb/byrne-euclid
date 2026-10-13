@@ -953,12 +953,12 @@
 
 \def\bookString{Book}
 
-\iflanguage{brazilian}{
+\ifthenelse{\equal{\byrnebook@booklanguage}{brazilian}}{
   \def\hypstr{hip.}%
   \def\bookString{Livro}%
 }{}
 
-\iflanguage{russian}{
+\ifthenelse{\equal{\byrnebook@booklanguage}{russian}}{
 	\def\qedstr{Ч. Т. Д.}%
 	\def\qefstr{Ч. Т. Д.}%
 	\def\hypstr{гип.}%
@@ -968,7 +968,7 @@
 	\def\indefstr{опр.}%
 	\def\inaxstr{акс.}%
 	\def\bookString{Книга}%
-  }
+  }{}
 
 \makeatother
 
