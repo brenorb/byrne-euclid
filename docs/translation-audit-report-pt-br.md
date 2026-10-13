@@ -1,4 +1,90 @@
-# Relatório de Auditoria Adversarial da Tradução PT-BR
+# Auditoria e correções da tradução PT-BR
+
+
+## Estado das correções — 13/10/2026
+
+A revisão de outubro comparou as 186 proposições rotuladas em português (188 blocos `\problem`,
+pois III.VIII está subdividida) com seus
+correspondentes em inglês no commit `e09e323`. As correções foram separadas
+em commits por assunto na branch `fix/translation-audit-findings`.
+
+- As conclusões verbais de II.II–XI e a afirmação direta de VI.II foram restauradas.
+- III.XXVI–XXIX e VI.XXXIII agora exigem círculos iguais; a proporção de VI.XXXIII foi recomposta.
+- VI.XV exige igualdade de área; VI.XXII usa terceiras proporcionais;
+  VI.XXVI trata da disposição sobre a mesma diagonal, não de comprimentos iguais.
+- O Livro V distingue razão de proporção e preserva as hipóteses de múltiplos,
+  a ordem de comparação e as relações por conversão.
+- As construções usam prolongar, traçar, cordas, partes e ângulos do vértice;
+  as condições espaciais usam fora da figura e sobre a circunferência.
+- A classe gera Livro e hip. para o português brasileiro e contém a localização
+  dos tipos de referência. Os títulos, casos e capitulares remanescentes foram traduzidos.
+- A Introdução recebeu correções de calques, concordância e ortografia.
+- Os lapsos algébricos herdados foram corrigidos também no inglês. As negações
+  duplicadas de `\ngtr` e `\neq` eram da tradução portuguesa; a notação ambígua
+  de V.X foi esclarecida nas duas edições.
+- IV.XVI enuncia a inscrição do quindecágono no círculo dado e VI.D explicita
+  a soma dos retângulos, nas duas edições.
+
+### Inventário de atendimento
+
+Os IDs abaixo pertencem à auditoria de outubro. As faixas de linhas registradas
+nas issues são do snapshot anterior à correção.
+
+| ID | Achado | Atendimento |
+| --- | --- | --- |
+| F01 | A edição portuguesa não está na branch padrão | README documenta a branch e a compilação; integração em master depende de merge |
+| F02 | [Dez enunciados do Livro II perderam a conclusão em palavras](https://github.com/brenorb/byrne-euclid/issues/2) | Corrigido |
+| F03 | [A primeira metade do teorema VI.II foi cortada](https://github.com/brenorb/byrne-euclid/issues/2) | Corrigido |
+| F04 | [Círculos iguais viraram desiguais em cinco proposições](https://github.com/brenorb/byrne-euclid/issues/3) | Corrigido |
+| F05 | [VI.XV omite que os triângulos devem ter áreas iguais](https://github.com/brenorb/byrne-euclid/issues/4) | Corrigido |
+| F06 | [VI.XXVI transforma alinhamento de diagonais em igualdade de comprimentos](https://github.com/brenorb/byrne-euclid/issues/4) | Corrigido |
+| F07 | [VI.XXII confunde terceira proporcional com um terço](https://github.com/brenorb/byrne-euclid/issues/4) | Corrigido |
+| F08 | [VI.XXIV e VI.XXXII ficaram com enunciados sintaticamente quebrados](https://github.com/brenorb/byrne-euclid/issues/4) | Corrigido |
+| F09 | [VI.XXXIII perdeu o sinal que iguala as duas razões](https://github.com/brenorb/byrne-euclid/issues/3) | Corrigido |
+| F10 | [V.V perdeu a hipótese do mesmo múltiplo nas partes retiradas](https://github.com/brenorb/byrne-euclid/issues/5) | Corrigido |
+| F11 | [V.IX e V.X perderam o objeto da comparação de razões](https://github.com/brenorb/byrne-euclid/issues/5) | Corrigido |
+| F12 | [Razão recebe traduções técnicas incompatíveis](https://github.com/brenorb/byrne-euclid/issues/5) | Corrigido |
+| F13 | [A definição V.XX perde a ordem de comparação e altera o latinismo](https://github.com/brenorb/byrne-euclid/issues/5) | Corrigido |
+| F14 | [Convertendo e V.XIX têm termos sem sentido matemático](https://github.com/brenorb/byrne-euclid/issues/5) | Corrigido |
+| F15 | [O axioma V.I ficou tautológico](https://github.com/brenorb/byrne-euclid/issues/5) | Corrigido |
+| F16 | [Without foi traduzido como ausência em vez de posição externa](https://github.com/brenorb/byrne-euclid/issues/6) | Corrigido |
+| F17 | [III.XVII permite um ponto interior para a tangente](https://github.com/brenorb/byrne-euclid/issues/6) | Corrigido |
+| F18 | [III.XVI perdeu a posição do ponto entre a perpendicular e o círculo](https://github.com/brenorb/byrne-euclid/issues/6) | Corrigido |
+| F19 | [Produce / drawn / meet recebem traduções que mudam a construção](https://github.com/brenorb/byrne-euclid/issues/6) | Corrigido |
+| F20 | [Falsos amigos adicionais no vocabulário geométrico](https://github.com/brenorb/byrne-euclid/issues/6) | Corrigido |
+| F21 | [A definição III.III perdeu o critério de encontro dos círculos](https://github.com/brenorb/byrne-euclid/issues/6) | Corrigido |
+| F22 | [Ainda há palavras e títulos não traduzidos no conteúdo visível](https://github.com/brenorb/byrne-euclid/issues/7) | Corrigido |
+| F23 | [A classe compõe Book e hyp. na edição brasileira](https://github.com/brenorb/byrne-euclid/issues/7) | Corrigido |
+| F24 | Calques na Introdução prejudicam a leitura e o sentido | Corrigido |
+| F25 | [IV.XVI pede a construção errada já no inglês](https://github.com/brenorb/byrne-euclid/issues/8) | Corrigido |
+| F26 | [Há lapsos simbólicos herdados que sobrevivem na tradução](https://github.com/brenorb/byrne-euclid/issues/8) | Lapsos herdados corrigidos em EN/PT; dupla negação da tradução corrigida em PT |
+| F27 | [VI.D/Ptolomeu precisa explicitar a soma dos retângulos](https://github.com/brenorb/byrne-euclid/issues/8) | Corrigido |
+| F28 | A conclusão do relatório anterior não descreve o estado auditado | Este relatório substitui a conclusão anterior |
+
+### Validação
+
+- LuaLaTeX / TeX Live 2026, em duas passagens por edição: PT-BR com 278 páginas,
+  EN com 271 e RU com 284. Nenhum erro fatal, caractere ausente ou referência
+  indefinida nos logs finais.
+- Preservados os 188 blocos de enunciados, os rótulos das 186 proposições,
+  77 definições, 15 axiomas e 3 postulados da edição portuguesa.
+- Varredura das fontes e do texto extraído sem títulos `Theor.`/`theor.`,
+  `Case`, `consequently`, `Book` ou `hyp.` remanescentes no conteúdo português.
+- Inspeção visual de páginas afetadas pelas conclusões restauradas, pela
+  igualdade de áreas, pela relação entre arcos, pela comparação de múltiplos
+  e pelo teorema de Ptolomeu. Os três URLs bibliográficos foram preservados.
+- Permanecem avisos tipográficos de caixas e de níveis de bookmarks do projeto;
+  isso não equivale a uma revisão visual integral de todas as páginas.
+
+O CI compila as três edições em duas passagens, incluindo PT-BR, e usa a
+biblioteca Byrne no commit `08c138e09a4ec6326f9c5e3c3b1bfd2201fb695d`.
+Comentários de código, títulos bibliográficos originais, versos latinos com
+tradução, Q.E.D./Q.E.F. e a decisão editorial de `trapezium/trapezia` foram preservados.
+
+## Histórico da auditoria inicial
+
+As seções seguintes registram o diagnóstico anterior às correções de julho.
+Elas não descrevem o estado atual da tradução.
 
 ## Escopo
 
@@ -48,7 +134,7 @@ Há também problemas de registro técnico:
 
 ## Achados principais
 
-| Severidade | Ocorrência atual | Problema | Motivo | Sugestão | Fontes |
+| Severidade | Ocorrência na auditoria inicial | Problema | Motivo | Sugestão | Fontes |
 | --- | --- | --- | --- | --- | --- |
 | Alta | `byrne-pt-br-latex.tex:3622-4602` (`\part{Book II}`) | Livro II segue em inglês | Não é uma escolha ruim de tradução; é ausência de tradução | Traduzir integralmente o Livro II, começando pelas definições e títulos de proposições | [F1] |
 | Alta | `byrne-pt-br-latex.tex:4603-7272` (`\part{Book III}`) | Livro III segue em inglês | Mesmo problema estrutural do Livro II | Traduzir integralmente o Livro III | [F1] |
@@ -132,7 +218,7 @@ Se a meta for fechar a tradução com o menor risco técnico possível, a ordem 
 4. **Traduzir integralmente os Livros II-VI**.
 5. Durante essa tradução, aplicar o glossário acima antes de revisar estilo fino.
 
-## Conclusão
+## Conclusão da auditoria inicial
 
 O arquivo atual não está “quase pronto com alguns termos ruins”; ele está em um estado misto:
 
@@ -141,11 +227,18 @@ O arquivo atual não está “quase pronto com alguns termos ruins”; ele está
 
 O ponto mais perigoso para o sentido matemático é `rhomboid -> paralelogramo`. O segundo maior problema é estrutural: a falsa impressão de completude da edição PT-BR, quando mais de dois terços do conteúdo técnico ainda não foram vertidos.
 
-## Verificação posterior
+## Verificação de julho de 2026 (substituída)
 
-Em 14/07/2026, os achados desta auditoria foram rechecados contra o estado atual de `byrne-pt-br-latex.tex`, incluindo uma leitura adversarial independente. Os cinco blocos dos Livros II-VI agora estão traduzidos; `romboide`, `oblongo`, `lados`, `traçar` e a formulação de `straight line may be drawn` foram corrigidos; e a nota do tradutor sobre `trapezium`/`trapezia` está presente na definição XXXIV. No livro, a nota aponta por referências internas clicáveis `[B1]`, `[B2]` e `[B3]` para a bibliografia do próprio volume; os códigos `[F...]` continuam reservados às fontes deste relatório. A varredura final não encontrou nenhum finding acionável adicional.
+A revisão de julho registrou a tradução dos cinco livros finais e a correção
+ de `romboide`, `oblongo`, `lados`, `traçar` e da nota sobre `trapezium`.
+Essas correções estão presentes. Porém, a conclusão de que não havia achados
+acionáveis adicionais foi substituída pela revisão de 13/10/2026: o commit
+`e09e3236540c25ee77431cfe0cd90e50ff2c5637` ainda continha conclusões verbais
+omitidas e erros de sentido, além de resíduos de idioma.
 
-A compilação limpa em duas passagens foi concluída sem erro fatal, gerando o PDF de 278 páginas. Permanecem apenas avisos tipográficos e de referências já produzidos pelo projeto, sem falha de compilação.
+As referências da nota do tradutor usam `[B1]`, `[B2]` e `[B3]` na bibliografia
+do volume. Os códigos `[F...]` da auditoria histórica abaixo são fontes
+bibliográficas e não devem ser confundidos com os IDs dos achados de outubro.
 
 ## Anexo A: Evidências sobre `trapezium` / `τραπέζιον`
 
