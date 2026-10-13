@@ -11640,7 +11640,7 @@ draw byNamedLineSeq(0)(noLine,AE,BA,BD,DA,AC);
 draw byLabelsOnPolygon(A, E, D, B, C)(ALL_LABELS, 0);
 }
 \drawCurrentPictureInMargin
-\problem{T}{riângulos}{que têm um ângulo em cada igual ($\drawAngle{DAE} = \drawAngle{BAC}$) têm os lados em torno dos ângulos iguais reciprocamente proporcionais
+\problem{T}{riângulos}{iguais em área, que têm um ângulo de um igual a um ângulo do outro ($\drawAngle{DAE} = \drawAngle{BAC}$) têm os lados em torno dos ângulos iguais reciprocamente proporcionais
 ($\drawUnitLine{AE} : \drawUnitLine{BA} :: \drawUnitLine{AC} : \drawUnitLine{DA}$).\\
 E dois triângulos que têm um ângulo de um igual ao ângulo do outro, e os lados em torno dos ângulos iguais reciprocamente proporcionais, são iguais.}
 
@@ -12103,7 +12103,7 @@ E se quatro figuras retilíneas semelhantes, descritas de forma semelhante em qu
 
 \startsubproposition{Parte I.}
 \begin{center}
-Considere \drawUnitLine{O} um terço proporcional a \drawUnitLine{AB} e \drawUnitLine{CD}, e \drawUnitLine{P} um terço proporcional a \drawUnitLine{EF} e \drawUnitLine{GH} \byref{prop:VI.XI};
+Tome \drawUnitLine{O} como terceira proporcional a \drawUnitLine{AB} e \drawUnitLine{CD}, e \drawUnitLine{P} como terceira proporcional a \drawUnitLine{EF} e \drawUnitLine{GH} \byref{prop:VI.XI};
 
 como $\drawUnitLine{AB} : \drawUnitLine{CD} :: \drawUnitLine{EF} : \drawUnitLine{GH}$ \byref{\hypref}\\
 $\drawUnitLine{CD} : \drawUnitLine{O} :: \drawUnitLine{GH} : \drawUnitLine{P}$ \byref{\constref}
@@ -12233,7 +12233,7 @@ draw byNamedLine(AE,EF);
 draw byNamedPolygon(AGF);
 draw byLabelsOnPolygon(G, F, E, A)(ALL_LABELS, 0);
 })
-que são semelhantes ao todo e entre si, estando dispostos na diagonal.}
+dispostos sobre a diagonal são semelhantes ao todo e entre si.}
 
 \begin{center}
 Como \parallelogramABCD\ e \parallelogramAEFG\ possuem um ângulo comum eles são equiangulares;\\
@@ -12408,7 +12408,7 @@ draw byNamedLine(EAt,AC);
 draw byNamedLineFull(E, F, 0, 1,  0, 1)(AGt);
 draw byLabelsOnPolygon(A, D, C, B)(ALL_LABELS, 0);
 })
-têm um ângulo comum, têm diagonais correspondentes iguais.}
+têm um ângulo comum, estão dispostos sobre a mesma diagonal.}
 
 \begin{center}
 Pois, se possível, seja
@@ -12420,7 +12420,7 @@ stopGlobalRotation;
 }
 seja a diagonal de \parallelogramABCD\ e trace $\drawUnitLine{KH} \parallel \drawUnitLine{AG}$ \byref{prop:I.XXXI}.
 
-Como \drawLine[bottom][parallelogramAKHG]{AG,GH,KH,AK} e \parallelogramABCD\ têm diagonais correspondentes iguais e têm \drawAngle{A} comum, eles são \byref{prop:VI.XXIV} semelhantes;
+Como \drawLine[bottom][parallelogramAKHG]{AG,GH,KH,AK} e \parallelogramABCD\ estão dispostos sobre a mesma diagonal \lineAHC\ e têm \drawAngle{A} comum, eles são \byref{prop:VI.XXIV} semelhantes;
 
 $\therefore \drawSizedLine{AG} : \drawSizedLine{AK} :: \drawSizedLine{AG,GD} : \drawSizedLine{AK,KE,EB}$;\\
 mas $\drawSizedLine{AG} : \drawSizedLine{AK,KE} :: \drawSizedLine{AG,GD} : \drawSizedLine{AK,KE,EB}$ \byref{\hypref},\\
@@ -12757,7 +12757,7 @@ draw byNamedLineSeq(0)(EDt,CEt,DCt);
 draw byLabelsOnPolygon(C, D, E)(ALL_LABELS, 0);
 stopTempAngleScale;
 }),
-ter dois lados proporcionais ($\drawUnitLine{AB} : \drawUnitLine{CA} :: \drawUnitLine{DC} : \drawUnitLine{ED}$) e ser colocados em um ângulo que os lados homólogos fiquem paralelos, os lados restantes (\drawUnitLine{BC} e \drawUnitLine{CE}) formam uma linha reta.}
+têm dois lados proporcionais ($\drawUnitLine{AB} : \drawUnitLine{CA} :: \drawUnitLine{DC} : \drawUnitLine{ED}$) e são colocados de tal modo que os lados homólogos fiquem paralelos, os lados restantes (\drawUnitLine{BC} e \drawUnitLine{CE}) formam uma linha reta.}
 
 \begin{center}
 Como $\drawUnitLine{AB} \parallel \drawUnitLine{DC}$,\\
